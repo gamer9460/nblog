@@ -1,8 +1,7 @@
 baseURL = 'https://comforting-quokka-174fd1.netlify.app/'
 languageCode = 'en-us'
-title = 'PacenThink'
+title = "Pace 'n Think"
 theme = 'PaperMod'
-
 
 [Params]
   ShowBreadCrumbs = 'true'
