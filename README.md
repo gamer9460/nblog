@@ -1,5 +1,5 @@
-# blog.pacenthink.io
-https://blog.pacenthink.io
+# pacenthink.io
+https://pacenthink.io
 
 
 /Users/dg/.zprofile
