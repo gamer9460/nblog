@@ -7,5 +7,5 @@ https://pacenthink.io
 
 
     hugo new site name
-    hugo server
+    hugo server 
     hego -t PaperMod
