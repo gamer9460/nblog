@@ -6,19 +6,10 @@ theme = 'hugo-PaperMod'
 [Params]
   ShowBreadCrumbs = 'true'
   ShowShareButtons = 'true'
-  ShowReadingTime = 'true'
+  ShowReadingTime = "true"
   ShowPostNavLinks = 'true'
-  ShowWordCount = 'true'
   ShowRssButtonInSectionTermList = 'true'
   UseHugoToc = 'true'
-  disableSpecial1stPost = 'true'
-  disableScrollToTop = 'true'
-  comments = 'true'
-  hidemeta = 'true'
-  hideSummary = 'true'
-  showtoc = 'true'
-  tocopen = 'true'
-  author = 'Me'
 
 [fuseOpts]
 isCaseSensitive = false
