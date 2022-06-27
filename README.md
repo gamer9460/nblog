@@ -1,21 +1,65 @@
 # pacenthink.io
 
-## published url : https://pacenthink.io
+A repository to house the code for https://www.pacenthink.io/
 
+## Initial Setup 
 
-/Users/dg/.zprofile 
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+This repository was bootstrapped using the [Hugo QuickStart Guide](https://gohugo.io/getting-started/quick-start/).
 
-    ### Theme We Have Used
-    - https://github.com/adityatelange/hugo-PaperMod.git
+## Test
 
-    ### Hugo Command 
-    hugo new site name
-    hugo server 
-    hego -t PaperMod
+Use the steps below to test your changes:
 
-    CI / CD Pipeline
-    - This website main branch is having automated deployment with netlify. This will automatically deployed when something is new push to the main branch.
-    - All configuration regarding ci / cd pipeline will be in netlify portal so by there we can modify the deployment related configuration chnages.
+**Step 1**. Apply your changes. 
+
+**Step 2**. Run Hugo locally: `hugo server -D`. 
+
+**Step 3**. Validate your changes. If they look good, [publish them](#contributions). 
+
+## Assumptions
+
+The repository assumes the following:
+
+- A basic understanding of [Git](https://git-scm.com/).
+- A basic understanding of [Hugo](https://gohugo.io). 
+    - **Important Notes**: 
+        - This repository uses the following Hugo Theme: https://github.com/adityatelange/hugo-PaperMod.git
+        - Hugo version `>= v0.100.2`. 
+- (Optional) A basic understanding of [Netlify](https://www.netlify.com). 
+    - **Important Note**: Netlify holds all the configurations to automatically publish changes via a CI/CD pipeline and the `main` branch. If CI/CD changes are needed, please reach out to a team member with the specifics. 
+
+## Contributions
+
+Contributions are always welcome. As such, this project uses the `main` branch as the source of truth to track and publish changes.
+
+To publish a change, create a [PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) by following the steps below: 
+
+**Step 1**. Clone this project: `git@github.com:pacenthink/pacenthink.io.git`.
+
+**Step 2**. Checkout a branch:
+```sh 
+# Feature branch
+$ git checkout -b feature/abc
+
+# Bug fix branch
+$ git checkout -b fix/abc
+```
+
+**Step 3**. Validate the changes locally by executing the steps defined under [Test](#test).
+
+**Step 4**. Commit and push the new changes to the remote:
+```
+$ git add file1 file2 ...
+
+$ git commit -m "Adding some change"
+
+$ git push --set-upstream origin <branch>
+```
+
+**Step 5**. Create a PR against the `main` branch and assign it to a team member for review.
+
+**Step 6**. Once merged, a CI/CD pipeline will run on the `main` branch to publish the change/s via Netlify. This normally only take a couple of minutes.
+
+**Step 7**. Verify that your change has been propagated correctly by visiting https://wwww.pacenthink.io/
 
     
