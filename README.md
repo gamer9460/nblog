@@ -10,11 +10,15 @@ This repository was bootstrapped using the [Hugo QuickStart Guide](https://gohug
 
 Use the steps below to test your changes:
 
-**Step 1**. Apply your changes. 
+**Step 1**. Add a new blog file: `hugo new content/blog/<topic>.md` 
 
-**Step 2**. Run Hugo locally: `hugo server -D`. 
+**Step 2**. Edit the newly created file with the desired change/s.
 
-**Step 3**. Validate your changes. If they look good, [publish them](#contributions). 
+**Step 3**. Run Hugo locally to validate your change/s: `hugo server -D`. 
+
+**Step 4**. [Publish your changes](#contributions). 
+
+**Helpful hint**: The project includes a [Makefile](https://github.com/pacenthink/pacenthink.io/Makefile) to help you speed up testing. Run `make help` from the root of the project or see the makefile for details.
 
 ## Assumptions
 
