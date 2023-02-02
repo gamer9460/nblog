@@ -11,7 +11,6 @@ Here's a glimpse of what we will be going through
 
 - [Introduction](#introduction)
 - [What's in it for me?](#whats-in-it-for-me)
-- [A look at other real-time communication technologies](#a-look-at-other-real-time-communication-technologies)
 - [Hands on 🙌🏽](#hands-on-)
   - [Implementing a SSE Web server in Go](#implementing-a-sse-web-server-in-go)
   - [Implementing a SSE client using `EventSource`](#implementing-a-sse-client-using-eventsource)
@@ -28,21 +27,26 @@ Here's how a sample SSE stream looks like
 
 ## What's in it for me?
 
-Although relatively new, SSE can be a viable solution. They offer various advantages:
-
-- Low latency and real-time updates
-- Simple and efficient server-to-client communication
-- Improved scalability and reduced server load
-
 A perfect use-case for SSE is the "notification tab 🔔" which is present on every kind of product nowadays.
 A server can be configured to push notifications to any client every time something happens in the product. For, e.g. you can award users with points every time they complete a step of onboarding or add new data to their profile.
 
-## A look at other real-time communication technologies
+Before SSE came into being following approaches have existed to build real-time systems.
 
 - WebSockets
-- AJAX
+
+  WebSockets provide a bi-directional channel where both the server and client can send/receive messages.
 - Long Polling
+  
+  In Long Polling, the response to a HTTP request is delayed until the server is ready to provide a response. Long polling reduces costs by reducing the number of empty responses.
 - WebRTC
+  
+  WebRTC which was released around 2011 enables web browsers to communicate in a peer-to-peer fashion. Primarily used over UDP, WebRTC has various usecases including text-based chats, file sharing, and screen sharing.
+
+Although relatively new, SSE can be a viable solution. They offer various advantages:
+
+- Low latency and real-time updates.
+- Simple and efficient server-to-client communication. SSE provides a simple and easy to use HTTP-based methods for realtime data streaming.
+- Improved scalability and reduced server load (often the case with long polling)
 
 ## Hands on 🙌🏽
 
@@ -93,8 +97,8 @@ server.CreateStream("messages")
 
 Let's create 2 different handlers:
 
-1. Where we tell our server to send us an event. Think of this endpoint which is just responsible for triggering.
-2. Where the server will push events.
+1. `trigger`: Where we tell our server to send us an event. Think of this endpoint which is just responsible for triggering.
+2. `events`: Where the server will push events.
 
 ```go
 mux := http.NewServeMux()
@@ -164,6 +168,7 @@ Let's declare a boilerplate HTML code, that we will use to trigger the events fr
     <button type="button" id="triggerEvents">Trigger Event</button>
     <ul style="font-size: 25px;"></ul>
     <script>
+        // tell our server to send us an event
         function triggerEvent() {
             fetch('http://127.0.0.1:8080/trigger', {
                 method: 'GET',
@@ -201,8 +206,10 @@ Here's a demo of how the client side works.
 
 ## Conclusion
 
+Server-Sent Events is a relatively new technology with limited use-cases but if you don't have very complex requirements like building chat systems (where websockets are a common solution) then using SSE can be a good bet.
+
 ## Resources
 
 - [HTML SSE Standard](https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events)
-- Make sure to show some 💚 to [r3labs/sse](https://github.com/r3labs/sse).
 - [`EventSource MDN`](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
+- Make sure to show some 💚 to [r3labs/sse](https://github.com/r3labs/sse).
