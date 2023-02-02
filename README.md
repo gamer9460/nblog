@@ -24,6 +24,11 @@ Use the steps below to test your changes:
 
 **Helpful hint**: The project includes a [Makefile](https://github.com/pacenthink/pacenthink.io/Makefile) to help you speed up testing. Run `make help` from the root of the project or see the makefile for details.
 
+## Prerequisites
+### Install Docker
+
+Check the official [Docker documentation](https://docs.docker.com/engine/) for information how to install Docker on your operating system. And then install Docker and supporting tools.
+
 ## Assumptions
 
 The repository assumes the following:
@@ -33,8 +38,6 @@ The repository assumes the following:
     - **Important Notes**: 
         - This repository uses the following Hugo Theme: https://github.com/adityatelange/hugo-PaperMod.git
         - Hugo version `>= v0.100.2`. 
-- (Optional) A basic understanding of [Netlify](https://www.netlify.com). 
-    - **Important Note**: Netlify holds all the configurations to automatically publish changes via a CI/CD pipeline and the `main` branch. If CI/CD changes are needed, please reach out to a team member with the specifics. 
 
 ## Contributions
 
@@ -66,7 +69,7 @@ $ git push --set-upstream origin <branch>
 
 **Step 5**. Create a PR against the `main` branch and assign it to a team member for review.
 
-**Step 6**. Once merged, a CI/CD pipeline will run on the `main` branch to publish the change/s via Netlify. This normally only take a couple of minutes.
+**Step 6**. Once merged, a CI/CD pipeline will run on the `main` branch to publish the change/s via BND Platform. This normally only take a couple of minutes.
 
 **Step 7**. Verify that your change has been propagated correctly by visiting https://wwww.pacenthink.io/
 
