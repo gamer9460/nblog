@@ -1,48 +1,41 @@
 ---
-title: "A Closer Look at Server Sent Events"
+title: "A Closer Look at Server-Sent Events"
 date: 2023-02-01T13:59:11+05:30
 draft: false
 ---
 
-Server-Sent Events (SSE) which first appeared in the HTML5 specification in late 2009 is relatively new are a simple and efficient way for a server to PUSH data to a client in real-time over HTTP.
-The goal of this article is to give you an overview on where the technology currently sits and what are some possible usecases to introduce it.
+Server-Sent Events (SSE) which first appeared in the HTML5 specification in late 2009 is a simple and efficient way for a server to PUSH data to a client in real-time over HTTP.
+The goal of this article is to give you an overview of where the technology currently sits and what are some possible use cases to introduce it.
 
 Here's a glimpse of what we will be going through
 
-- [Looking at the HTML5 Specification](#looking-at-the-html5-specification)
+- [Introduction](#introduction)
 - [What's in it for me?](#whats-in-it-for-me)
-- [Limitations of Server-Sent Events](#limitations-of-server-sent-events)
 - [A look at other real-time communication technologies](#a-look-at-other-real-time-communication-technologies)
 - [Hands on 🙌🏽](#hands-on-)
-  - [Implementing a SSE Webserver in Go](#implementing-a-sse-webserver-in-go)
+  - [Implementing a SSE Web server in Go](#implementing-a-sse-web-server-in-go)
   - [Implementing a SSE client using `EventSource`](#implementing-a-sse-client-using-eventsource)
 - [Conclusion](#conclusion)
 - [Resources](#resources)
 
-## Looking at the [HTML5 Specification](https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events)
+## Introduction
 
-SSE enables a server to send data to a client by "server push". The client establishes an HTTP connection to a server and keeps the connection open. The server can then continouslly send messages. A message is terminated by a blank line (two line terminators in a row). The data transfer mode is uni-directional beacause only the "server" is allowed to send data after establisihing a connection.
+SSE enables a server to send data to a client by "server push". The client establishes an HTTP connection to a server and keeps the connection open. The server can then continuously send messages. A message is terminated by a blank line (two line terminators in a row). The data transfer mode is uni-directional because only the "server" is allowed to send data after establishing a connection.
 
 Here's how a sample SSE stream looks like
 
-![sse](https://user-images.githubusercontent.com/34342551/216042287-b3ecb636-cd4e-46ff-b16d-8efe14770cab.svg)
-
+![sse simple architecture](https://user-images.githubusercontent.com/34342551/216042287-b3ecb636-cd4e-46ff-b16d-8efe14770cab.svg)
 
 ## What's in it for me?
 
-Although realtively knew, SSEs can be a viable solution. The offer various advantages:
+Although relatively new, SSE can be a viable solution. They offer various advantages:
 
 - Low latency and real-time updates
 - Simple and efficient server-to-client communication
 - Improved scalability and reduced server load
 
-A perfect use-case for SSE is the "notification tab 🔔" which is present on every kind of product nowadays. A server can be configured to push notifications to any client every time something happens in the product. For e.g you can award users with points every time they complete a step of onboarding.
-
-## Limitations of Server-Sent Events
-
-- Limited browser support
-- Lack of support for older browsers
-- Security concerns
+A perfect use-case for SSE is the "notification tab 🔔" which is present on every kind of product nowadays.
+A server can be configured to push notifications to any client every time something happens in the product. For, e.g. you can award users with points every time they complete a step of onboarding or add new data to their profile.
 
 ## A look at other real-time communication technologies
 
@@ -53,10 +46,10 @@ A perfect use-case for SSE is the "notification tab 🔔" which is present on ev
 
 ## Hands on 🙌🏽
 
-### Implementing a SSE Webserver in Go
+### Implementing a SSE Web server in Go
 
-Let's get down to some business, in this section we will be using [r3labs/sse](https://github.com/r3labs/sse) to implement a simple SSE webserver.
-Let's start by importing the said package and initialising our SSE server.
+Let's get down to some business, in this section we will be using [r3labs/sse](https://github.com/r3labs/sse) to implement a simple SSE web server.
+Let's start by importing the said package and initializing our SSE server.
 
 ```go
 package main
@@ -71,6 +64,13 @@ import (
 
 func main() {
 	server := sse.New()
+    // prevents replaying old messages
+    server.AutoReplay = false
+	server.Headers = map[string]string{
+		"Access-Control-Allow-Origin":  "*",
+		"Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+	}
+
 	mux := http.NewServeMux()
 
 	addr := ":8080"
@@ -84,7 +84,7 @@ func main() {
 }
 ```
 
-We now have a basic HTTP server running, lets create a stream where a client can listen for events and server can push events. We do this by calling the `CreateStream` function.
+We now have a basic HTTP server running, let's create a stream where a client can listen for events and the server can push events. We do this by calling the `CreateStream` function.
 
 ```go
 server := sse.New()
@@ -93,7 +93,7 @@ server.CreateStream("messages")
 
 Let's create 2 different handlers:
 
-1. Where we tell our server to send us an event. Thing of this endpoint which is just reponsible for triggering.
+1. Where we tell our server to send us an event. Think of this endpoint which is just responsible for triggering.
 2. Where the server will push events.
 
 ```go
@@ -102,7 +102,7 @@ mux.HandleFunc("/events", server.ServeHTTP)
 mux.HandleFunc("/trigger", logHTTPRequest(server))
 ```
 
-Here the `/events` endpoint will be used to exchange "events" and the `/trigger` endpoint will tell our server to push the events in `messages` stream that we created earlier.
+Here the `/events` endpoint will be used to exchange "events" and the `/trigger` endpoint will tell our server to push the events in the `messages` stream that we created earlier.
 
 Let's write our `logHTTPRequest` handler that will push SSE events to all clients currently subscribed.
 
@@ -119,23 +119,34 @@ func logHTTPRequest(server *sse.Server) http.HandlerFunc {
 }
 ```
 
-To publish an event we use the `server.Publish` function which takes a stream id (in our case "message") and a SSE event, `Event`.
+To publish an event we use the `server.Publish` function which takes a stream ID (in our case "message") and a SSE event, `Event` in which we are sending latest timestamp in string form.
 
-That's it we now have a SSE server to publish events, lets quickly create a HTML client as well!
+> Note that Event streams are always decoded as UTF-8.
 
-### Implementing a SSE client using `EventSource`
+That's it, we now have a SSE server to publish events. Run the server using `go run main.go` and you should see our log.
 
-As discussed previously, the HTML5 standard declares the EventSource Web API.
+```txt
+2023/02/02 22:40:39 Starting server on :8080
 
-The `EventSource()` constructor creates a new EventSource to handle receiving server-sent events from a specified URL.
+```
 
-The URL for our SSE server looks like this.
+The URL for our SSE server where we will publish events looks like this.
 
 ```bash
 http://127.0.0.1:8080/events?stream=messages
 ```
 
-Let's try to establish a SSE connection using this URL. Make sure to the server is running.
+If you had to visit this URL on a browser, you can see that the request never finishes (since its streaming)
+
+![Opening SSE URL on a browser](https://user-images.githubusercontent.com/122530514/216394847-fdbb9581-380e-417f-931b-9b0d9404d68e.gif)
+
+Our next step is to build a SSE Client where we will create a connection using this URL.
+
+### Implementing a SSE client using `EventSource`
+
+The `EventSource()` constructor creates a new EventSource to handle receiving server-sent events from a specified URL.
+
+Let's declare a boilerplate HTML code, that we will use to trigger the events from our server.
 
 ```html
 <!DOCTYPE html>
@@ -162,20 +173,26 @@ Let's try to establish a SSE connection using this URL. Make sure to the server 
         var btn = document.getElementById("triggerEvents");
         btn.addEventListener("click", triggerEvent);
 
-        // Read SSE logic
-        const evtSource = new EventSource('http://127.0.0.1:8080/events?stream=messages');
-        const eventList = document.querySelector('ul');
+        // TODO add code to listen to events and update DOM.
 
-        evtSource.onmessage = (e) => {
-            const newElement = document.createElement("li");
-
-            newElement.textContent = `message: ${e.data}`;
-            eventList.appendChild(newElement);
-        }
     </script>
 </body>
-
 </html>
+```
+
+As soon as we hit the trigger button, the server will send us an event. Let's add logic for listening to events
+
+```js
+// Read SSE logic
+const evtSource = new EventSource('http://127.0.0.1:8080/events?stream=messages');
+const eventList = document.querySelector('ul');
+
+evtSource.onmessage = (e) => {
+   const newElement = document.createElement("li");
+
+   newElement.textContent = `message: ${e.data}`;
+   eventList.appendChild(newElement);
+}
 ```
 
 Here's a demo of how the client side works.
@@ -186,5 +203,6 @@ Here's a demo of how the client side works.
 
 ## Resources
 
+- [HTML SSE Standard](https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events)
 - Make sure to show some 💚 to [r3labs/sse](https://github.com/r3labs/sse).
 - [`EventSource MDN`](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
