@@ -56,7 +56,7 @@ A perfect use-case for SSE is the "notification tab 🔔" which is present on ev
 ### Implementing a SSE Webserver in Go
 
 Let's get down to some business, in this section we will be using [r3labs/sse](https://github.com/r3labs/sse) to implement a simple SSE webserver.
-Let's start by importing the said package and initialising a SSE server.
+Let's start by importing the said package and initialising our SSE server.
 
 ```go
 package main
@@ -64,37 +64,14 @@ package main
 import (
 	"log"
 	"net/http"
-	"sse-poc/instance"
 	"time"
 
 	"github.com/r3labs/sse/v2"
 )
 
-func logHTTPRequest(w http.ResponseWriter, r *http.Request) {
-	log.Printf("Got trigger request. Sending SSE")
-
-	server := instance.SSEServer()
-	server.Publish("messages", &sse.Event{
-		Data: []byte(time.Now().String()),
-	})
-	w.Header().Add("Access-Control-Allow-Origin", "*")
-	w.WriteHeader(200)
-}
-
 func main() {
-  server := sse.New()
-  // disable replaying old events to new clients
-  server.AutoReplay = false
-  server.Headers = map[string]string{
-  	"Access-Control-Allow-Origin":  "*",
-  	"Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-  }
-
-	server.CreateStream("messages")
-
+	server := sse.New()
 	mux := http.NewServeMux()
-	mux.HandleFunc("/events", server.ServeHTTP)
-	mux.HandleFunc("/trigger", logHTTPRequest)
 
 	addr := ":8080"
 	log.Println("Starting server on", addr)
@@ -107,7 +84,58 @@ func main() {
 }
 ```
 
+We now have a basic HTTP server running, lets create a stream where a client can listen for events and server can push events. We do this by calling the `CreateStream` function.
+
+```go
+server := sse.New()
+server.CreateStream("messages")
+```
+
+Let's create 2 different handlers:
+
+1. Where we tell our server to send us an event. Thing of this endpoint which is just reponsible for triggering.
+2. Where the server will push events.
+
+```go
+mux := http.NewServeMux()
+mux.HandleFunc("/events", server.ServeHTTP)
+mux.HandleFunc("/trigger", logHTTPRequest(server))
+```
+
+Here the `/events` endpoint will be used to exchange "events" and the `/trigger` endpoint will tell our server to push the events in `messages` stream that we created earlier.
+
+Let's write our `logHTTPRequest` handler that will push SSE events to all clients currently subscribed.
+
+```go
+func logHTTPRequest(server *sse.Server) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		log.Printf("Got trigger request. Sending SSE")
+
+		server.Publish("messages", &sse.Event{
+			Data: []byte(time.Now().String()),
+		})
+		w.WriteHeader(200)
+	}
+}
+```
+
+To publish an event we use the `server.Publish` function which takes a stream id (in our case "message") and a SSE event, `Event`.
+
+That's it we now have a SSE server to publish events, lets quickly create a HTML client as well!
+
 ### Implementing a SSE client using `EventSource`
+
+As discussed previously, the HTML5 standard declares the EventSource Web API.
+
+The `EventSource()` constructor creates a new EventSource to handle receiving server-sent events from a specified URL.
+
+The URL for our SSE server looks like this.
+
+```bash
+http://127.0.0.1:8080/events?stream=messages
+```
+
+Let's try to establish a SSE connection using this URL. Make sure to the server is running.
 
 ```html
 <!DOCTYPE html>
@@ -150,8 +178,13 @@ func main() {
 </html>
 ```
 
+Here's a demo of how the client side works.
+
+![SSE Web Client Demo](https://user-images.githubusercontent.com/34342551/216331453-dcc6edd5-58b4-4487-b5d8-ccccbf792118.gif)
+
 ## Conclusion
 
 ## Resources
 
 - Make sure to show some 💚 to [r3labs/sse](https://github.com/r3labs/sse).
+- [`EventSource MDN`](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
