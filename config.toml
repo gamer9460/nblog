@@ -1,4 +1,4 @@
-baseURL = 'http://www.pacenthink.io/'
+baseURL = 'https://pacenthinkio-maddy023-main.pacenthink.co/'
 languageCode = 'en-us'
 title = "Pace 'n Think"
 theme = 'hugo-PaperMod'
