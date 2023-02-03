@@ -12,7 +12,12 @@ help : Makefile
 %:
 	hugo new content/blog/$@.md
 
-.PHONY: server
-## server : Start the Hugo server.
-server:
-	hugo server
+.PHONY: build
+## build : build docker image for hugo application
+build:
+	docker build . -t hugo
+
+.PHONY: deploy
+## deploy : deploy hugo application in docker container
+deploy:
+	docker run --rm -p 8080:8080 hugo
