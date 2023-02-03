@@ -1,4 +1,5 @@
 # The below URL is hardcoded since Mhathesh has deployed this to BND.
+# Also see: https://github.com/pacenthink/pacenthink.io/pull/10#discussion_r1095238635
 baseURL = 'https://pacenthinkio-maddy023-devops.pacenthink.co/'
 languageCode = 'en-us'
 title = "Pace 'n Think"
