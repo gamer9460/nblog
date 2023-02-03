@@ -1,4 +1,5 @@
-baseURL = 'https://pacenthinkio-maddy023-main.pacenthink.co/'
+# The below URL is hardcoded since Mhathesh has deployed this to BND.
+baseURL = 'https://pacenthinkio-maddy023-devops.pacenthink.co/'
 languageCode = 'en-us'
 title = "Pace 'n Think"
 theme = 'hugo-PaperMod'

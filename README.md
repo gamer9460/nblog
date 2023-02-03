@@ -20,19 +20,15 @@ Use the steps below to test your changes:
 
 **Step 5**. Navigate to http://localhost:8080 to view your changes. 
 
-**Step 6**. [Publish your changes](#contributions). 
+**Step 6**. [Publish your changes](#contributions).
 
 **Helpful hint**: The project includes a [Makefile](https://github.com/pacenthink/pacenthink.io/Makefile) to help you speed up testing. Run `make help` from the root of the project or see the makefile for details.
-
-## Prerequisites
-### Install Docker
-
-Check the official [Docker documentation](https://docs.docker.com/engine/) for information how to install Docker on your operating system. And then install Docker and supporting tools.
 
 ## Assumptions
 
 The repository assumes the following:
 
+- A basic understanding of [Docker](https://docs.docker.com/engine/) with Docker installed locally.
 - A basic understanding of [Git](https://git-scm.com/).
 - A basic understanding of [Hugo](https://gohugo.io). 
     - **Important Notes**: 
@@ -69,7 +65,7 @@ $ git push --set-upstream origin <branch>
 
 **Step 5**. Create a PR against the `main` branch and assign it to a team member for review.
 
-**Step 6**. Once merged, a CI/CD pipeline will run on the `main` branch to publish the change/s via BND Platform. This normally only take a couple of minutes.
+**Step 6**. Once merged, a CI/CD pipeline will run on the `main` branch to publish the change/s via the [BND Platform](https://bnd.pacenthink.co/login).
 
 **Step 7**. Verify that your change has been propagated correctly by visiting https://wwww.pacenthink.io/
 
