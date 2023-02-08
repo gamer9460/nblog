@@ -2,7 +2,7 @@
 
 A repository to house the code for https://www.pacenthink.io/
 
-## Initial Setup 
+## Initial Setup
 
 This repository was bootstrapped using the [Hugo QuickStart Guide](https://gohugo.io/getting-started/quick-start/).
 
@@ -10,17 +10,13 @@ This repository was bootstrapped using the [Hugo QuickStart Guide](https://gohug
 
 Use the steps below to test your changes:
 
-**Step 1**. Add a new blog file: `hugo new content/blog/<topic>.md` 
+**Step 1**. Add a new blog file: `hugo new content/blog/<topic>.md`
 
 **Step 2**. Edit the newly created file with the desired change/s.
 
-**Step 3**. Build Hugo Docker image locally: `make build`. 
+**Step 3**. Run Hugo locally to validate your change/s: `hugo server -D`.
 
-**Step 4**. Run Hugo locally to validate your change/s: `make deploy`. 
-
-**Step 5**. Navigate to http://localhost:8080 to view your changes. 
-
-**Step 6**. [Publish your changes](#contributions).
+**Step 4**. [Publish your changes](#contributions).
 
 **Helpful hint**: The project includes a [Makefile](https://github.com/pacenthink/pacenthink.io/Makefile) to help you speed up testing. Run `make help` from the root of the project or see the makefile for details.
 
