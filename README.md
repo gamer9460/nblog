@@ -39,7 +39,9 @@ To publish a change, create a [PR](https://docs.github.com/en/pull-requests/coll
 
 **Step 1**. Clone this project: `git@github.com:pacenthink/pacenthink.io.git`.
 
-**Step 2**. Checkout a branch:
+**Step 2**. Pull hugo theme from submodule if missing `git submodule update --init --recursive`
+
+**Step 3**. Checkout a branch:
 ```sh 
 # Feature branch
 $ git checkout -b feature/abc
@@ -48,9 +50,9 @@ $ git checkout -b feature/abc
 $ git checkout -b fix/abc
 ```
 
-**Step 3**. Validate the changes locally by executing the steps defined under [Test](#test).
+**Step 4**. Validate the changes locally by executing the steps defined under [Test](#test).
 
-**Step 4**. Commit and push the new changes to the remote:
+**Step 5**. Commit and push the new changes to the remote:
 ```
 $ git add file1 file2 ...
 
@@ -59,10 +61,10 @@ $ git commit -m "Adding some change"
 $ git push --set-upstream origin <branch>
 ```
 
-**Step 5**. Create a PR against the `main` branch and assign it to a team member for review.
+**Step 6**. Create a PR against the `main` branch and assign it to a team member for review.
 
-**Step 6**. Once merged, a CI/CD pipeline will run on the `main` branch to publish the change/s via the [BND Platform](https://bnd.pacenthink.co/login).
+**Step 7**. Once merged, a CI/CD pipeline will run on the `main` branch to publish the change/s via the [BND Platform](https://bnd.pacenthink.co/login).
 
-**Step 7**. Verify that your change has been propagated correctly by visiting https://wwww.pacenthink.io/
+**Step 8**. Verify that your change has been propagated correctly by visiting https://wwww.pacenthink.io/
 
     
