@@ -1,14 +1,14 @@
 ---
 title: "What Is Semantic Versioning"
-date: 2023-01-17T14:34:00-07:00
+date: 2023-02-07T22:00:00-07:00
 draft: false
 ---
 
-Have you ever come across an application version with the format `1.0.0` and wondered what these numbers actually mean?
+Have you ever come across an application version number with the format `v1.0.0` and wondered what the numbers `1.0.0` mean?
 
 ## Description
 
-In its simplest form, Semantic Versionining (SemVer) is a method for tracking changes in an application using the following format:
+The numbers `1.0.0` follow a system known as Semantic Versioning (SemVer). In its simplest form, SemVer is a method for tracking changes in an application using the following format:
 
 ```sh
 X       Y       Z
