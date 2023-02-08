@@ -8,7 +8,7 @@ Have you ever come across an application version number with the format `v1.0.0`
 
 ## Description
 
-The numbers `1.0.0` follow a system known as Semantic Versioning (SemVer). In its simplest form, SemVer is a method for tracking changes in an application using the following format:
+The numbers `1.0.0` follow a system known as [Semantic Versioning (SemVer)](https://semver.org). In its simplest form, SemVer is a method for tracking changes in an application using the following format:
 
 ```sh
 X       Y       Z
