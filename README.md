@@ -1,6 +1,6 @@
 # pacenthink.io
 
-A repository to house the code for https://www.pacenthink.io/
+A repository to house the code for https://pacenthinkio-maddy023-main.pacenthink.co/
 
 ## Initial Setup
 
@@ -65,6 +65,4 @@ $ git push --set-upstream origin <branch>
 
 **Step 7**. Once merged, a CI/CD pipeline will run on the `main` branch to publish the change/s via the [BND Platform](https://bnd.pacenthink.co/login).
 
-**Step 8**. Verify that your change has been propagated correctly by visiting https://wwww.pacenthink.io/
-
-    
+**Step 8**. Verify that your change has been propagated correctly by visiting https://pacenthinkio-maddy023-main.pacenthink.co/
