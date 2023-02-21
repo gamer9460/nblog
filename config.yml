@@ -23,7 +23,7 @@ params:
 
   sidebar:
     compact: false
-    emoji: 🗞️
+    # emoji: 🗞️
     subtitle: "Welcome to Pace 'n Think"
     avatar:
       enabled: true

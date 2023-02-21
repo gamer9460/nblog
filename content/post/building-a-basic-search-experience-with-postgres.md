@@ -2,6 +2,13 @@
 title: "Building a basic search experience with Postgres"
 date: 2023-01-30T20:32:20+05:30
 draft: false
+image: "img/postgres-search-experience-cover.png"
+tags: ["postgres", "sql"]
+categories: ["Engineering"]
+author: "Bhupesh Varshney"
+authorDes: "Software Craftsman | Tech Writer | DevTools 🧡 | Python & Golang"
+authorUrl: "https://github.com/Bhupesh-V"
+authorImage: "img/bhupesh-varshney.jpg"
 ---
 
 Building search functionality in products is a common task. Many solutions exist to solve this problem already. OpenSource tools like [opensearch](https://opensearch.org/) and [mellisearch](https://www.meilisearch.com/) are some examples that are very commonly used. Using a 3rd party tool to build a "full-text search" is a good bet if you have a lot of data (i.e. a lot of users).
