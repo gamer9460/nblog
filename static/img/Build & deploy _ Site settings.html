@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#continuous-deployment -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Build &amp; deploy | Site settings</title><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffffff"><meta name="google-site-verification" content="G4JqDTXMHpDyWoqIRwgw8PBqg-AncXqtdkHehcOR7kc"><meta name="description" content="Start building the best web experiences in record time"><link rel="preconnect" href="https://api.commandbar.com/" crossorigin=""><link rel="preconnect" href="https://screenshot-proxy.netlify.app/" crossorigin=""><link rel="apple-touch-icon" sizes="180x180" href="https://www.netlify.com/v3/static/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="16x16" href="https://app.netlify.com/favicon-prod-remote-default-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="https://app.netlify.com/favicon-prod-remote-default-32x32.png"><link rel="icon" type="image/png" sizes="48x48" href="https://app.netlify.com/favicon-prod-remote-default-48x48.png"><link href="./Build &amp; deploy _ Site settings_files/app.css" rel="stylesheet"><script src="./Build &amp; deploy _ Site settings_files/banner.js" type="text/javascript" id="cookieBanner-7477936" data-cookieconsent="ignore" data-hs-ignore="true" data-loader="hs-scriptloader" data-hsjs-portal="7477936" data-hsjs-env="prod" data-hsjs-hublet="na1"></script><script src="./Build &amp; deploy _ Site settings_files/7477936.js" type="text/javascript" id="hs-script-loader"></script><script type="text/javascript" async="" src="./Build &amp; deploy _ Site settings_files/analytics.js"></script><script type="text/javascript" async="" src="./Build &amp; deploy _ Site settings_files/7477936(1).js" id="hs-analytics"></script><script type="text/javascript" async="" src="./Build &amp; deploy _ Site settings_files/gtm.js"></script><script type="text/javascript" src="./Build &amp; deploy _ Site settings_files/commons.c42222c4cb2f8913500f.js.gz" async="" status="loaded"></script><script type="text/javascript" src="./Build &amp; deploy _ Site settings_files/hotjar.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" src="./Build &amp; deploy _ Site settings_files/visual-tagger.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" src="./Build &amp; deploy _ Site settings_files/hubspot.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" src="./Build &amp; deploy _ Site settings_files/google-tag-manager.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" src="./Build &amp; deploy _ Site settings_files/ed984d68b220640a83ac.js" async="" status="loaded"></script><script async="" src="./Build &amp; deploy _ Site settings_files/analytics.min.js"></script><script async="" type="module" src="./Build &amp; deploy _ Site settings_files/userflow.js"></script><link rel="prefetch" as="script" href="https://app.netlify.com/framework-info.bundle.js"><script async="" src="./Build &amp; deploy _ Site settings_files/hotjar-3115010.js"></script><script async="" src="./Build &amp; deploy _ Site settings_files/modules.bca0d1c28285412bb689.js" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script charset="utf-8" src="./Build &amp; deploy _ Site settings_files/13.5e21898857f4389ff4e3.chunk.js"></script><style id="_goober"> @keyframes go2264125279{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go3020080000{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}@keyframes go463499852{from{transform:scale(0) rotate(90deg);opacity:0;}to{transform:scale(1) rotate(90deg);opacity:1;}}@keyframes go1268368563{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes go1310225428{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go651618207{0%{height:0;width:0;opacity:0;}40%{height:0;width:6px;opacity:1;}100%{opacity:1;height:10px;}}@keyframes go901347462{from{transform:scale(0.6);opacity:0.4;}to{transform:scale(1);opacity:1;}}.go4109123758{z-index:9999;}.go4109123758 > *{pointer-events:auto;}</style><style>#commandbar-wrapper *,
+#commandbar-wrapper *:before,
+#commandbar-wrapper *:after {
+  box-sizing: border-box;
+}
+
+.commandbar-modal > .rc-dialog > .rc-dialog-content {
+  background-color: transparent;
+  /* Enables 3d animations within the bar */
+  perspective: 100px;
+}
+
+.commandbar-tooltip {
+  z-index: 2147483647 !important; /*make the tooltip the highest possible z index*/
+}
+
+/*** Hack: Hide this because it's less flexible (classnames can't be changes)
+    Instead we only show its children, by translating its children ***/
+.commandbar-modal > .rc-dialog > .rc-dialog-content > .rc-dialog-header {
+  max-height: 0px !important;
+  padding: 0px !important;
+}
+
+.commandbar-modal > .rc-dialog {
+  left: 0px;
+  transition: left 0.3s;
+}
+
+.commandbar-modal > .rc-dialog > .rc-dialog-content > .rc-dialog-body {
+  position: relative !important;
+}
+
+/* TestMode inline CommandBar */
+.commandbar-modal-inline.rc-dialog-wrap {
+  position: relative;
+  height: 100%;
+}
+
+#commandbar-container > div {
+  height: 100%;
+}
+
+#commandbar-home > .rc-dialog-root {
+  height: 100%;
+}
+
+#commandbar-wrapper .rc-header-guidance {
+  background: rgba(174, 177, 221, 1) !important;
+  filter: brightness(135%);
+  border-radius: 2px 2px 0px 0px !important;
+  border-bottom: 0px !important;
+  padding: 8px 30px 2px 30px !important;
+  margin: 0px 10px 0px 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px !important;
+  font-weight: 400;
+  text-align: center;
+}
+
+@keyframes fontbulger {
+  0% {
+    font-size: 10px;
+  }
+  30% {
+    font-size: 15px;
+  }
+  100% {
+    font-size: 12px;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+.commandbar-category-collapse {
+  transform: scale(1, -1);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.commandbar-category-expand {
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+</style><style>/*** Guidance banner styling and animation ***/
+@keyframes example {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-30px);
+  }
+}
+
+.rc-header-guidance {
+  animation: example 0.5s; /* IE 10+, Fx 29+ */
+  -webkit-animation: example 0.5s; /* Safari 4+ */
+  -moz-animation: example 0.5s; /* Fx 5+ */
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards; /* Safari 4+ */
+  -moz-animation-fill-mode: forwards; /* Fx 5+ */
+}
+
+/*** CommandBar entry animation ***/
+/*** We can't do exit animation because rc-dialog makes display: none ***/
+@keyframes onEntry {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.commandbar-opened {
+  animation: onEntry 0.1s; /* IE 10+, Fx 29+ */
+  -webkit-animation: onEntry 0.1s; /* Safari 4+ */
+  -moz-animation: onEntry 0.1s; /* Fx 5+ */
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards; /*   Safari 4+ */
+  -moz-animation-fill-mode: forwards; /*  Fx 5+ */
+}
+
+@keyframes onSelect {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  50% {
+    transform: translate3d(0px, 0px, -0.5px);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+.commandbar-selected {
+  animation: onSelect 0.4s; /* IE 10+, Fx 29+ */
+  -webkit-animation: onSelect 0.4s; /* Safari 4+ */
+  -moz-animation: onSelect 0.4s; /* Fx 5+ */
+}
+
+@keyframes ScaleEntry {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.commandbar-scale-entry-animation {
+  animation: ScaleEntry 0.3s; /* IE 10+, Fx 29+ */
+  -webkit-animation: ScaleEntry 0.3s; /* Safari 4+ */
+  -moz-animation: ScaleEntry 0.3s; /* Fx 5+ */
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards; /*   Safari 4+ */
+  -moz-animation-fill-mode: forwards; /*  Fx 5+ */
+}
+
+.commandbar-shortcut-tooltip {
+  opacity: 0;
+  animation: tagEntry 0.2s;
+  animation-delay: 0.5s;
+  -webkit-animation: tagEntry 0.2s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation: tagEntry 0.2s;
+  -moz-animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+}
+
+@keyframes tagExit {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+.commandbar-shortcut-tooltip-remove {
+  animation: tagExit 0.2s; /* IE 10+, Fx 29+ */
+  -webkit-animation: tagExit 0.2s; /* Safari 4+ */
+  -moz-animation: tagExit 0.2s; /* Fx 5+ */
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards; /*   Safari 4+ */
+  -moz-animation-fill-mode: forwards; /*  Fx 5+ */
+}
+
+.commandbar-shortcut-tooltip,
+.commandbar-shortcut-tooltip-remove {
+  z-index: 99999999;
+  position: absolute;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: proxima-nova, sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.commandbar-shortcut-tooltip-tag {
+  margin-left: 10px;
+  padding: 2px 5px;
+  border-radius: 2px;
+  background-color: grey;
+}
+
+#commandbar-launcher {
+  animation: 0.25s ease-out scaleIn;
+}
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes growFromBottom {
+  0% {
+    transform: scale(1, 0.3);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.commandbar-animation-fade-in {
+  animation: 0.3s ease-out onEntry;
+  transform-origin: 100% 100%;
+}
+@keyframes moveLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -110;
+  }
+}
+
+@keyframes commandbar-animation-shake {
+  10%,
+  90% {
+    transform: translate3d(-0.5px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+
+.commandbar-blocks-animation {
+  animation: moveLeft 0.4s; /* IE 10+, Fx 29+ */
+  -webkit-animation: moveLeft 0.4s; /* Safari 4+ */
+  -moz-animation: moveLeft 0.4s; /* Fx 5+ */
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards; /*   Safari 4+ */
+  -moz-animation-fill-mode: forwards; /*  Fx 5+ */
+}
+</style><style>.rc-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.rc-dialog-wrap {
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.rc-dialog-title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+}
+.rc-dialog-content {
+  position: relative;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 6px 6px;
+  background-clip: padding-box;
+}
+.rc-dialog-close {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  font-size: 21px;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+  text-decoration: none;
+}
+.rc-dialog-close-x:after {
+  content: '×';
+}
+.rc-dialog-close:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  text-decoration: none;
+}
+.rc-dialog-header {
+  padding: 13px 20px 14px 20px;
+  border-radius: 5px 5px 0 0;
+  background: #fff;
+  color: #666;
+  border-bottom: 1px solid #e9e9e9;
+}
+.rc-dialog-body {
+  padding: 20px;
+}
+.rc-dialog-footer {
+  border-top: 1px solid #e9e9e9;
+  padding: 10px 20px;
+  text-align: right;
+  border-radius: 0 0 5px 5px;
+}
+.rc-dialog-zoom-enter,
+.rc-dialog-zoom-appear {
+  opacity: 0;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+  animation-play-state: paused;
+}
+.rc-dialog-zoom-leave {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  animation-play-state: paused;
+}
+.rc-dialog-zoom-enter.rc-dialog-zoom-enter-active,
+.rc-dialog-zoom-appear.rc-dialog-zoom-appear-active {
+  animation-name: rcDialogZoomIn;
+  animation-play-state: running;
+}
+.rc-dialog-zoom-leave.rc-dialog-zoom-leave-active {
+  animation-name: rcDialogZoomOut;
+  animation-play-state: running;
+}
+@keyframes rcDialogZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes rcDialogZoomOut {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+}
+@media (min-width: 768px) {
+  .rc-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+}
+.rc-dialog-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #373737;
+  background-color: rgba(55, 55, 55, 0.6);
+  height: 100%;
+  filter: alpha(opacity=50);
+  z-index: 1050;
+}
+.rc-dialog-mask-hidden {
+  display: none;
+}
+.rc-dialog-fade-enter,
+.rc-dialog-fade-appear {
+  opacity: 0;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-play-state: paused;
+}
+.rc-dialog-fade-leave {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-play-state: paused;
+}
+.rc-dialog-fade-enter.rc-dialog-fade-enter-active,
+.rc-dialog-fade-appear.rc-dialog-fade-appear-active {
+  animation-name: rcDialogFadeIn;
+  animation-play-state: running;
+}
+.rc-dialog-fade-leave.rc-dialog-fade-leave-active {
+  animation-name: rcDialogFadeOut;
+  animation-play-state: running;
+}
+@keyframes rcDialogFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rcDialogFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+</style><style>.commandbar-search-filter-block,
+.commandbar-block,
+.commandbar-block-background-left,
+.commandbar-block-background-top {
+  line-height: 19.2px;
+  min-width: 0px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+  transition: color ease-in 0.3s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.commandbar-search-filter-block {
+  padding: 4px;
+}
+
+.commandbar-block-background-left {
+  margin: 0px 4px 8px 4px;
+}
+
+.commandbar-block-background-top:first-child {
+  margin-left: 0px;
+}
+
+.commandbar-block-background-top {
+  margin: 4px;
+}
+
+.commandbar-blocks-container-left {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -110px;
+  max-width: 100px;
+  z-index: -1;
+  overflow: visible;
+  align-items: flex-end;
+  top: 0px;
+}
+
+.commandbar-blocks-container-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+</style><style>/*
+* rc-tooltip styles
+* TODO set up a less loader and use the built in rc-tooltip.less files instead
+* of manually overwriting the css file with specific selectors
+*/
+
+.commandbar-tooltip.commandbar-tooltip-zoom-enter,
+.commandbar-tooltip.commandbar-tooltip-zoom-leave {
+  display: block;
+}
+.commandbar-tooltip-zoom-enter,
+.commandbar-tooltip-zoom-appear {
+  opacity: 0;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  animation-play-state: paused;
+}
+.commandbar-tooltip-zoom-leave {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
+  animation-play-state: paused;
+}
+.commandbar-tooltip-zoom-enter.commandbar-tooltip-zoom-enter-active,
+.commandbar-tooltip-zoom-appear.commandbar-tooltip-zoom-appear-active {
+  animation-name: rcToolTipZoomIn;
+  animation-play-state: running;
+}
+.commandbar-tooltip-zoom-leave.commandbar-tooltip-zoom-leave-active {
+  animation-name: rcToolTipZoomOut;
+  animation-play-state: running;
+}
+@keyframes rcToolTipZoomIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+}
+@keyframes rcToolTipZoomOut {
+  0% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
+}
+.commandbar-tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  visibility: visible;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+.commandbar-tooltip-hidden {
+  display: none;
+}
+.commandbar-tooltip-placement-top,
+.commandbar-tooltip-placement-topLeft,
+.commandbar-tooltip-placement-topRight {
+  padding: 5px 0 9px 0;
+}
+.commandbar-tooltip-placement-right,
+.commandbar-tooltip-placement-rightTop,
+.commandbar-tooltip-placement-rightBottom {
+  padding: 0 5px 0 9px;
+}
+.commandbar-tooltip-placement-bottom,
+.commandbar-tooltip-placement-bottomLeft,
+.commandbar-tooltip-placement-bottomRight {
+  padding: 9px 0 5px 0;
+}
+.commandbar-tooltip-placement-left,
+.commandbar-tooltip-placement-leftTop,
+.commandbar-tooltip-placement-leftBottom {
+  padding: 0 9px 0 5px;
+}
+.commandbar-tooltip-inner {
+  padding: 8px 10px;
+  color: #d5d6d7 !important;
+  text-align: left;
+  text-decoration: none;
+  background-color: #373737;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
+}
+
+.commandbar-tooltip-inner > span {
+  color: inherit;
+}
+
+.commandbar-tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.commandbar-tooltip-placement-top .commandbar-tooltip-arrow,
+.commandbar-tooltip-placement-topLeft .commandbar-tooltip-arrow,
+.commandbar-tooltip-placement-topRight .commandbar-tooltip-arrow {
+  bottom: 4px;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #373737;
+}
+.commandbar-tooltip-placement-top .commandbar-tooltip-arrow {
+  left: 50%;
+}
+.commandbar-tooltip-placement-topLeft .commandbar-tooltip-arrow {
+  left: 15%;
+}
+.commandbar-tooltip-placement-topRight .commandbar-tooltip-arrow {
+  right: 15%;
+}
+.commandbar-tooltip-placement-right .commandbar-tooltip-arrow,
+.commandbar-tooltip-placement-rightTop .commandbar-tooltip-arrow,
+.commandbar-tooltip-placement-rightBottom .commandbar-tooltip-arrow {
+  left: 4px;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #373737;
+}
+.commandbar-tooltip-placement-right .commandbar-tooltip-arrow {
+  top: 50%;
+}
+.commandbar-tooltip-placement-rightTop .commandbar-tooltip-arrow {
+  top: 15%;
+  margin-top: 0;
+}
+.commandbar-tooltip-placement-rightBottom .commandbar-tooltip-arrow {
+  bottom: 15%;
+}
+.commandbar-tooltip-placement-left .commandbar-tooltip-arrow,
+.commandbar-tooltip-placement-leftTop .commandbar-tooltip-arrow,
+.commandbar-tooltip-placement-leftBottom .commandbar-tooltip-arrow {
+  right: 4px;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #373737;
+}
+.commandbar-tooltip-placement-left .commandbar-tooltip-arrow {
+  top: 50%;
+}
+.commandbar-tooltip-placement-leftTop .commandbar-tooltip-arrow {
+  top: 15%;
+  margin-top: 0;
+}
+.commandbar-tooltip-placement-leftBottom .commandbar-tooltip-arrow {
+  bottom: 15%;
+}
+.commandbar-tooltip-placement-bottom .commandbar-tooltip-arrow,
+.commandbar-tooltip-placement-bottomLeft .commandbar-tooltip-arrow,
+.commandbar-tooltip-placement-bottomRight .commandbar-tooltip-arrow {
+  top: 4px;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #373737;
+}
+.commandbar-tooltip-placement-bottom .commandbar-tooltip-arrow {
+  left: 50%;
+}
+.commandbar-tooltip-placement-bottomLeft .commandbar-tooltip-arrow {
+  left: 15%;
+}
+.commandbar-tooltip-placement-bottomRight .commandbar-tooltip-arrow {
+  right: 15%;
+}
+</style><style>.styles_poweredContainer__YRbFW {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.styles_poweredContainer__YRbFW:hover {
+  opacity: 1;
+}
+</style><script charset="utf-8" src="./Build &amp; deploy _ Site settings_files/6.6e08dbc9e19a3929413c.chunk.js"></script><script charset="utf-8" src="./Build &amp; deploy _ Site settings_files/1.1f5c76280b1df4a7d118.chunk.js"></script><style data-emotion="css" data-s=""></style></head><body data-new-gr-c-s-check-loaded="14.1095.0" data-gr-ext-installed="" class=""><script src="./Build &amp; deploy _ Site settings_files/s.js"></script><svg style="bottom: 0; position: absolute; z-index: -1" aria-hidden="true"><defs><radialgradient id="netlify-logo-gradient" cx="0%" cy="0%" r="100%" fx="0%" fy="0%"><stop offset="0%" stop-color="#20C6B7"></stop><stop offset="100%" stop-color="#4D9ABF"></stop></radialgradient><path id="netlify-logomark" d="m297 88-8 50c3 1 5 2 7 5l39-17-38-38zm-34 69c-.5-2-.5-2.9 0-5l-58-25c-4 7-14 11-22 9l-49 76 129-55zm-59-54c2 2 4 7 4 11l62 27c2-2 3-3 6-4l10-60-40-40-42 66zm-98-18-47 47 51 74c4-1 8-2 13 0l48-76c-5-5-7-13-5-20l-60-25zm160 190-12 80 75.9-75.9L276 268c-2 4-6 6-10 7zm36-121 98 41.9a9 9 0 0 0-.6-2.2c-1.5-4.9-6-9.3-14.4-17.7l-40-41-43 19zm-59 107-105.1-21c-.9 2-.9 2-1.9 3l94 136 8-8 16-96c-6-3-10-8-11-14zM74 282l23-36c-1-1-1-1-2-3l-43 18 22 21zm223-116c-3 5-8 7-13 7l-12 71c4 3 6 6 7 12l62 12 44-44a76.7 76.7 0 0 0 13-15l-101-43zM91 230 4.8 212.9c2.3 2.9 5.6 6.5 10.2 11.1l27 27 49-21zm35 21c-5 3-13 3-18 1l-25 40 94 93c8.4 8.4 12.1 12.5 17 14 4.1 1.3 8.4 1.3 12.5 0s7.3-3.9 13.5-10l-94-138zm142.5-82.5L140 223c1 2 1 3 1 5l104 21c3-6 9-9 15-9l11-70c-1 0-2-1-2.5-1.5zM94 218c2-4 1-3 5-6l-49-71-34.9 35.2C6.7 184.6 2.5 188.8.9 193.7c-.5 1.7-.8 3.5-.9 5.3l94 19zm79-118c5-5 14-6 21-4l43-68-13-12.9C215.6 6.7 211.4 2.5 206.5 1a20.8 20.8 0 0 0-12.6 0c-4.9 1.5-9.5 6.6-17.9 15l-60 59 57 25z"></path><symbol id="netlify-logo" viewBox="0 0 400 400"><use xlink:href="#netlify-logomark" fill="url(#netlify-logo-gradient)"></use></symbol><symbol id="netlify-logo-mono" viewBox="0 0 400 400"><use xlink:href="#netlify-logomark" fill="inherit"></use></symbol></defs></svg><div id="root" tabindex="-1"><div role="status" aria-live="polite" aria-atomic="true" class="visuallyhidden" style=""></div><div class="app" style=""><header class="app-header" role="banner"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#main" class="skip-to-main">Skip to main content</a><div class="container"><div class="tw-flex tw-justify-between"><ol class="tw-flex tw-flex-wrap tw-items-start tw-list-none tw-mx-[-12px] tw-my-0 tw-p-0 tw-flex-col tw-text-xl tw-text-white md:tw-flex-row md:tw-items-center" aria-label="Breadcrumb"><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest tw-text-xl tw-text-black tw-underline dark:tw-text-white tw-text-underline-offset-4 active tw-flex tw-items-center tw-p-0 tw-ml-1 hover:!tw-bg-transparent" data-testid="logo-container" data-test-to="/teams/devrajrangani411" href="https://app.netlify.com/teams/devrajrangani411"><div class="tw-w-4 tw-h-4"><svg width="40" height="40"><title>Netlify</title><use xlink:href="#netlify-logo"></use></svg></div></a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest tw-text-xl !tw-pr-[4px] !tw-mr-[-10px] after:tw-ml-[-12px] after:tw-align-middle after:tw-bg-gray-dark after:tw-inline-block after:tw-mask-image-icon-caret-down after:tw-mask-center after:tw-mask-no-repeat after:tw-transform after:tw--rotate-90 after:tw-relative after:tw-w-[12px] after:tw-h-[12px] after:tw-content-empty dark:after:tw-bg-gray-light" href="https://app.netlify.com/teams/devrajrangani411"><span class="tw-mr-[20px]">Devraj’s team</span></a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest tw-text-xl tw-text-black tw-underline dark:tw-text-white tw-text-underline-offset-4 active tw-text-black tw-underline dark:tw-text-white tw-text-underline-offset-4 active" aria-current="location" href="https://app.netlify.com/sites/thunderous-praline-89f77e">thunderous-praline-89f77e</a></li></ol><div class="tw-flex tw-flex-wrap tw-justify-end tw-self-start lg:tw-self-center"><div class="tw-order-2 tw-mt-2 tw-flex tw-flex-full tw-items-end tw-justify-end lg:tw-order-0 lg:tw-mr-1 lg:tw-mt-0 lg:tw-flex-auto"><a class="btn btn-default btn-primary btn-primary--pop tw-w-auto" href="https://app.netlify.com/teams/devrajrangani411/billing/pricing">Upgrade</a></div><button class="btn btn-default btn-secondary btn-secondary--standard tw-hidden lg:tw-block tw-mx-1 tw-py-[5px] tw-pl-[8px] tw-pr-[6px] tw-bg-gray-lightest hover:tw-bg-gray-lighter dark:tw-bg-gray-darkest dark:hover:tw-bg-gray-darker tw-border-[1px] tw-border-solid tw-border-gray-light dark:tw-border-gray-dark tw-text-gray-darker hover:tw-text-black dark:tw-text-gray-lighter dark:hover:tw-text-white" type="button"><span class="tw-flex tw-items-center"><svg width="24" height="24" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw-mr-1 tw-flex-shrink-0" focusable="false"><path d="M2.96 6.79a3.83 3.83 0 1 1 7.66 0 3.83 3.83 0 0 1-7.66 0Zm3.83-5.63a5.63 5.63 0 1 0 3.29 10.2l3.04 3.04a.9.9 0 1 0 1.28-1.28l-3.05-3.04A5.63 5.63 0 0 0 6.8 1.16Z"></path></svg><span class="tw-mr-1">Search anything</span></span></button><button class="btn btn-icon btn-tertiary btn-tertiary--standard tw-block lg:tw-hidden tw-mx-[4px] md:tw-mx-1 active:tw-bg-teal-lightest active:tw-text-teal-darkest dark:active:tw-text-white dark:hover:tw-text-white dark:tw-text-gray-light focus:tw-text-teal-darkest hover:tw-bg-teal-lightest hover:tw-text-teal-darkest tw-bg-transparent tw-text-gray-darker" type="button"><span class="tw-absolute tw-top-1/2 tw-left-1/2 tw--translate-x-1/2 tw--translate-y-1/2 tw-transform"><svg width="24" height="24" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="!tw-fill-current tw-align-bottom" role="img"><title>Command Palette</title><path d="M2.96 6.79a3.83 3.83 0 1 1 7.66 0 3.83 3.83 0 0 1-7.66 0Zm3.83-5.63a5.63 5.63 0 1 0 3.29 10.2l3.04 3.04a.9.9 0 1 0 1.28-1.28l-3.05-3.04A5.63 5.63 0 0 0 6.8 1.16Z"></path></svg></span></button><a class="btn btn-icon btn-tertiary btn-tertiary--standard tw-mx-[4px] md:tw-mx-1 active:tw-bg-teal-lightest active:tw-text-teal-darkest dark:active:tw-text-white dark:hover:tw-text-white dark:tw-text-gray-light focus:tw-text-teal-darkest hover:tw-bg-teal-lightest hover:tw-text-teal-darkest tw-bg-transparent tw-text-gray-darker" href="https://app.netlify.com/user/labs"><span class="tw-absolute tw-top-1/2 tw-left-1/2 tw--translate-x-1/2 tw--translate-y-1/2 tw-transform"><svg width="24" height="24" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="!tw-fill-current tw-align-bottom" role="img"><title>Netlify Labs</title><path fill-rule="evenodd" d="M5.79 1.25a.9.9 0 0 0-.89.9c0 .46.34.84.78.9v2.8a.6.6 0 0 1-.11.35l-3.42 4.75a2.4 2.4 0 0 0 1.95 3.8h7.8a2.4 2.4 0 0 0 1.94-3.8L10.43 6.2a.6.6 0 0 1-.11-.35v-2.8a.9.9 0 0 0 .78-.9c0-.5-.4-.9-.89-.9H5.8Zm2.73 1.8H7.48v2.8c0 .5-.16 1-.45 1.4L5.27 9.7c.6.39 1.67.19 2.73 0 1.04-.2 2.09-.4 2.7-.04l-1.73-2.4c-.3-.42-.45-.9-.45-1.4V3.04Z"></path></svg></span></a><div class="md:tw-mx-1 md:tw-relative tw-mx-[4px] tw-static tw-w-button-icon" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="downshift-89-label"><button aria-label="Notifications. Open menu" role="button" aria-haspopup="true" data-toggle="true" for="downshift-89-input" id="downshift-89-label" class="btn btn-icon btn-tertiary btn-tertiary--standard hover:tw-text-teal-darkest hover:tw-bg-teal-lightest focus:tw-text-teal-darkest active:tw-text-teal-darkest active:tw-bg-teal-lightest dark:hover:tw-text-white dark:focus:tw-text-white dark:active:tw-text-white tw-text-gray-darker tw-bg-transparent dark:tw-text-gray-light" type="button"><span class="tw-absolute tw-top-1/2 tw-left-1/2 tw--translate-x-1/2 tw--translate-y-1/2 tw-transform"><svg width="24" height="24" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="!tw-fill-current tw-align-bottom" role="img"><title>Unread notifications</title><path d="M9.12 1.16A3 3 0 0 0 12.18 5l.03.51v1.1c0 .78.7 2.08 1.06 2.76.41.75.73 1.62.73 2.14 0 .77-.62 1.5-1.4 1.5H3.4c-.77 0-1.4-.69-1.4-1.5 0-.52.32-1.4.73-2.14.36-.68 1.06-1.98 1.06-2.75V5.5C3.8 3.07 5.68 1 8 1c.39 0 .76.06 1.12.16ZM10 14a2 2 0 1 1-4 0h4Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10 2a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z" fill="#FF6B60"></path></svg></span></button></div><div class="md:tw-mx-1 md:tw-relative tw-mx-[4px] tw-static tw-w-button-icon" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="downshift-90-label"><button aria-label="Support. Open menu" role="button" aria-haspopup="true" data-toggle="true" for="downshift-90-input" id="downshift-90-label" class="btn btn-icon btn-tertiary btn-tertiary--standard hover:tw-text-teal-darkest hover:tw-bg-teal-lightest focus:tw-text-teal-darkest active:tw-text-teal-darkest active:tw-bg-teal-lightest dark:hover:tw-text-white dark:active:tw-text-white tw-text-gray-darker tw-bg-transparent dark:tw-text-gray-light" type="button"><span class="tw-absolute tw-top-1/2 tw-left-1/2 tw--translate-x-1/2 tw--translate-y-1/2 tw-transform"><svg width="26" height="26" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="!tw-fill-current tw-align-bottom" role="img"><title>Support</title><path d="M12.85 13.05a6.98 6.98 0 0 1-9.3.36l.05-.19v-.02l.03-.07a4.2 4.2 0 0 1 1.94-2.27 3.73 3.73 0 0 0 5.02-.15l.32.14.02.01.07.04a4.2 4.2 0 0 1 1.84 2.15Zm.73-.82a6.97 6.97 0 0 0-.28-8.8l-.14.04-.02.01-.07.03-.3.15a4.2 4.2 0 0 0-1.79 1.98v.02l-.02.04a3.73 3.73 0 0 1 .27 4.2l.08.04h.02a1.75 1.75 0 0 1 .14.08l.37.22a5.2 5.2 0 0 1 1.74 1.99Zm-1.05-9.57a5.2 5.2 0 0 0-2.33 2.3 3.73 3.73 0 0 0-4.4 0l-.08-.17a5.2 5.2 0 0 0-2.25-2.13 6.97 6.97 0 0 1 9.06 0Zm-9.83.77a6.97 6.97 0 0 0 .05 9.2l.09-.22a5.2 5.2 0 0 1 2.05-2.31 3.73 3.73 0 0 1 .15-4.4l-.01-.04-.01-.02-.03-.07a4.2 4.2 0 0 0-2.13-2.09h-.02l-.14-.05Z"></path></svg></span></button></div><div class="dropdown tw-ml-[4px] tw-h-[36px] tw-w-[36px] md:tw-ml-1" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="User. Open menu" aria-haspopup="true" data-toggle="true" name="User" class="btn btn-default btn-tertiary btn-tertiary--standard tw-rounded-50 tw-w-[36px] tw-h-[36px] hover:tw-shadow-teal tw-relative" type="button"><img class="tw-rounded-50 tw-inline-block tw-overflow-hidden tw-self-center tw-object-cover tw-h-avatar-md tw-w-avatar-md tw-leading-normal tw-border-gray-lightest tw-border-solid tw-border tw-absolute tw-m-0 tw-top-0 tw-left-0 dark:tw-border-gray-dark" src="./Build &amp; deploy _ Site settings_files/47136680" width="32" height="32" alt="" title="" loading="lazy"></button><ul class="dropdown-inner dropdown-menu tw-top-4 tw-mt-[4px] tw-left-auto tw-right-0"><li><a id="downshift-91-item-0" role="option" aria-selected="false" class="menuitem"><div><strong class="h4">Devraj<br></strong><small class="subdued">devraj.rangani411@gmail.com</small></div></a></li><li><a id="downshift-91-item-1" role="option" aria-selected="false" class="menuitem">User settings</a></li><li><a id="downshift-91-item-2" role="option" aria-selected="false" class="menuitem">Sign out</a></li></ul></div></div></div><nav aria-label="Secondary navigation" class="tw--mb-1"><ul class="tw-flex tw-flex-wrap tw-items-center tw-list-none tw-mx-[-12px] tw-my-0 tw-p-0"><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://app.netlify.com/sites/thunderous-praline-89f77e/overview">Site overview</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://app.netlify.com/sites/thunderous-praline-89f77e/deploys">Deploys</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://app.netlify.com/sites/thunderous-praline-89f77e/functions">Functions</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://app.netlify.com/sites/thunderous-praline-89f77e/edge-functions">Edge Functions</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://app.netlify.com/sites/thunderous-praline-89f77e/integrations">Integrations</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://app.netlify.com/sites/thunderous-praline-89f77e/forms">Forms</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://app.netlify.com/sites/thunderous-praline-89f77e/large-media">Large Media</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://app.netlify.com/sites/thunderous-praline-89f77e/splits">Split Testing</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://app.netlify.com/sites/thunderous-praline-89f77e/analytics">Analytics</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://app.netlify.com/sites/thunderous-praline-89f77e/graph">Graph</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest tw-text-black tw-underline dark:tw-text-white tw-text-underline-offset-4 active" aria-current="page" href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings">Site settings</a></li></ul></nav></div></header><main id="main" class="app-main" role="main" tabindex="-1"><div class="container"><div class="card card-hero media"><a class="media-figure tw-screenshot" target="_blank" rel="noopener noreferrer" href="https://thunderous-praline-89f77e.netlify.app/" title="Go to site thunderous-praline-89f77e"><picture class="tw-border-none tw-m-0 tw-p-0 tw-block tw-w-full tw-align-middle tw-max-w-full tw-h-auto"><source srcset="https://screenshot-proxy.netlify.app/f_avif,w_336/https://d33wubrfki0l68.cloudfront.net/63dd30393b5ef41144f94d93/screenshot_2023-02-03-16-03-16-0000.png" type="image/avif"><source srcset="https://screenshot-proxy.netlify.app/f_webp,w_336/https://d33wubrfki0l68.cloudfront.net/63dd30393b5ef41144f94d93/screenshot_2023-02-03-16-03-16-0000.png" type="image/webp"><img src="./Build &amp; deploy _ Site settings_files/screenshot_2023-02-03-16-03-16-0000.png" alt="" width="168" height="105" loading="lazy" class="tw-align-top"></picture></a><div class="media-body"><h1 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between">Settings for thunderous-praline-89f77e</h1><p><a class="tw-text-inherit tw-underline tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit" target="_blank" rel="noopener noreferrer" href="https://thunderous-praline-89f77e.netlify.app/">thunderous-praline-89f77e.netlify.app</a></p><p class="tw-flex-auto tw-items-center tw-break-all">Deploys from <span class="tw-mr-[0.3em]"><a class="tw-text-inherit tw-underline tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-break-words" target="_blank" rel="noopener noreferrer" href="https://github.com/DevrajRangani411/hugo-poc">GitHub</a></span><span class="tw-inline-flex tw-items-center tw-whitespace-nowrap">with<svg viewBox="0 0 346 388" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw-ml-[0.4em] tw-mr-[0.2em] tw-h-[1em] tw-w-[1em] tw-pt-[0.1em]"><path fill-rule="evenodd" clip-rule="evenodd" d="M310.22 87.67 195.81 21.13a51.001 51.001 0 0 0-52.42.69L40.59 85.28a54.998 54.998 0 0 0-26.1 46.8v129.47a52.998 52.998 0 0 0 26.56 45.93l104.57 60.19a48.996 48.996 0 0 0 48.48.23l113.55-63.94a47.996 47.996 0 0 0 24.45-41.82V125.71a44 44 0 0 0-21.88-38.04ZM93.91 89.7v207.22h43.35v-90.61h71.92v90.61h43.48V89.7h-43.48v75.48h-71.92V89.7H93.91Z"></path></svg>Hugo</span>.</p><p>Owned by <a class="tw-text-inherit tw-underline tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit" href="https://app.netlify.com/teams/devrajrangani411">Devraj's team</a>.</p><p><time datetime="2023-02-03T16:11:25.224Z" title="Fri, Feb 3, 2023 at 9:41 PM" aria-label="Last update at 9:41 PM">Last update at 9:41&nbsp;PM<span class="tw-hidden md:tw-inline"> (a few seconds ago)</span></time></p></div></div><div class="layout-sidebar"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#content" class="tw-sr-only focus:tw-not-sr-only tw-bg-teal-darker tw-text-white tw-block tw-text-sm tw-l-0 tw-absolute tw-py-0 focus:tw-pr-1 focus:tw-pl-1 tw-mb-2 tw-t-0 focus:tw-h-3 focus:tw-absolute">Skip to content</a><nav class="sidebar tw-mt-3 md:tw-mt-3 0"><ul class="tw-space-y-[4px] tw-overflow-hidden tw-rounded-lg tw-border-px tw-border-solid tw-border-gray-light tw-bg-white tw-p-1 dark:tw-border-gray dark:tw-bg-black-darker" data-cy="sidenav" aria-label="Sidebar"><li class="tw-w-full tw-leading-4"><a class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-w-full tw-rounded-sm tw-px-2 tw-py-1 tw-leading-3 tw-transition tw-duration-200 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest !tw-font-semibold" href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/general">General</a></li><li data-cy="sidenav-item-active" aria-current="page" class="tw-w-full tw-leading-4"><a class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-w-full tw-rounded-sm tw-px-2 tw-py-1 tw-leading-3 tw-transition tw-duration-200 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest !tw-font-bold !tw-text-black hover:!tw-text-teal-darkest dark:!tw-text-white dark:hover:!tw-text-teal-lightest" href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys">Build &amp; deploy</a><ul class=""><li class="tw-my-[4px] first:tw-mb-[2px] first:tw-mt-[4px] last:tw-mt-[2px] last:tw-mb-0 tw-bg-gray-lighter dark:tw-bg-gray-darker !tw-text-black dark:!tw-text-white !tw-font-semibold tw-rounded-sm"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#continuous-deployment" class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-rounded-sm tw-py-1 tw-pl-[32px] tw-text-sm !tw-font-medium tw-leading-3 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest">Continuous deployment</a></li><li class="tw-my-[4px] first:tw-mb-[2px] first:tw-mt-[4px] last:tw-mt-[2px] last:tw-mb-0"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#environment" class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-rounded-sm tw-py-1 tw-pl-[32px] tw-text-sm !tw-font-medium tw-leading-3 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest">Environment</a></li><li class="tw-my-[4px] first:tw-mb-[2px] first:tw-mt-[4px] last:tw-mt-[2px] last:tw-mb-0"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#post-processing" class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-rounded-sm tw-py-1 tw-pl-[32px] tw-text-sm !tw-font-medium tw-leading-3 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest">Post processing</a></li><li class="tw-my-[4px] first:tw-mb-[2px] first:tw-mt-[4px] last:tw-mt-[2px] last:tw-mb-0"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#deploy-notifications" class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-rounded-sm tw-py-1 tw-pl-[32px] tw-text-sm !tw-font-medium tw-leading-3 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest">Deploy notifications</a></li></ul></li><li class="tw-w-full tw-leading-4"><a class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-w-full tw-rounded-sm tw-px-2 tw-py-1 tw-leading-3 tw-transition tw-duration-200 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest !tw-font-semibold" href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/env"><div class="tw-flex tw-flex-col" data-cy="env-vars-primitive"><span class="tw-max-w-none lg:tw-max-w-[165px]">Environment variables <span class="tw-align-baseline tw-capitalize tw-duration-200 tw-ease-out tw-flex-0-auto tw-inline-block tw-leading-2 tw-px-[4px] tw-py-[2px] tw-relative tw-rounded-sm tw-self-center tw-text-sm tw-transition tw--top-px tw-whitespace-nowrap tw-font-bold tw-bg-teal-lightest tw-text-teal-darkest dark:tw-bg-teal-darkest dark:tw-text-teal-lighter">New</span></span></div></a></li><li class="tw-w-full tw-leading-4"><a class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-w-full tw-rounded-sm tw-px-2 tw-py-1 tw-leading-3 tw-transition tw-duration-200 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest !tw-font-semibold" href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/domain">Domain management</a></li><li class="tw-w-full tw-leading-4"><a class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-w-full tw-rounded-sm tw-px-2 tw-py-1 tw-leading-3 tw-transition tw-duration-200 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest !tw-font-semibold" href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/analytics">Analytics</a></li><li class="tw-w-full tw-leading-4"><a class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-w-full tw-rounded-sm tw-px-2 tw-py-1 tw-leading-3 tw-transition tw-duration-200 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest !tw-font-semibold" href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/log-drains">Log Drains</a></li><li class="tw-w-full tw-leading-4"><a class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-w-full tw-rounded-sm tw-px-2 tw-py-1 tw-leading-3 tw-transition tw-duration-200 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest !tw-font-semibold" href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/functions">Functions</a></li><li class="tw-w-full tw-leading-4"><a class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-w-full tw-rounded-sm tw-px-2 tw-py-1 tw-leading-3 tw-transition tw-duration-200 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest !tw-font-semibold" href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/identity">Identity</a></li><li class="tw-w-full tw-leading-4"><a class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-w-full tw-rounded-sm tw-px-2 tw-py-1 tw-leading-3 tw-transition tw-duration-200 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest !tw-font-semibold" href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/forms">Forms</a></li><li class="tw-w-full tw-leading-4"><a class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-w-full tw-rounded-sm tw-px-2 tw-py-1 tw-leading-3 tw-transition tw-duration-200 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest !tw-font-semibold" href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/large-media">Large Media</a></li><li class="tw-w-full tw-leading-4"><a class="tw-text-inherit tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit tw-block tw-w-full tw-rounded-sm tw-px-2 tw-py-1 tw-leading-3 tw-transition tw-duration-200 hover:tw-bg-teal-lightest hover:!tw-text-teal-darkest hover:tw-no-underline dark:hover:tw-bg-teal-darkest dark:hover:!tw-text-teal-lightest !tw-font-semibold" href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/access">Access control <span class="tw-align-baseline tw-capitalize tw-duration-200 tw-ease-out tw-flex-0-auto tw-inline-block tw-leading-2 tw-px-[4px] tw-py-[2px] tw-relative tw-rounded-sm tw-self-center tw-text-sm tw-transition tw--top-px tw-whitespace-nowrap tw-font-bold tw-bg-teal-lightest tw-text-teal-darkest dark:tw-bg-teal-darkest dark:tw-text-teal-lighter">New</span></a></li></ul></nav><div class="main" id="content"><article class="container"><h1 class="visuallyhidden">Build &amp; deploy settings</h1><section id="section-continuous-deployment" class="tw-mt-3 md:tw-mt-3"><header class="tw-py-1"><h2 class="tw-text-xl tw-leading-none"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#continuous-deployment" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="continuous-deployment">Continuous deployment</a></h2><p>Settings for continuous deployment from a Git repository</p></header><section class="card card-settings" tabindex="-1" aria-labelledby="card-title-Repository"><div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start" id="card-title-Repository"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#repository" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="repository">Repository</a></h3></div><div class="tw-mt-1 tw-max-w-10">Your site is linked to a Git repository for continuous deployment.</div><div class="table-body"><dl><dt>Current repository</dt><dd class="break-all"><a class="tw-text-inherit tw-underline tw-text-decoration-color-gray tw-font-weight-inherit hover:tw-text-black hover:tw-text-decoration-color-inherit dark:hover:tw-text-white dark:tw-text-inherit dark:tw-text-decoration-color-inherit" target="_blank" rel="noopener noreferrer" href="https://github.com/DevrajRangani411/hugo-poc">github.com/DevrajRangani411/hugo-poc</a></dd></dl></div><p><a class="tw-bg-none tw-border-none tw-text-teal-darkest tw-inline-block tw-font-bold tw-pr-3 tw-mt-1 tw-underline tw-rounded-sm focus:tw-outline focus:tw-outline-1 hover:tw-no-underline after:tw-content-arrow after:tw-ml-[4px] after:tw-absolute dark:tw-text-teal dark:focus:tw-outline-teal-lightest after:tw-transform after:tw--rotate-40" target="_blank" rel="noopener" href="https://docs.netlify.com/site-deploys/create-deploys/#deploy-with-git">Learn more about continuous deployment in the docs</a></p><footer class="tw-pt-3"><div><div class="tw-flex tw-flex-wrap tw-inline-spacer-gap-2"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Manage repository. Open menu" aria-haspopup="true" data-toggle="true" name="Manage repository" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Manage repository<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-95-item-0" role="option" aria-selected="false" class="menuitem">Link to a different repository</a></li><li><a id="downshift-95-item-1" role="option" aria-selected="false" class="menuitem danger">Unlink DevrajRangani411/hugo-poc</a></li></ul></div></div></div></footer></div></section><section class="card card-settings" tabindex="-1" aria-labelledby="card-title-Build-settings"><div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start" id="card-title-Build-settings"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#build-settings" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="build-settings">Build settings</a></h3></div><div class="table-body"><dl><div><dt>Base directory</dt><dd class="break-all"><span class="placeholder">Not set</span></dd></div><div><dt>Build command</dt><dd class="break-all">hugo --minify</dd></div><div><dt>Publish directory</dt><dd class="break-all">public</dd></div><div><dt>Deploy log visibility</dt><dd>Logs are public</dd></div><div><dt>Build status</dt><dd><div class="tw-flex tw-items-center">Active</div></dd></div></dl></div><p><a class="tw-bg-none tw-border-none tw-text-teal-darkest tw-inline-block tw-font-bold tw-pr-3 tw-mt-1 tw-underline tw-rounded-sm focus:tw-outline focus:tw-outline-1 hover:tw-no-underline after:tw-content-arrow after:tw-ml-[4px] after:tw-absolute dark:tw-text-teal dark:focus:tw-outline-teal-lightest after:tw-transform after:tw--rotate-40" target="_blank" rel="noopener" href="https://docs.netlify.com/integrations/frameworks/">Learn more about common configuration directives in the docs</a></p><footer class="tw-pt-3"><div><div class="tw-flex tw-flex-wrap tw-inline-spacer-gap-2"><button class="btn btn-default btn-secondary btn-secondary--standard" type="button">Edit settings</button></div></div></footer></div></section><section class="card card-settings" tabindex="-1" aria-labelledby="card-title-Branches-and-deploy-contexts"><div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start" id="card-title-Branches-and-deploy-contexts"><a id="deploy-contexts" class="tw-sr-only"></a><a id="branches" class="tw-sr-only"></a><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#branches-and-deploy-contexts" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="branches-and-deploy-contexts">Branches and deploy contexts</a></h3></div><div class="tw-mt-1 tw-max-w-10">Deploy contexts are branch-based environments that enable you to configure builds depending on the context. This includes production and preview environments.</div><div class="table-body"><dl><div><dt>Production branch</dt><dd class="break-all">main</dd></div><div><dt>Branch deploys</dt><dd>Deploy only the production branch</dd></div><div><dt>Deploy Previews</dt><dd>Any pull request against your production branch / branch deploy branches</dd></div></dl></div><p><a class="tw-bg-none tw-border-none tw-text-teal-darkest tw-inline-block tw-font-bold tw-pr-3 tw-mt-1 tw-underline tw-rounded-sm focus:tw-outline focus:tw-outline-1 hover:tw-no-underline after:tw-content-arrow after:tw-ml-[4px] after:tw-absolute dark:tw-text-teal dark:focus:tw-outline-teal-lightest after:tw-transform after:tw--rotate-40" target="_blank" rel="noopener" href="https://docs.netlify.com/site-deploys/overview/#branches-and-deploys">Learn more about branches and deploys in the docs</a></p><footer class="tw-pt-3"><div><div class="tw-flex tw-flex-wrap tw-inline-spacer-gap-2"><button class="btn btn-default btn-secondary btn-secondary--standard" type="button">Edit settings</button></div></div></footer></div></section><section class="card card-settings" tabindex="-1" aria-labelledby="card-title-Collaboration-tools"><div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start" id="card-title-Collaboration-tools"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#collaboration-tools" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="collaboration-tools">Collaboration tools</a></h3></div><div class="tw-mt-1 tw-max-w-10">The Netlify Drawer enables your team to collaborate on preview environments before changes go live to production. Discuss changes, file new issues, or annotate screenshots directly from a preview context.</div><div class="table-body"><dl><div><dt>Netlify Drawer</dt><dd>Enabled on Deploy Previews</dd></div></dl></div><p><a class="tw-bg-none tw-border-none tw-text-teal-darkest tw-inline-block tw-font-bold tw-pr-3 tw-mt-1 tw-underline tw-rounded-sm focus:tw-outline focus:tw-outline-1 hover:tw-no-underline after:tw-content-arrow after:tw-ml-[4px] after:tw-absolute dark:tw-text-teal dark:focus:tw-outline-teal-lightest after:tw-transform after:tw--rotate-40" target="_blank" rel="noopener" href="https://docs.netlify.com/site-deploys/deploy-previews/#collaborative-deploy-previews">Learn more about the Netlify Drawer in the docs</a></p><footer class="tw-pt-3"><div><div class="tw-flex tw-flex-wrap tw-inline-spacer-gap-2"><button class="btn btn-default btn-secondary btn-secondary--standard" type="button">Edit settings</button></div></div></footer></div></section><section class="card card-settings" tabindex="-1" aria-labelledby="card-title-Build-hooks"><div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start" id="card-title-Build-hooks"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#build-hooks" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="build-hooks">Build hooks</a></h3></div><div class="tw-mt-1 tw-max-w-10">Build hooks give you a unique URL you can use to trigger a build.</div><p><a class="tw-bg-none tw-border-none tw-text-teal-darkest tw-inline-block tw-font-bold tw-pr-3 tw-mt-1 tw-underline tw-rounded-sm focus:tw-outline focus:tw-outline-1 hover:tw-no-underline after:tw-content-arrow after:tw-ml-[4px] after:tw-absolute dark:tw-text-teal dark:focus:tw-outline-teal-lightest after:tw-transform after:tw--rotate-40" target="_blank" rel="noopener" href="https://docs.netlify.com/configure-builds/build-hooks/">Learn more about build hooks in the docs</a></p><footer class="tw-pt-3"><div><div class="tw-flex tw-flex-wrap tw-inline-spacer-gap-2"><button class="btn btn-default btn-secondary btn-secondary--standard" type="button">Add build hook</button></div></div></footer></div></section><section class="card card-settings" tabindex="-1" aria-labelledby="card-title-Deploy-key"><div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start" id="card-title-Deploy-key"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#deploy-key" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="deploy-key">Deploy key</a></h3></div><div class="tw-mt-1 tw-max-w-10">A deploy key grants permissions to our build system to access your private submodule.</div><p><a class="tw-bg-none tw-border-none tw-text-teal-darkest tw-inline-block tw-font-bold tw-pr-3 tw-mt-1 tw-underline tw-rounded-sm focus:tw-outline focus:tw-outline-1 hover:tw-no-underline after:tw-content-arrow after:tw-ml-[4px] after:tw-absolute dark:tw-text-teal dark:focus:tw-outline-teal-lightest after:tw-transform after:tw--rotate-40" target="_blank" rel="noopener" href="https://docs.netlify.com/configure-builds/repo-permissions-linking/#access-other-repositories-at-build">Learn more about deploy keys in the docs</a></p><footer class="tw-pt-3"><div><div class="tw-flex tw-flex-wrap tw-inline-spacer-gap-2"><button class="btn btn-default btn-secondary btn-secondary--standard" type="button">Generate public deploy key</button></div></div></footer></div></section><section class="card card-settings" tabindex="-1" aria-labelledby="card-title-Build-image-selection"><div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start" id="card-title-Build-image-selection"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#build-image-selection" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="build-image-selection">Build image selection</a></h3></div><div class="tw-mt-1 tw-max-w-10">Select a different build image to change the operating system and supported software versions in the environment where our buildbot builds your site.</div><div class="table-body"><dl><dt>Build image</dt><dd>Ubuntu Focal 20.04 (default)</dd></dl></div><p><a class="tw-bg-none tw-border-none tw-text-teal-darkest tw-inline-block tw-font-bold tw-pr-3 tw-mt-1 tw-underline tw-rounded-sm focus:tw-outline focus:tw-outline-1 hover:tw-no-underline after:tw-content-arrow after:tw-ml-[4px] after:tw-absolute dark:tw-text-teal dark:focus:tw-outline-teal-lightest after:tw-transform after:tw--rotate-40" target="_blank" rel="noopener" href="https://docs.netlify.com/configure-builds/overview/#build-image-selection">Learn more about build image selection in the docs</a></p><footer class="tw-pt-3"><div><div class="tw-flex tw-flex-wrap tw-inline-spacer-gap-2"><button class="btn btn-default btn-secondary btn-secondary--standard" type="button">Edit settings</button></div></div></footer></div></section><section class="card card-settings" tabindex="-1" aria-labelledby="card-title-Automatic-deploy-deletion"><div><div class="card-ribbon"><svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg" class="tw-text-blue dark:tw-text-blue-lighter"><path d="M0 1a1 1 0 0 1 1-1h38a1 1 0 0 1 1 1v37.523a1 1 0 0 1-1.371.928l-16.4-6.56a6 6 0 0 0-4.457 0l-16.4 6.56A1 1 0 0 1 0 38.523z"></path></svg><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current card-ribbon__icon tw-text-white dark:tw-text-blue-darkest"><path class="icon-locked-top" d="M5.05 5.4v-.28c0-.83.3-1.62.86-2.2.55-.6 1.3-.92 2.08-.92h.1c1.63 0 2.94 1.4 2.94 3.12V6.3c-.38-.15-.84-.2-1.26-.18v-1c0-.98-.75-1.78-1.67-1.78h-.11c-.93 0-1.68.8-1.68 1.78v.27c0 .34-.24.63-.56.66h-.01a.6.6 0 0 1-.49-.16.68.68 0 0 1-.2-.5z"></path><path class="icon-locked-bottom" d="M12.5 12.88V8.1a.69.69 0 0 0-.53-.69l-.06-.01a19.8 19.8 0 0 0-7.82 0l-.05.01a.69.69 0 0 0-.54.69v4.78c0 .33.22.62.54.69l.4.08a18.1 18.1 0 0 0 7.12 0l.4-.08a.69.69 0 0 0 .54-.7z"></path></svg></div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start" id="card-title-Automatic-deploy-deletion"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#automatic-deploy-deletion" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="automatic-deploy-deletion">Automatic deploy deletion</a></h3></div><div class="tw-mt-1 tw-max-w-10">Control when deploys are automatically deleted. Netlify will not automatically delete the deploy currently published on your site, nor the most recent successful deploy from a Git branch.</div><div class="table-body"><dl><dt>Delete deploys after</dt><dd>90 days</dd></dl></div><p><a class="tw-bg-none tw-border-none tw-text-teal-darkest tw-inline-block tw-font-bold tw-pr-3 tw-mt-1 tw-underline tw-rounded-sm focus:tw-outline focus:tw-outline-1 hover:tw-no-underline after:tw-content-arrow after:tw-ml-[4px] after:tw-absolute dark:tw-text-teal dark:focus:tw-outline-teal-lightest after:tw-transform after:tw--rotate-40" target="_blank" rel="noopener" href="https://docs.netlify.com/site-deploys/manage-deploys/#automatic-deploy-deletion">Learn more about deploy deletion in the docs</a></p><footer class="tw-pt-3"><div><div class="tw-flex tw-flex-wrap tw-inline-spacer-gap-2"><button class="btn btn-default btn-primary btn-primary--pop" type="button"><span class="tw-flex tw-justify-center tw-flex-nowrap tw-items-center"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw-flex-shrink-0 tw-mr-1" focusable="false"><path class="icon-locked-top" d="M5.05 5.4v-.28c0-.83.3-1.62.86-2.2.55-.6 1.3-.92 2.08-.92h.1c1.63 0 2.94 1.4 2.94 3.12V6.3c-.38-.15-.84-.2-1.26-.18v-1c0-.98-.75-1.78-1.67-1.78h-.11c-.93 0-1.68.8-1.68 1.78v.27c0 .34-.24.63-.56.66h-.01a.6.6 0 0 1-.49-.16.68.68 0 0 1-.2-.5z"></path><path class="icon-locked-bottom" d="M12.5 12.88V8.1a.69.69 0 0 0-.53-.69l-.06-.01a19.8 19.8 0 0 0-7.82 0l-.05.01a.69.69 0 0 0-.54.69v4.78c0 .33.22.62.54.69l.4.08a18.1 18.1 0 0 0 7.12 0l.4-.08a.69.69 0 0 0 .54-.7z"></path></svg>Upgrade to customize <span class="tw-sr-only">automatic deploy deletion</span></span></button></div></div></footer></div></section></section><section id="section-environment" class="tw-mt-5 md:tw-mt-5"><header class="tw-py-1"><h2 class="tw-text-xl tw-leading-none"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#environment" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="environment">Environment</a></h2><p>Control the environment your site builds in and/or gets deployed to</p></header><section class="card card-settings" tabindex="-1" aria-labelledby="card-title-Environment-variables"><div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start" id="card-title-Environment-variables">Environment variables</h3></div><div class="tw-mt-1 tw-max-w-10">Set environment variables for your build script and add-ons.</div><form class="floating-labels"><div><div class="form-row"><div class="tw-c-form-field tw-group !tw-mt-[36px]"><label class=""><div class="tw-c-form-field-label tw-font-regular tw-text-gray-darker dark:tw-text-gray-lighter tw-leading-normal tw-cursor-pointer tw-absolute tw-text-base tw-floating-label tw-floating-label-transform"><span class="">Key</span></div><div class=""><input id="nf_field_f0f8cd31-d45b-4e14-969d-e5c09ec680e3" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" name="key" type="text" placeholder="VARIABLE_NAME" required="" class="" value="HUGO_VERSION"></div></label></div><div class="tw-c-form-field tw-group !tw-mt-[36px]"><label class=""><div class="tw-c-form-field-label tw-font-regular tw-text-gray-darker dark:tw-text-gray-lighter tw-leading-normal tw-cursor-pointer tw-absolute tw-text-base tw-floating-label tw-floating-label-transform"><span class="">Value</span></div><div class=""><div class="tw-appearance-none tw-bg-white tw-border-[1px] tw-border-gray-dark tw-border-solid tw-box-border tw-flex tw-flex-1 tw-font-medium tw-h-4 tw-items-center tw-leading-very-chill tw-m-0 tw-w-full tw-px-[14px] tw-py-[6px] tw-rounded-sm tw-shadow-none tw-text-base tw-text-black focus-within:!tw-form-field-focus-outline group-hover:tw-border-gray-darker group-hover:focus-within:!tw-form-field-focus-outline dark:tw-border-gray-light dark:tw-bg-black dark:tw-text-white dark:focus-within:tw-border-gray-lightest dark:group-hover:tw-border-gray-lighter dark:group-hover:focus-within:!tw-form-field-focus-outline }"><input id="2d13b5ff-1537-422c-b9b9-5a141f8087fb" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" name="value" aria-label="This value is revealed." type="text" placeholder="somevalue" class="tw-flex-1 tw-bg-transparent tw-border-none tw-shadow-none tw-p-0 focus:tw-shadow-none focus:tw-outline-0 dark:tw-bg-transparent dark:tw-border-none dark:focus:tw-shadow-none" value="0.110.0"><span class="tw--mr-[10px] tw-flex-none tw-leading-asleep tw-px-1 tw-rounded-bl-none tw-rounded-sm tw-rounded-tl-none tw-whitespace-nowrap"><button type="button" aria-controls="2d13b5ff-1537-422c-b9b9-5a141f8087fb" class="!tw-bg-transparent tw-border-none tw-rounded-50 tw-flex tw-justify-center tw-items-center tw-p-0 tw-outline-0 tw-h-3 tw-w-3 tw-text-inherit focus-visible:tw-shadow-teal" aria-label="Hide variable"><svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current"><g fill="currentColor"><path d="M15.6 7.52c-.28-.41-.57-.79-.85-1.15s-.57-.69-.86-1a.16.16 0 0 0-.13-.06.18.18 0 0 0-.13.06l-1.08 1.08a.42.42 0 0 0-.145.26.17.17 0 0 0 .015.07c.18.2.36.41.54.63.19.22.37.45.55.7a13.51 13.51 0 0 1-2.92 3 4.58 4.58 0 0 1-2.63 1c-.16.015-.4.01-.48-.01-.11-.027-.23-.072-.27-.08a.31.31 0 0 0-.12 0c-.04.008-.11.07-.11.07l-.57.56-.67.67a.2.2 0 0 0-.05.18.19.19 0 0 0 .11.14c.35.149.711.27 1.08.36.368.08.744.12 1.12.12a6.53 6.53 0 0 0 3.8-1.35 16.81 16.81 0 0 0 3.8-4.07 1 1 0 0 0 .18-.58 1 1 0 0 0-.18-.6zM13.94 1.29a1 1 0 0 0-1.42 0l-1.63 1.63A6.1 6.1 0 0 0 8 2.1C5.473 2.1 2.937 3.91.39 7.53a1 1 0 0 0 0 1.15 20.514 20.514 0 0 0 2.15 2.6l-1.5 1.5a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0L13.94 2.71a1 1 0 0 0 0-1.42zM2.44 8.1c2-2.74 3.91-4 5.56-4 .485.007.964.11 1.41.3L3.94 9.87a16.66 16.66 0 0 1-1.5-1.77z"></path></g></svg></button><span class="tw-sr-only" aria-live="polite">Variable is shown</span></span></div></div></label></div><div class="tw-mt-[36px] tw-flex-grow-0 md:tw-flex-grow"><button aria-label="Delete" class="btn btn-icon btn-secondary btn-secondary--standard" type="button"><span class="tw-absolute tw-top-1/2 tw-left-1/2 tw--translate-x-1/2 tw--translate-y-1/2 tw-transform"><svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg" class="!tw-fill-current tw-block" role="img"><title>Delete</title><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm2.444-4.277.009.01.28-.28a.765.765 0 0 0 0-1.081L9.366 8.003l1.371-1.37a.765.765 0 0 0 .001-1.081l-.289-.289a.765.765 0 0 0-1.08 0L8.006 6.627 6.637 5.257a.765.765 0 0 0-1.08.001l-.29.29a.765.765 0 0 0 0 1.08l1.359 1.36-1.371 1.37a.765.765 0 0 0-.001 1.081l.288.289a.765.765 0 0 0 1.081-.001l1.371-1.371 1.369 1.368a.765.765 0 0 0 1.08 0z"></path></svg></span></button></div></div><button class="btn btn-default btn-secondary btn-secondary--standard tw-mt-4 md:tw-mt-4" type="button">New variable</button></div><p><a class="tw-bg-none tw-border-none tw-text-teal-darkest tw-inline-block tw-font-bold tw-pr-3 tw-mt-1 tw-underline tw-rounded-sm focus:tw-outline focus:tw-outline-1 hover:tw-no-underline after:tw-content-arrow after:tw-ml-[4px] after:tw-absolute dark:tw-text-teal dark:focus:tw-outline-teal-lightest after:tw-transform after:tw--rotate-40" target="_blank" rel="noopener" href="https://docs.netlify.com/configure-builds/environment-variables/">Learn more about environment variables in the docs</a></p><div class="tw-flex tw-w-full tw-flex-wrap tw-items-center tw-justify-end tw-actions-flex-gap-2 md:tw-w-auto md:tw-justify-start tw-mt-4 md:tw-mt-4"><button class="btn btn-default btn-primary btn-primary--standard" type="submit">Save</button><button class="btn btn-default btn-secondary btn-secondary--standard" type="button">Cancel</button></div></form></div></section><section class="card card-settings" tabindex="-1" aria-labelledby="card-title-Sensitive-variable-policy"><div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start" id="card-title-Sensitive-variable-policy"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#sensitive-variable-policy" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="sensitive-variable-policy">Sensitive variable policy</a></h3></div><div class="tw-mt-1 tw-max-w-10">Deploy Previews triggered by a pull request from an unrecognized author’s fork are considered untrusted deploys. Choose how to manage sensitive environment variable access for these deploys.</div><div class="table-body"><dl><dt>Untrusted deploys</dt><dd>Require approval</dd></dl></div><p><a class="tw-bg-none tw-border-none tw-text-teal-darkest tw-inline-block tw-font-bold tw-pr-3 tw-mt-1 tw-underline tw-rounded-sm focus:tw-outline focus:tw-outline-1 hover:tw-no-underline after:tw-content-arrow after:tw-ml-[4px] after:tw-absolute dark:tw-text-teal dark:focus:tw-outline-teal-lightest after:tw-transform after:tw--rotate-40" target="_blank" rel="noopener" href="https://docs.netlify.com/configure-builds/environment-variables/#sensitive-variable-policy">Learn more about sensitive variable policy in the docs</a></p><footer class="tw-pt-3"><div><div class="tw-flex tw-flex-wrap tw-inline-spacer-gap-2"><button class="btn btn-default btn-secondary btn-secondary--standard" type="button">Edit settings</button></div></div></footer></div></section></section><section id="section-post-processing" class="tw-mt-5 md:tw-mt-5"><header class="tw-py-1"><h2 class="tw-text-xl tw-leading-none"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#post-processing" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="post-processing">Post processing</a></h2><p>Control the post processing and optimizations Netlify can do for you</p></header><section class="card card-settings" tabindex="-1" aria-labelledby="card-title-Snippet-injection"><div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start" id="card-title-Snippet-injection"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#snippet-injection" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="snippet-injection">Snippet injection</a></h3></div><div class="tw-mt-1 tw-max-w-10">Inject analytics or other scripts into the HTML of your site.</div><p><a class="tw-bg-none tw-border-none tw-text-teal-darkest tw-inline-block tw-font-bold tw-pr-3 tw-mt-1 tw-underline tw-rounded-sm focus:tw-outline focus:tw-outline-1 hover:tw-no-underline after:tw-content-arrow after:tw-ml-[4px] after:tw-absolute dark:tw-text-teal dark:focus:tw-outline-teal-lightest after:tw-transform after:tw--rotate-40" target="_blank" rel="noopener" href="https://docs.netlify.com/site-deploys/post-processing/snippet-injection/">Learn more about snippet injection in the docs</a></p><footer class="tw-pt-3"><div><div class="tw-flex tw-flex-wrap tw-inline-spacer-gap-2"><button class="btn btn-default btn-secondary btn-secondary--standard" type="button">Add snippet</button></div></div></footer></div></section><section class="card card-settings" tabindex="-1"><div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#asset-optimization" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="asset-optimization">Asset optimization</a></h3></div><div><p>Enable asset optimization to rewrite link URLs to pretty URLs, bundle and minify CSS and JS, and compress images.</p></div><p><a class="tw-bg-none tw-border-none tw-text-teal-darkest tw-inline-block tw-font-bold tw-pr-3 tw-mt-1 tw-underline tw-rounded-sm focus:tw-outline focus:tw-outline-1 hover:tw-no-underline after:tw-content-arrow after:tw-ml-[4px] after:tw-absolute dark:tw-text-teal dark:focus:tw-outline-teal-lightest after:tw-transform after:tw--rotate-40" target="_blank" rel="noopener" href="https://docs.netlify.com/site-deploys/post-processing/">Learn more about asset optimization in the docs</a></p><footer class="tw-pt-3"><div><div class="tw-flex tw-flex-wrap tw-inline-spacer-gap-2"><button class="btn btn-default btn-secondary btn-secondary--standard" type="button">Edit settings</button></div></div></footer></div></section><section class="card card-settings" tabindex="-1" aria-labelledby="card-title-Prerendering"><div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start" id="card-title-Prerendering"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#prerendering" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="prerendering">Prerendering</a></h3><div class="tw-flex tw-flex-wrap tw-gap-1 tw-self-start"><sup class="tw-align-baseline tw-capitalize tw-duration-200 tw-ease-out tw-flex-0-auto tw-inline-block tw-leading-2 tw-px-[4px] tw-py-[2px] tw-relative tw-rounded-sm tw-self-center tw-text-sm tw-transition tw--top-px tw-whitespace-nowrap tw-bg-gold-lighter tw-font-bold tw-text-black dark:tw-text-gold-darkest tw-align-top tw-top-[4px] !tw-self-start">Beta</sup></div></div><p>Enable prerendering to allow crawlers used by search engines and social networks to see the pages rendered by your app.</p><p><a class="tw-bg-none tw-border-none tw-text-teal-darkest tw-inline-block tw-font-bold tw-pr-3 tw-mt-1 tw-underline tw-rounded-sm focus:tw-outline focus:tw-outline-1 hover:tw-no-underline after:tw-content-arrow after:tw-ml-[4px] after:tw-absolute dark:tw-text-teal dark:focus:tw-outline-teal-lightest after:tw-transform after:tw--rotate-40" target="_blank" rel="noopener" href="https://docs.netlify.com/site-deploys/post-processing/prerendering/">Learn more about prerendering in the docs</a></p><footer class="tw-pt-3"><div><div class="tw-flex tw-flex-wrap tw-inline-spacer-gap-2"><button class="btn btn-default btn-secondary btn-secondary--standard" type="button">Edit settings</button></div></div></footer></div></section><section class="card card-settings card-settings--form-detection" tabindex="-1" aria-labelledby="card-title-Form-detection"><div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start" id="card-title-Form-detection"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#form-detection" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="form-detection">Form detection</a></h3></div><div class="tw-mt-1 tw-max-w-10"><span>With each deploy, Netlify scans new and changed HTML files for forms to enable handling submissions. If you’re not using Netlify Forms, you can disable form detection to speed up deploy time.</span></div><p><a class="tw-bg-none tw-border-none tw-text-teal-darkest tw-inline-block tw-font-bold tw-pr-3 tw-mt-1 tw-underline tw-rounded-sm focus:tw-outline focus:tw-outline-1 hover:tw-no-underline after:tw-content-arrow after:tw-ml-[4px] after:tw-absolute dark:tw-text-teal dark:focus:tw-outline-teal-lightest after:tw-transform after:tw--rotate-40" target="_blank" rel="noopener" href="https://docs.netlify.com/site-deploys/post-processing/form-detection/">Learn more about form detection in the docs</a></p><footer class="tw-pt-3"><div><div class="tw-flex tw-flex-wrap tw-inline-spacer-gap-2"><button class="btn btn-default btn-secondary btn-secondary--standard" type="button">Edit settings</button></div></div></footer></div></section></section><section id="section-deploy-notifications" class="tw-mt-5 md:tw-mt-5"><header class="tw-py-1"><h2 class="tw-text-xl tw-leading-none"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#deploy-notifications" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="deploy-notifications">Deploy notifications</a></h2><p>Set up outgoing webhooks to notify other services about deploys for your site. <a class="tw-text-teal-darkest tw-cursor-pointer tw-font-medium tw-relative tw-underline hover:tw-no-underline focus:tw-outline-teal dark:tw-text-teal dark:focus:tw-outline-teal" target="_blank" rel="noopener" href="https://docs.netlify.com/site-deploys/notifications/">Learn more</a></p></header><section class="card card-settings table" tabindex="-1" aria-labelledby="card-title-Outgoing-notifications"><div><div class="table-header tw-gap-1"><h3 class="tw-flex tw-font-semibold tw-gap-1 tw-justify-start tw-leading-tight tw-text-xl after:tw-content-none md:tw-justify-between tw-self-start" id="card-title-Outgoing-notifications"><a href="https://app.netlify.com/sites/thunderous-praline-89f77e/settings/deploys#outgoing-notifications" class="tw-text-inherit tw-font-weight-inherit tw-relative tw-outline-0 tw-py-1 tw-px-0 tw--my-1 tw-mx-0 focus:tw-no-underline hover:tw-no-underline after:tw-bg-gray after:tw-bottom-0 after:tw-content-empty after:tw-mt-[2px] after:tw-mask-image-icon-link after:tw-mask-center after:tw-mask-no-repeat after:tw-mask-2 after:tw-w-3 after:tw-top-0 after:tw-absolute after:tw-opacity-0 hover:after:tw-opacity-100 focus:after:tw-opacity-100 dark:tw-text-inherit" id="outgoing-notifications">Outgoing notifications</a></h3><div class="toolbar"><div class="dropdown pull-right" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Add notification. Open menu" aria-haspopup="true" data-toggle="true" name="Add notification" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Add notification<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-111-item-0" role="option" aria-selected="false" class="menuitem"><div class="media"><span class="media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path d="M1.17 2C.523 2 0 2.545 0 3.222v8.556C0 12.455.522 13 1.17 13h13.66c.648 0 1.17-.545 1.17-1.222V3.222C16 2.545 15.478 2 14.83 2zm1.167 2.002a.36.36 0 0 1 .3.115l4.846 4.996c.301.312.72.312 1.023 0l4.858-4.996a.354.354 0 0 1 .52.023.463.463 0 0 1-.02.58l-2.748 2.828 2.742 2.72c.164.135.19.433.055.603a.356.356 0 0 1-.544.006l-2.794-2.77-1.569 1.61a1.38 1.38 0 0 1-2.024 0l-1.557-1.61-2.794 2.77a.356.356 0 0 1-.544-.006c-.136-.17-.109-.468.055-.603l2.742-2.72L2.136 4.72a.453.453 0 0 1-.11-.433.39.39 0 0 1 .311-.285z"></path></svg></span><span class="mw-0 media-body">Email notification<br><small class="meta">Send notifications via email</small></span><span class="tw-align-baseline tw-capitalize tw-duration-200 tw-ease-out tw-flex-0-auto tw-inline-block tw-leading-2 tw-px-[4px] tw-py-[2px] tw-relative tw-rounded-sm tw-self-center tw-text-sm tw-transition tw--top-px tw-whitespace-nowrap tw-bg-gray-light tw-font-semibold tw-text-black dark:tw-bg-gray dark:tw-text-white" to="">pro</span></div></a></li><li><a id="downshift-111-item-1" role="option" aria-selected="false" class="menuitem"><div class="media"><span class="media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path clip-rule="evenodd" d="M1.9 8.9h3.15a3.085 3.085 0 0 0 5.9 0h3.15a.9.9 0 1 0 0-1.8h-3.15a3.085 3.085 0 0 0-5.9 0H1.9a.9.9 0 0 0 0 1.8zM8 6.417a1.583 1.583 0 1 0 0 3.166 1.583 1.583 0 0 0 0-3.166z" fill-rule="evenodd"></path></svg></span><span class="mw-0 media-body">GitHub commit checks<br><small class="meta">Add rich details to commits</small></span></div></a></li><li><a id="downshift-111-item-2" role="option" aria-selected="false" class="menuitem"><div class="media"><span class="media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path clip-rule="evenodd" d="M1.9 8.9h3.15a3.085 3.085 0 0 0 5.9 0h3.15a.9.9 0 1 0 0-1.8h-3.15a3.085 3.085 0 0 0-5.9 0H1.9a.9.9 0 0 0 0 1.8zM8 6.417a1.583 1.583 0 1 0 0 3.166 1.583 1.583 0 0 0 0-3.166z" fill-rule="evenodd"></path></svg></span><span class="mw-0 media-body">GitHub commit status<br><small class="meta">Add Deploy Preview notifications to commits</small></span></div></a></li><li><a id="downshift-111-item-3" role="option" aria-selected="false" class="menuitem"><div class="media"><span class="media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path d="M14.984 7.495c-.21-2.606-2.432-4.785-5.46-5.353-3.029-.569-6.14.609-7.646 2.893-1.504 2.284-1.043 5.13 1.134 6.99a3.647 3.647 0 0 1-.72.677c-.27.203-.365.526-.24.813.127.286.449.479.812.485h.11a7.378 7.378 0 0 0 2.78-.526c2.216.632 4.661.29 6.516-.91 1.854-1.202 2.873-3.104 2.714-5.069zM8.886 12.06a5.86 5.86 0 0 1-2.672-.215l-.223-.073-.203.108c-.5.234-1.053.372-1.623.406.237-.222.442-.466.614-.727l.195-.281-.294-.22c-.987-.739-1.589-1.778-1.674-2.892-.135-2.31 1.94-4.287 4.663-4.442 2.724-.155 5.092 1.57 5.322 3.875.152 2.15-1.607 4.062-4.105 4.461z"></path></svg></span><span class="mw-0 media-body">GitHub pull request comment<br><small class="meta">Add Deploy Preview notifications as pull request comments</small></span></div></a></li><li><a id="downshift-111-item-4" role="option" aria-selected="false" class="menuitem"><div class="media"><span class="media-figure"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" aria-hidden="true" class="!tw-fill-current icon"><path fill="#E01E5A" d="M4 9.8a1.5 1.5 0 0 1-3 0c0-.8.7-1.4 1.5-1.4H4v1.4zm.7 0a1.5 1.5 0 0 1 3 0v3.7a1.5 1.5 0 0 1-3 0V9.8z"></path><path fill="#36C5F0" d="M6.2 4a1.5 1.5 0 0 1 0-3c.8 0 1.4.7 1.4 1.5V4H6.2zm0 .7a1.5 1.5 0 0 1 0 3H2.5a1.5 1.5 0 0 1 0-3h3.7z"></path><path fill="#2EB67D" d="M12 6.2a1.5 1.5 0 0 1 3 0c0 .8-.7 1.4-1.5 1.4H12V6.2zm-.7 0a1.5 1.5 0 0 1-3 0V2.5a1.5 1.5 0 0 1 3 0v3.7z"></path><path fill="#ECB22E" d="M9.8 12a1.5 1.5 0 0 1 0 3c-.8 0-1.4-.7-1.4-1.5V12h1.4zm0-.7a1.5 1.5 0 0 1 0-3h3.7a1.5 1.5 0 0 1 0 3H9.8z"></path></svg></span><span class="mw-0 media-body">Slack integration<br><small class="meta">Send notifications to a Slack channel</small></span><span class="tw-align-baseline tw-capitalize tw-duration-200 tw-ease-out tw-flex-0-auto tw-inline-block tw-leading-2 tw-px-[4px] tw-py-[2px] tw-relative tw-rounded-sm tw-self-center tw-text-sm tw-transition tw--top-px tw-whitespace-nowrap tw-bg-gray-light tw-font-semibold tw-text-black dark:tw-bg-gray dark:tw-text-white" to="">pro</span></div></a></li><li><a id="downshift-111-item-5" role="option" aria-selected="false" class="menuitem"><div class="media"><span class="media-figure"><svg height="24" viewBox="0 0 32 32" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path d="M26 6a6 6 0 0 0-12 0 5.998 5.998 0 0 0 4 5.651V24a4 4 0 0 1-8 0h4l-8-8v8a8 8 0 0 0 16 0V11.652c2.329-.825 4-3.04 4-5.652zm-6 2a2 2 0 1 1 .001-4.001A2 2 0 0 1 20 8z" fill-rule="evenodd"></path></svg></span><span class="mw-0 media-body">Outgoing webhook<br><small class="meta">Send notifications as POST requests to external services</small></span></div></a></li></ul></div></div></div><ul class="table-body"><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path clip-rule="evenodd" d="M1.9 8.9h3.15a3.085 3.085 0 0 0 5.9 0h3.15a.9.9 0 1 0 0-1.8h-3.15a3.085 3.085 0 0 0-5.9 0H1.9a.9.9 0 0 0 0 1.8zM8 6.417a1.583 1.583 0 1 0 0 3.166 1.583 1.583 0 0 0 0-3.166z" fill-rule="evenodd"></path></svg></div><div class="media-body inline"><p><span>Add Deploy Preview notifications to commits when Deploy Preview starts</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-96-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-96-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path clip-rule="evenodd" d="M1.9 8.9h3.15a3.085 3.085 0 0 0 5.9 0h3.15a.9.9 0 1 0 0-1.8h-3.15a3.085 3.085 0 0 0-5.9 0H1.9a.9.9 0 0 0 0 1.8zM8 6.417a1.583 1.583 0 1 0 0 3.166 1.583 1.583 0 0 0 0-3.166z" fill-rule="evenodd"></path></svg></div><div class="media-body inline"><p><span>Add rich details to commits when Deploy Preview starts</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-97-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-97-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path d="M14.984 7.495c-.21-2.606-2.432-4.785-5.46-5.353-3.029-.569-6.14.609-7.646 2.893-1.504 2.284-1.043 5.13 1.134 6.99a3.647 3.647 0 0 1-.72.677c-.27.203-.365.526-.24.813.127.286.449.479.812.485h.11a7.378 7.378 0 0 0 2.78-.526c2.216.632 4.661.29 6.516-.91 1.854-1.202 2.873-3.104 2.714-5.069zM8.886 12.06a5.86 5.86 0 0 1-2.672-.215l-.223-.073-.203.108c-.5.234-1.053.372-1.623.406.237-.222.442-.466.614-.727l.195-.281-.294-.22c-.987-.739-1.589-1.778-1.674-2.892-.135-2.31 1.94-4.287 4.663-4.442 2.724-.155 5.092 1.57 5.322 3.875.152 2.15-1.607 4.062-4.105 4.461z"></path></svg></div><div class="media-body inline"><p><span>Add Deploy Preview notifications as pull request comments when Deploy Preview starts</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-98-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-98-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path clip-rule="evenodd" d="M1.9 8.9h3.15a3.085 3.085 0 0 0 5.9 0h3.15a.9.9 0 1 0 0-1.8h-3.15a3.085 3.085 0 0 0-5.9 0H1.9a.9.9 0 0 0 0 1.8zM8 6.417a1.583 1.583 0 1 0 0 3.166 1.583 1.583 0 0 0 0-3.166z" fill-rule="evenodd"></path></svg></div><div class="media-body inline"><p><span>Add Deploy Preview notifications to commits when Deploy Preview succeeds</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-99-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-99-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path clip-rule="evenodd" d="M1.9 8.9h3.15a3.085 3.085 0 0 0 5.9 0h3.15a.9.9 0 1 0 0-1.8h-3.15a3.085 3.085 0 0 0-5.9 0H1.9a.9.9 0 0 0 0 1.8zM8 6.417a1.583 1.583 0 1 0 0 3.166 1.583 1.583 0 0 0 0-3.166z" fill-rule="evenodd"></path></svg></div><div class="media-body inline"><p><span>Add rich details to commits when Deploy Preview succeeds</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-100-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-100-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path d="M14.984 7.495c-.21-2.606-2.432-4.785-5.46-5.353-3.029-.569-6.14.609-7.646 2.893-1.504 2.284-1.043 5.13 1.134 6.99a3.647 3.647 0 0 1-.72.677c-.27.203-.365.526-.24.813.127.286.449.479.812.485h.11a7.378 7.378 0 0 0 2.78-.526c2.216.632 4.661.29 6.516-.91 1.854-1.202 2.873-3.104 2.714-5.069zM8.886 12.06a5.86 5.86 0 0 1-2.672-.215l-.223-.073-.203.108c-.5.234-1.053.372-1.623.406.237-.222.442-.466.614-.727l.195-.281-.294-.22c-.987-.739-1.589-1.778-1.674-2.892-.135-2.31 1.94-4.287 4.663-4.442 2.724-.155 5.092 1.57 5.322 3.875.152 2.15-1.607 4.062-4.105 4.461z"></path></svg></div><div class="media-body inline"><p><span>Add Deploy Preview notifications as pull request comments when Deploy Preview succeeds</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-101-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-101-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path clip-rule="evenodd" d="M1.9 8.9h3.15a3.085 3.085 0 0 0 5.9 0h3.15a.9.9 0 1 0 0-1.8h-3.15a3.085 3.085 0 0 0-5.9 0H1.9a.9.9 0 0 0 0 1.8zM8 6.417a1.583 1.583 0 1 0 0 3.166 1.583 1.583 0 0 0 0-3.166z" fill-rule="evenodd"></path></svg></div><div class="media-body inline"><p><span>Add Deploy Preview notifications to commits when Deploy Preview fails</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-102-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-102-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path clip-rule="evenodd" d="M1.9 8.9h3.15a3.085 3.085 0 0 0 5.9 0h3.15a.9.9 0 1 0 0-1.8h-3.15a3.085 3.085 0 0 0-5.9 0H1.9a.9.9 0 0 0 0 1.8zM8 6.417a1.583 1.583 0 1 0 0 3.166 1.583 1.583 0 0 0 0-3.166z" fill-rule="evenodd"></path></svg></div><div class="media-body inline"><p><span>Add rich details to commits when Deploy Preview fails</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-103-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-103-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path d="M14.984 7.495c-.21-2.606-2.432-4.785-5.46-5.353-3.029-.569-6.14.609-7.646 2.893-1.504 2.284-1.043 5.13 1.134 6.99a3.647 3.647 0 0 1-.72.677c-.27.203-.365.526-.24.813.127.286.449.479.812.485h.11a7.378 7.378 0 0 0 2.78-.526c2.216.632 4.661.29 6.516-.91 1.854-1.202 2.873-3.104 2.714-5.069zM8.886 12.06a5.86 5.86 0 0 1-2.672-.215l-.223-.073-.203.108c-.5.234-1.053.372-1.623.406.237-.222.442-.466.614-.727l.195-.281-.294-.22c-.987-.739-1.589-1.778-1.674-2.892-.135-2.31 1.94-4.287 4.663-4.442 2.724-.155 5.092 1.57 5.322 3.875.152 2.15-1.607 4.062-4.105 4.461z"></path></svg></div><div class="media-body inline"><p><span>Add Deploy Preview notifications as pull request comments when Deploy Preview fails</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-104-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-104-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path d="M1.17 2C.523 2 0 2.545 0 3.222v8.556C0 12.455.522 13 1.17 13h13.66c.648 0 1.17-.545 1.17-1.222V3.222C16 2.545 15.478 2 14.83 2zm1.167 2.002a.36.36 0 0 1 .3.115l4.846 4.996c.301.312.72.312 1.023 0l4.858-4.996a.354.354 0 0 1 .52.023.463.463 0 0 1-.02.58l-2.748 2.828 2.742 2.72c.164.135.19.433.055.603a.356.356 0 0 1-.544.006l-2.794-2.77-1.569 1.61a1.38 1.38 0 0 1-2.024 0l-1.557-1.61-2.794 2.77a.356.356 0 0 1-.544-.006c-.136-.17-.109-.468.055-.603l2.742-2.72L2.136 4.72a.453.453 0 0 1-.11-.433.39.39 0 0 1 .311-.285z"></path></svg></div><div class="media-body inline"><p><span><span>Email devraj.rangani411@gmail.com</span> when deploy request is pending</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-105-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-105-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path d="M14.984 7.495c-.21-2.606-2.432-4.785-5.46-5.353-3.029-.569-6.14.609-7.646 2.893-1.504 2.284-1.043 5.13 1.134 6.99a3.647 3.647 0 0 1-.72.677c-.27.203-.365.526-.24.813.127.286.449.479.812.485h.11a7.378 7.378 0 0 0 2.78-.526c2.216.632 4.661.29 6.516-.91 1.854-1.202 2.873-3.104 2.714-5.069zM8.886 12.06a5.86 5.86 0 0 1-2.672-.215l-.223-.073-.203.108c-.5.234-1.053.372-1.623.406.237-.222.442-.466.614-.727l.195-.281-.294-.22c-.987-.739-1.589-1.778-1.674-2.892-.135-2.31 1.94-4.287 4.663-4.442 2.724-.155 5.092 1.57 5.322 3.875.152 2.15-1.607 4.062-4.105 4.461z"></path></svg></div><div class="media-body inline"><p><span>Add Deploy Preview notifications as pull request comments when deploy request is pending</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-106-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-106-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path d="M1.17 2C.523 2 0 2.545 0 3.222v8.556C0 12.455.522 13 1.17 13h13.66c.648 0 1.17-.545 1.17-1.222V3.222C16 2.545 15.478 2 14.83 2zm1.167 2.002a.36.36 0 0 1 .3.115l4.846 4.996c.301.312.72.312 1.023 0l4.858-4.996a.354.354 0 0 1 .52.023.463.463 0 0 1-.02.58l-2.748 2.828 2.742 2.72c.164.135.19.433.055.603a.356.356 0 0 1-.544.006l-2.794-2.77-1.569 1.61a1.38 1.38 0 0 1-2.024 0l-1.557-1.61-2.794 2.77a.356.356 0 0 1-.544-.006c-.136-.17-.109-.468.055-.603l2.742-2.72L2.136 4.72a.453.453 0 0 1-.11-.433.39.39 0 0 1 .311-.285z"></path></svg></div><div class="media-body inline"><p><span><span>Email devraj.rangani411@gmail.com</span> when deploy request is accepted</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-107-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-107-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path d="M14.984 7.495c-.21-2.606-2.432-4.785-5.46-5.353-3.029-.569-6.14.609-7.646 2.893-1.504 2.284-1.043 5.13 1.134 6.99a3.647 3.647 0 0 1-.72.677c-.27.203-.365.526-.24.813.127.286.449.479.812.485h.11a7.378 7.378 0 0 0 2.78-.526c2.216.632 4.661.29 6.516-.91 1.854-1.202 2.873-3.104 2.714-5.069zM8.886 12.06a5.86 5.86 0 0 1-2.672-.215l-.223-.073-.203.108c-.5.234-1.053.372-1.623.406.237-.222.442-.466.614-.727l.195-.281-.294-.22c-.987-.739-1.589-1.778-1.674-2.892-.135-2.31 1.94-4.287 4.663-4.442 2.724-.155 5.092 1.57 5.322 3.875.152 2.15-1.607 4.062-4.105 4.461z"></path></svg></div><div class="media-body inline"><p><span>Add Deploy Preview notifications as pull request comments when deploy request is accepted</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-108-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-108-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path d="M1.17 2C.523 2 0 2.545 0 3.222v8.556C0 12.455.522 13 1.17 13h13.66c.648 0 1.17-.545 1.17-1.222V3.222C16 2.545 15.478 2 14.83 2zm1.167 2.002a.36.36 0 0 1 .3.115l4.846 4.996c.301.312.72.312 1.023 0l4.858-4.996a.354.354 0 0 1 .52.023.463.463 0 0 1-.02.58l-2.748 2.828 2.742 2.72c.164.135.19.433.055.603a.356.356 0 0 1-.544.006l-2.794-2.77-1.569 1.61a1.38 1.38 0 0 1-2.024 0l-1.557-1.61-2.794 2.77a.356.356 0 0 1-.544-.006c-.136-.17-.109-.468.055-.603l2.742-2.72L2.136 4.72a.453.453 0 0 1-.11-.433.39.39 0 0 1 .311-.285z"></path></svg></div><div class="media-body inline"><p><span><span>Email devraj.rangani411@gmail.com</span> when deploy request is rejected</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-109-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-109-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li><li class="notification-list-item"><div class="media"><div class="media-figure notification-list-item__media-figure"><svg height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current icon"><path d="M14.984 7.495c-.21-2.606-2.432-4.785-5.46-5.353-3.029-.569-6.14.609-7.646 2.893-1.504 2.284-1.043 5.13 1.134 6.99a3.647 3.647 0 0 1-.72.677c-.27.203-.365.526-.24.813.127.286.449.479.812.485h.11a7.378 7.378 0 0 0 2.78-.526c2.216.632 4.661.29 6.516-.91 1.854-1.202 2.873-3.104 2.714-5.069zM8.886 12.06a5.86 5.86 0 0 1-2.672-.215l-.223-.073-.203.108c-.5.234-1.053.372-1.623.406.237-.222.442-.466.614-.727l.195-.281-.294-.22c-.987-.739-1.589-1.778-1.674-2.892-.135-2.31 1.94-4.287 4.663-4.442 2.724-.155 5.092 1.57 5.322 3.875.152 2.15-1.607 4.062-4.105 4.461z"></path></svg></div><div class="media-body inline"><p><span>Add Deploy Preview notifications as pull request comments when deploy request is rejected</span></p><div class="actions"><div class="dropdown" aria-expanded="false" aria-haspopup="listbox"><button role="button" aria-label="Options. Open menu" aria-haspopup="true" data-toggle="true" name="Options" class="btn btn-default btn-secondary btn-secondary--standard" type="button">Options<svg height="12" viewBox="0 0 16 16" width="12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="!tw-fill-current tw--mt-[2px] tw-ml-1 tw-inline-block tw-align-middle tw-transition-transform tw-duration-100 tw-ease-cubic-bezier"><path d="m4 4 3.4 3.4c.3.4.9.4 1.2 0L11.9 4 14 6.2l-5.4 5.6c-.3.3-.9.3-1.2 0L2 6.2z"></path></svg></button><ul class="dropdown-inner dropdown-menu"><li><a id="downshift-110-item-0" role="option" aria-selected="false" class="menuitem danger">Delete notification</a></li><li><a id="downshift-110-item-1" role="option" aria-selected="false" class="menuitem">Edit notification</a></li></ul></div></div></div></div></li></ul></div></section></section></article></div></div></div></main><footer class="app-footer" role="contentinfo"><div class="container"><nav><ul class="tw-flex tw-flex-wrap tw-items-center tw-list-none tw-mx-[-12px] tw-my-0 tw-p-0" aria-label="External links"><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://docs.netlify.com/">Docs</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://www.netlify.com/pricing/">Pricing</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://www.netlify.com/support/">Support</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://www.netlify.com/blog/">Blog</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://www.netlify.com/blog/tags/changelog/">Changelog</a></li><li class="tw-flex tw-items-center tw-m-[4px]"><a class="btn btn-default btn-tertiary btn-tertiary--standard tw-w-auto tw-font-semibold tw-p-1 tw-min-h-4 tw-leading-3 tw-text-left tw-text-gray-darker dark:tw-text-gray-light dark:hover:tw-text-teal dark:hover:tw-bg-teal-darkest" href="https://www.netlify.com/legal/terms-of-use/">Terms</a></li></ul></nav><p><small>© 2023 Netlify</small></p></div></footer></div></div><script>// preload the critical path fetch requests that the app
+      // loads (some in a serial fashion) during bootstrap
+      (() => {
+        // we are confident the user is authenticated
+        // if we have the auth cookie hint.
+        if (document.cookie.includes('_nf-auth-hint')) {
+          // ParallelData allows for async loading and handoff to the app. It also
+          // allows us to pull data from a parallel loaded request to use to make other
+          // parallel requests.
+          // This is the fetch-only version (does not include XHR parallel loading)
+          // ParallelData v1.3.0 - https://github.com/sean-roberts/parallel-data
+          // prettier-ignore
+          !function(){"use strict";var e="ParallelData";function t(){try{for(var t,r=arguments.length,n=Array(r),o=0;o<r;o++)n[o]=arguments[o];(t=console).error.apply(t,[e].concat(n))}catch(e){}}function r(e,t){return Object.assign.apply(Object,arguments)}var n={},o={},a={},c=function(e,t){return e.toUpperCase()+"-"+t},i=function(){};i=function(e,n,i){var l=c(e,n);if(!o[l])var u=o[l]=fetch(n,r({},i,{__PDFetch__:!0,method:e,headers:r({},a.headers,i.headers||{}),credentials:i.credentials||"include",redirect:i.redirect||"follow"})).then(function(e){return i&&i.onParallelDataResponse&&i.onParallelDataResponse(e.clone(),{transferredToApp:!!u.__PDConsumed__}),e}).catch(function(e){throw t("fetch request failed",e),e})},window.ParallelData={version:"1.3.0",configure:function(e){var t;(e=e||{}).allRequests&&(t=e.allRequests,a=r({},a,t||{}))}},window.ParallelData.getForFetch=function(e,r){r=r||{};try{"fetch"in window&&"Promise"in window&&i("GET",e,r)}catch(e){t("fetch request failed",e)}},function(){try{var e=window.fetch;if(!e||!window.Promise)return;window.fetch=function(t,r){t=t||{},r=r||{};var a=void 0;"string"==typeof t?a=t:t.url&&(a=t.url);var i=function(e,t){if(e&&e.method&&e.url){var r=c(e.method,e.url);return"xhr"===t?n[r]:o[r]}}({method:r.method?r.method:t.method?t.method:"GET",url:a},"fetch");return r.__PDFetch__||!i||i.__PDConsumed__?e.apply(window,arguments):(i.__PDConsumed__=!0,i)}}catch(e){t("failed to run fetchInterceptor",e)}}()}();
+          // These requests were chosen because they were the most common critical path
+          // requests across all pages
+          ParallelData.getForFetch('/access-control/bb-api/api/v1/user');
+          ParallelData.getForFetch('/access-control/bb-api/api/v1/accounts');
+          ParallelData.getForFetch(
+            '/access-control/bb-api/api/v1/organizations'
+          );
+          ParallelData.getForFetch(
+            '/.netlify/functions/notifications?page=1&per_page=10'
+          );
+        }
+      })();</script><script>if (
+        window.location.host === 'app.netlify.com' ||
+        window.location.search.includes('force-load-segment')
+      ) {
+        // Segment snippet
+        // running snippet here because it will set up the initial mocked
+        // methods/properties for immediate use but we call analytics.load() later after the
+        // page has loaded so that segment is out of the critical path
+        // prettier-ignore
+        !function () {
+          var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
+            analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "page", "once", "off", "on"]; analytics.factory = function (t) { return function () { var e = Array.prototype.slice.call(arguments); e.unshift(t); analytics.push(e); return analytics } }; for (var t = 0; t < analytics.methods.length; t++) { var e = analytics.methods[t]; analytics[e] = analytics.factory(e) } analytics.load = function (t) { var e = document.createElement("script"); e.async = !0; e.src = ("https:" === document.location.protocol ? "https://" : "http://") + "cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js"; var n = document.getElementsByTagName("script")[0]; n.parentNode.insertBefore(e, n) }; analytics.SNIPPET_VERSION = "3.1.0";
+          }
+        }();
+
+        window._asyncScriptsWaitingLoad = window._asyncScriptsWaitingLoad || [];
+        window._asyncScriptsWaitingLoad.push(() => {
+          // load Segment
+          if (window.analytics) {
+            analytics.load("bHbADSxnRvrpFMYP6pMNP38JC4J7Av75");
+          }
+        });
+      }</script><script>(() => {
+        // Snippet modified! Modifications: make the fn addressable and load it async
+        // prettier-ignore
+        function loadQualtrics(){var g=function(e,h,f,g){
+          this.get=function(a){for(var a=a+"=",c=document.cookie.split(";"),b=0,e=c.length;b<e;b++){for(var d=c[b];" "==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null};
+          this.set=function(a,c){var b="",b=new Date;b.setTime(b.getTime()+6048E5);b="; expires="+b.toGMTString();document.cookie=a+"="+c+b+"; path=/; "};
+          this.check=function(){var a=this.get(f);if(a)a=a.split(":");else if(100!=e)"v"==h&&(e=Math.random()>=e/100?0:100),a=[h,e,0],this.set(f,a.join(":"));else return!0;var c=a[1];if(100==c)return!0;switch(a[0]){case "v":return!1;case "r":return c=a[2]%Math.floor(100/c),a[2]++,this.set(f,a.join(":")),!c}return!0};
+          this.go=function(){if(this.check()){var a=document.createElement("script");a.src=g;document.body&&document.body.appendChild(a)}};
+          this.start=function(){var t=this;"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",function(){t.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){t.go()}):t.go()};};
+          try{(new g(100,"r","QSI_S_ZN_2fUBCKrIaC7UPsi","https://zn2fubckriac7upsi-netlify.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_2fUBCKrIaC7UPsi")).start()}catch(i){}
+        }
+
+        window._asyncScriptsWaitingLoad = window._asyncScriptsWaitingLoad || [];
+        window._asyncScriptsWaitingLoad.push(() => {
+          // This variable is used to determine if the script was
+          // invoked by the downstream logic that waits for it to load
+          window._qualtricsLoadInvoked = true;
+          loadQualtrics();
+        });
+      })();</script><div id="ZN_2fUBCKrIaC7UPsi"></div><script>// Failed to execute 'removeChild' on 'Node' workaround
+      // https://github.com/facebook/react/issues/11538#issuecomment-417504600
+      (() => {
+        var originalRemoveChild = Node.prototype.removeChild;
+        var originalInsertBefore = Node.prototype.insertBefore;
+        var log
+        var observer = new MutationObserver(function (event) {
+          if (document.documentElement.className.match('translated')) {
+            log = window.DD_RUM && window.DD_RUM.addAction
+              ? window.DD_RUM.addAction
+              : (name, data) => console.error(name, data);
+            log('PageTranslate');
+            if (typeof Node === 'function' && Node.prototype) {
+              Node.prototype.removeChild = function (child) {
+                if (child.parentNode !== this) {
+                  log('CustomError', { errorType: 'removeChild', child: child })
+                  return child;
+                }
+                return originalRemoveChild.apply(this, arguments);
+              }
+              Node.prototype.insertBefore = function (newNode, referenceNode) {
+                if (referenceNode && referenceNode.parentNode !== this) {
+                  log('CustomError', { errorType: 'insertBefore', node: referenceNode })
+                  return newNode;
+                }
+                return originalInsertBefore.apply(this, arguments);
+              }
+            }
+          } else {
+            log && log('PageUntranslate');
+            Node.prototype.removeChild = originalRemoveChild;
+            Node.prototype.insertBefore = originalInsertBefore;
+          }
+        });
+        // https://stackoverflow.com/a/58891538
+        observer.observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ['class'],
+          childList: false,
+          characterData: false
+        });
+      })();</script><script src="./Build &amp; deploy _ Site settings_files/runtime.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/react.vendor.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/graphql.vendor.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/lib.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/actions.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/ui.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/helpers.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/lodash.vendor.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/monitoring.vendor.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/markdown.vendor.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/relayRouterRedux.vendor.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/containers.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/reactUiUtilities.vendor.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/reactVirtualized.vendor.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/584.bundle.js"></script><script src="./Build &amp; deploy _ Site settings_files/app.bundle.js"></script><iframe id="CrossStorageClient-712f40f1-aa60-43ff-bbcb-f4af79c66575" style="display: none; position: absolute; top: -999px; left: -999px;" src="./Build &amp; deploy _ Site settings_files/storage.html"></iframe><script>(()=>{
+        // this script adds cnm to the app but only to a percentage of users.
+        // this will enable us to measure users with it on vs off.
+        // Setting to true effectively sets this to 100% without changing any state
+        // that users are currently bucketed into. Setting it back to false will
+        // allow the bucketing to go back to the calculated version
+        let shouldAddCNM = true;
+        try{
+
+          if(window.location.origin !== 'https://app.netlify.com' && !window.location.origin.endsWith('-app.netlify.app')){
+            return;
+          }
+          
+          // for consistency of synthetic perf tests. Always include CNM
+          const userAgent = window.navigator.userAgent.toLowerCase();
+          if(userAgent.includes('lighthouse') || userAgent.includes('speedcurve')) {
+            shouldAddCNM = true;
+          }
+
+          const alreadyHasResult = shouldAddCNM === true || !!localStorage.getItem('cnm-add-result');
+          if(alreadyHasResult && !shouldAddCNM){
+            shouldAddCNM = localStorage.getItem('cnm-add-result') === 'true';
+          }else if(!alreadyHasResult) {
+            // 50% rollout
+            shouldAddCNM = (Math.random() * 100) > 50;
+            localStorage.setItem('cnm-add-result', shouldAddCNM.toString());
+          }
+          if(shouldAddCNM){
+            const script = document.createElement('script');
+            script.async = true;
+            script.defer = true;
+            script.src = '/netlify-cnm/cnm.js';
+            document.body.appendChild(script);
+          } 
+          if (window.DD_RUM) {
+            DD_RUM.addRumGlobalContext('use-cnm', shouldAddCNM);
+            DD_RUM.addRumGlobalContext('multi-visit-cnm', alreadyHasResult);
+          }
+        }catch(e){}
+      })();</script><script async="" defer="" src="./Build &amp; deploy _ Site settings_files/cnm.js"></script><noscript><div class="app"><div class="tw-flex tw-z-overlay tw-inset-0 tw-fixed tw-items-center tw-justify-center tw-m-0 tw-text-center tw-w-full tw-min-h-screen tw-bg-white"><div class="container"><h1>The Netlify dashboard needs JavaScript :(</h1><p>You can enable JavaScript in <a href="https://enable-javascript.com/" class="highlight-link" target="_blank">your browser settings</a>.</p></div></div></div></noscript><div id="netlify-rum-container" data-netlify-rum-site-id="5f9562c1-be9c-4898-bc6a-5b40de4e1450" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" style="position:fixed">
+  <!-- This div is automatically inserted by Netlify for Real User Monitoring (RUM). -->
+  <script async="" src="./Build &amp; deploy _ Site settings_files/netlify.js"></script>
+</div>
+<script src="./Build &amp; deploy _ Site settings_files/cnm-main-client.js" async=""></script><iframe id="_hjSafeContext_30891652" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="./Build &amp; deploy _ Site settings_files/saved_resource.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><script src="./Build &amp; deploy _ Site settings_files/saved_resource"></script><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" tabindex="-1" aria-hidden="true" id="_hjRemoteVarsFrame" src="./Build &amp; deploy _ Site settings_files/box-e031119f9e9e307a08fa610f85dbfb52.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div id="commandbar-wrapper" data-commandbar="1"><div id="commandbar" data-commandbar="1"><div><div class="rc-dialog-root"><div tabindex="-1" class="rc-dialog-wrap commandbar-modal" aria-label="commandbar" style="z-index: 2147483644; display: none;"></div></div><div><div></div></div><div style="position: absolute; top: 35vh; right: 50vw; z-index: 2147483647;"><div style="position: relative;"></div></div><div style="position: fixed; z-index: 2147483647; inset: 16px; pointer-events: none;"></div></div></div></div><div id="a11y-status-message" role="status" aria-live="polite" aria-relevant="additions text" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"></div><script src="./Build &amp; deploy _ Site settings_files/CoreModule.js" defer=""></script><script src="./Build &amp; deploy _ Site settings_files/UserDefinedHTMLModule.js" defer=""></script><div class="ReactModalPortal"></div><div class="ReactModalPortal"></div><div class="ReactModalPortal"></div><div class="ReactModalPortal"></div><div class="ReactModalPortal"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

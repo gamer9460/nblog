@@ -1,0 +1,42 @@
+<footer class="article-footer">
+  {{ partial "article/components/tags" . }} {{ if and
+  (.Site.Params.article.license.enabled) (not (eq .Params.license false)) }}
+  <section class="article-copyright">
+    {{ partial "helper/icon" "copyright" }}
+    <span
+      >{{ default .Site.Params.article.license.default .Params.license |
+      markdownify }}</span
+    >
+  </section>
+  {{ if .Params.author }}
+  <section class="article-author">
+    <blockquote>
+      {{ if .Params.authorImage }}
+      <div class="author-image">
+        <img src="../../{{.Params.authorImage}}" loading="lazy" />
+      </div>
+      {{ end }}
+      <div class="author-details">
+        <p>
+          <a
+            class="link"
+            href="{{.Params.authorUrl}}"
+            target="_blank"
+            rel="noopener"
+            >{{.Params.author}}</a
+          >
+        </p>
+        <p>{{.Params.authorDes}}</p>
+      </div>
+    </blockquote>
+  </section>
+  {{ end }} {{ end }} {{- if ne .Lastmod .Date -}}
+  <section class="article-lastmod">
+    {{ partial "helper/icon" "clock" }}
+    <span>
+      {{ T "article.lastUpdatedOn" }} {{ .Lastmod.Format ( or
+      .Site.Params.dateFormat.lastUpdated "Jan 02, 2006 15:04 MST" ) }}
+    </span>
+  </section>
+  {{- end -}}
+</footer>

@@ -1,2 +1,7 @@
-# Mac OS files
+# OS X files
 .DS_Store
+
+
+# Local cache
+/resources
+assets/jsconfig.json
