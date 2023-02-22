@@ -11,11 +11,11 @@ params:
     - post
   featuredImageField: image
   rssFullContent: true
-  favicon: img/favicon.ico
+  # favicon: img/favicon.ico
 
   footer:
     since: 2023
-    customText: Built to make things easy
+    # customText: Built to make things easy
 
   dateFormat:
     published: Jan 02, 2006
@@ -24,9 +24,9 @@ params:
   sidebar:
     compact: false
     # emoji: 🗞️
-    subtitle: "Welcome to Pace 'n Think"
+    # subtitle: "Welcome to Pace 'n Think"
     avatar:
-      enabled: true
+      enabled: false
       local: true
       src: img/art.png
 
@@ -39,7 +39,7 @@ params:
       default: Licensed under CC Pace 'n Think
 
   comments:
-    enabled: true
+    enabled: false
     provider: disqus
 
     disqusjs:
@@ -135,7 +135,7 @@ params:
     toggle: true
 
     # Available values: auto, light, dark
-    default: auto
+    default: dark
 
   imageProcessing:
     cover:
@@ -146,18 +146,18 @@ params:
 menu:
   main: []
 
-  social:
-    - identifier: github
-      name: GitHub
-      url: https://github.com/pacenthink
-      params:
-        icon: brand-github
+  # social:
+  #   - identifier: github
+  #     name: GitHub
+  #     url: https://github.com/pacenthink
+  #     params:
+  #       icon: brand-github
 
-    - identifier: twitter
-      name: Twitter
-      url: https://twitter.com/nurdsoft
-      params:
-        icon: brand-twitter
+  #   - identifier: twitter
+  #     name: Twitter
+  #     url: https://twitter.com/nurdsoft
+  #     params:
+  #       icon: brand-twitter
 
 related:
   includeNewer: true
