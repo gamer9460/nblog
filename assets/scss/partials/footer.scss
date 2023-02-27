@@ -2,6 +2,8 @@ footer.site-footer {
   padding: 20px 0 var(--section-separation) 0;
   font-size: 1.4rem;
   line-height: 1.75;
+  width: 100%;
+  overflow: hidden;
   position: fixed;
   bottom: 0;
 
