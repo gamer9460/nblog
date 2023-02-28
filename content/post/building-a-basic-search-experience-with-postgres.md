@@ -7,7 +7,7 @@ tags: ["postgres", "sql"]
 categories: ["Engineering"]
 author: "Bhupesh Varshney"
 authorDes: "Software Craftsman | Tech Writer | DevTools 🧡 | Python & Golang"
-authorUrl: "https://github.com/Bhupesh-V"
+authorUrl: "https://www.linkedin.com/in/bhupesh-v"
 authorImage: "img/bhupesh-varshney.jpg"
 ---
 
