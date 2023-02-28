@@ -343,7 +343,7 @@
 
   .highlight {
     background-color: var(--pre-background-color);
-    padding: var(--card-padding);
+    // padding: var(--card-padding);
     position: relative;
 
     &:hover {
@@ -357,7 +357,7 @@
     }
     pre {
       margin: initial;
-      padding: 0;
+      // padding: 0;
       margin: 0;
       width: auto;
     }
