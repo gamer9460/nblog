@@ -101,22 +101,22 @@ Let's take a quick overview of some common trigram functions in Postgres.
    Returns array of all the trigrams in the given string (no actual use, good for debugging).
 
    ```sql
-   SELECT show_trgm('bhupesh varshney')
+   SELECT show_trgm('pacenthink');
    
    -- output
 
-   ["  b","  v"," bh"," va","ars","bhu","esh","ey ","hne","hup","ney","pes","rsh","sh ","shn","upe","var"]
+   ["  p"," pa","ace","cen","ent","hin","ink","nk ","nth","pac","thi"]
    ```
 
-2. `similarity`
+2. `similarity`w
 
    Similarity ranges from 0 (not similar) to 1 (exact match).
 
    ```sql
-   SELECT similarity('bhupesh', 'bhu')
+   SELECT similarity('pacenthink', 'think')
 
    -- output
-   0.33333334
+   0.30769232
    ```
 
 Once you have the extension enabled, you can do similar word searches

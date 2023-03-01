@@ -1,11 +1,11 @@
 ---
 title: About
-description: Pace 'n Think.
+# description: Pace 'n Think.
 # date: "2019-02-28"
 aliases:
   - about-us
   - contact
-license: CC BY-NC-ND
+# license: CC BY-NC-ND
 # lastmod: "2020-10-09"
 menu:
   main:
