@@ -31,7 +31,7 @@ The goal of this post is to have a look at some in-built tools to build a minima
 The most basic and simplest approach to implement simple “pattern matching”. The ILIKE operator takes a pattern and returns results while ignoring the case of results.
 
 ```sql
-select * from my_table where my_column ilike '% my pattern %';
+SELECT * FROM my_table WHERE my_column ilike '% my pattern %';
 ```
 
 The wildcard `%` is used to match any number of characters. Similar to ILIKE is the `LIKE` operator which returns results in case-sensitive mode.
@@ -39,9 +39,9 @@ The wildcard `%` is used to match any number of characters. Similar to ILIKE is 
 This is easy to implement, but queries can easily become long when multiple columns are used which can be a hassle to maintain if you have to replicate a similar approach among multiple tables.
 
 ```sql
-select *
-from my_table
-where my_column ilike '% my pattern %'
+SELECT *
+FROM my_table
+WHERE my_column ilike '% my pattern %'
     or my_column2 ilike '% my pattern %'
     or my_column3 ilike '% my pattern %'
     or my_column4 ilike '% my pattern %'
@@ -52,9 +52,9 @@ where my_column ilike '% my pattern %'
 On top of that, custom enum types and dates need to be typecast, because ILIKE only works on `TEXT` data type.
 
 ```sql
-select *
-from my_table
-where
+SELECT *
+FROM my_table
+WHERE
     to_char(created_at, 'mm/dd/yy') ilike '% my pattern %'
     or custom_enum_type_column::text ilike '% my pattern %';
 ```
@@ -64,9 +64,9 @@ where
 This operator lets us use [“regular expressions”](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-SIMILARTO-REGEXP) in SQL queries and returns true/false if a match is found.
 
 ```sql
-select *
-from my_table
-where my_column SIMILAR TO 'string%'='t';
+SELECT *
+FROM my_table
+WHERE my_column SIMILAR TO 'string%'='t';
 ```
 
 Not very commonly used and is generally avoided, since introducing regex patterns in SQL queries is not an ideal solution.
@@ -108,7 +108,7 @@ Let's take a quick overview of some common trigram functions in Postgres.
    ["  p"," pa","ace","cen","ent","hin","ink","nk ","nth","pac","thi"]
    ```
 
-2. `similarity`w
+2. `similarity`
 
    Similarity ranges from 0 (not similar) to 1 (exact match).
 
@@ -122,8 +122,8 @@ Let's take a quick overview of some common trigram functions in Postgres.
 Once you have the extension enabled, you can do similar word searches
 
 ```sql
-select * from my_table
-where SIMILARITY(my_column, 'word') > 0.3
+SELECT * from my_table
+WHERE SIMILARITY(my_column, 'word') > 0.3
 ```
 
 ### Levenshtein Matching
