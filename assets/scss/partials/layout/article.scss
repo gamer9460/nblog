@@ -48,7 +48,7 @@
       }
 
       section {
-        color: var(--card-text-color-tertiary);
+        color: var(--body-text-color);
         text-transform: uppercase;
         display: flex;
         align-items: center;
@@ -259,7 +259,7 @@
     padding-inline-start: calc(
       var(--card-padding) - var(--heading-border-size)
     );
-    border-inline-start: var(--heading-border-size) solid var(--accent-color);
+    border-inline-start: var(--heading-border-size) solid #7cc0fe;
   }
 
   figure {
@@ -306,6 +306,18 @@
     padding: 2px 4px;
     border-radius: var(--tag-border-radius);
     font-family: var(--code-font-family);
+    cursor: pointer;
+  }
+
+  a > code,
+  p > code {
+    text-decoration: none;
+
+    font-weight: 600;
+    transition: text-decoration 1s ease;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .gallery {
@@ -337,6 +349,7 @@
     }
     code {
       color: unset;
+      font-size: 14px;
       border: none;
       background: none;
       padding: 0;
@@ -345,7 +358,7 @@
 
   .highlight {
     // background-color: var(--pre-background-color);
-    padding: 20px;
+    padding: 0 var(--card-padding);
     position: relative;
 
     &:hover {
