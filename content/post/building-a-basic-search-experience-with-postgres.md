@@ -6,7 +6,7 @@ image: "img/postgres-search-experience-cover.png"
 tags: ["postgres", "sql"]
 categories: ["Engineering"]
 author: "Bhupesh Varshney"
-authorDes: "Software Craftsman | Tech Writer | DevTools 🧡 | Python & Golang"
+authorDes: "Software Developer at Nurdsoft | Tech Writer |  Python & Golang"
 authorUrl: "https://www.linkedin.com/in/bhupesh-v"
 authorImage: "img/bhupesh-varshney.jpg"
 ---
@@ -15,7 +15,7 @@ Building search functionality in products is a common task. Many solutions exist
 
 The goal of this post is to have a look at some in-built tools to build a minimalist search feature when your data is backed by a Postgres (or any SQL) database. Here is a rundown of what we will be covering
 
-- [`ILIKE` operator](#ilike-operator)
+- [`ILIKE` operator](#ILIKE-operator)
 - [`SIMILAR TO` operator](#similar-to-operator)
 - [POSIX Regular Expressions](#posix-regular-expressions)
 - [Fuzzy Searching](#fuzzy-searching)
@@ -31,7 +31,7 @@ The goal of this post is to have a look at some in-built tools to build a minima
 The most basic and simplest approach to implement simple “pattern matching”. The ILIKE operator takes a pattern and returns results while ignoring the case of results.
 
 ```sql
-SELECT * FROM my_table WHERE my_column ilike '% my pattern %';
+SELECT * FROM my_table WHERE my_column ILIKE'% my pattern %';
 ```
 
 The wildcard `%` is used to match any number of characters. Similar to ILIKE is the `LIKE` operator which returns results in case-sensitive mode.
@@ -41,11 +41,11 @@ This is easy to implement, but queries can easily become long when multiple colu
 ```sql
 SELECT *
 FROM my_table
-WHERE my_column ilike '% my pattern %'
-    or my_column2 ilike '% my pattern %'
-    or my_column3 ilike '% my pattern %'
-    or my_column4 ilike '% my pattern %'
-    or my_column5 ilike '% my pattern %'
+WHERE my_column ILIKE '% my pattern %'
+    OR my_column2 ILIKE '% my pattern %'
+    OR my_column3 ILIKE '% my pattern %'
+    OR my_column4 ILIKE '% my pattern %'
+    OR my_column5 ILIKE '% my pattern %'
     ...
 ```
 
@@ -55,8 +55,8 @@ On top of that, custom enum types and dates need to be typecast, because ILIKE o
 SELECT *
 FROM my_table
 WHERE
-    to_char(created_at, 'mm/dd/yy') ilike '% my pattern %'
-    or custom_enum_type_column::text ilike '% my pattern %';
+    to_char(created_at, 'mm/dd/yy') ILIKE '% my pattern %'
+    OR custom_enum_type_column::text ILIKE '% my pattern %';
 ```
 
 ## `SIMILAR TO` operator
@@ -88,7 +88,7 @@ The operator `~` can be used to for POSIX regex matches. Where `*` is used of ca
 
 ### Trigram `pg_trgm`
 
-A trigram is a group of three consecutive characters taken from a string. 
+A trigram is a group of three consecutive characters taken from a string.
 
 We can measure the similarity of two strings by counting the number of trigrams they share.
 
@@ -102,7 +102,7 @@ Let's take a quick overview of some common trigram functions in Postgres.
 
    ```sql
    SELECT show_trgm('pacenthink');
-   
+
    -- output
 
    ["  p"," pa","ace","cen","ent","hin","ink","nk ","nth","pac","thi"]
@@ -122,7 +122,7 @@ Let's take a quick overview of some common trigram functions in Postgres.
 Once you have the extension enabled, you can do similar word searches
 
 ```sql
-SELECT * from my_table
+SELECT * FROM my_table
 WHERE SIMILARITY(my_column, 'word') > 0.3
 ```
 
@@ -176,7 +176,7 @@ Different functions available to Postgres can be used to achieve full-text searc
 2. **to_tsquery** for querying the vector for occurrences of certain words or phrases.
 
 ```sql
-SELECT to_tsvector('The quick brown fox jumped over the lazy dog.'); 
+SELECT to_tsvector('The quick brown fox jumped over the lazy dog.');
 
 -- output
 'brown':3 'dogs':9 'fox':4 'jumped':5 'lazy':8 'over':6 'quick':2 'the':1,7
@@ -188,7 +188,7 @@ Full text searching in PostgreSQL is based on the match operator `@@`, which ret
 SELECT to_tsvector('The quick brown fox jumped over the lazy dog') @@ to_tsquery('brown & fox');
 
 -- output
-true
+TRUE
 ```
 
 A `tsquery` contains search terms, which must be already-normalized lexemes, and may combine multiple terms using `AND`, `OR`, `NOT`, and `FOLLOWED BY` operators.
@@ -220,6 +220,6 @@ Note that having any kind of index will slow down INSERTS, UPDATES, and DELETEs.
 
 ## Resources
 
-- [Pattern Matching](https://www.postgresql.org/docs/current/functions-matching.html) 
+- [Pattern Matching](https://www.postgresql.org/docs/current/functions-matching.html)
 - [Preferred Index Types for Text Search](https://www.postgresql.org/docs/15/textsearch-indexes.html)
 - [Understanding Postgres GIN Indexes: The Good and the Bad](https://pganalyze.com/blog/gin-index)

@@ -5,16 +5,6 @@ a {
   &:hover {
     color: var(--accent-color-darker);
   }
-
-  &.link {
-    transition: all 0.3s ease;
-
-    &:hover {
-      box-shadow: 0px calc(-1rem * var(--article-line-height)) 0px
-        rgba(var(--link-background-color), var(--link-background-opacity-hover))
-        inset;
-    }
-  }
 }
 h2 a {
   &.link {
@@ -27,7 +17,7 @@ h2 a {
 }
 [data-scheme="dark"] {
   header > a,
-  footer  a {
+  footer a {
     color: black;
   }
   code {
@@ -37,15 +27,6 @@ h2 a {
   a {
     text-decoration: none;
     color: var(--accent-color);
-
-    &.link {
-      transition: all 0.3s ease;
-
-      &:hover {
-        box-shadow: 0px calc(-1rem * var(--article-line-height)) 0px
-          rgba(0, 0, 0, 0.4) inset;
-      }
-    }
   }
   h2 a {
     &.link {
