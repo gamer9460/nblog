@@ -6,8 +6,8 @@ image: "img/postgres-search-experience-cover.png"
 tags: ["postgres", "sql"]
 categories: ["Engineering"]
 author: "Bhupesh Varshney"
-authorDes: "Software Developer at Nurdsoft | Tech Writer |  Python & Golang"
-authorUrl: "https://www.linkedin.com/in/bhupesh-v"
+authorDes: "Software Developer at  Nurdsoft | Tech Writer |  Python & Golang"
+
 authorImage: "img/bhupesh-varshney.jpg"
 ---
 
@@ -77,7 +77,7 @@ POSIX regular expressions are a better way to match patterns than the `ILIKE` an
 
 The operator `~` can be used to for POSIX regex matches. Where `*` is used of case-insensitive matches & `!` represents the logical NOT operation.
 
-```
+```bash
 'pacenthink' ~ 'p.c'           = true
 'pacenthink' ~* 'thi'          = true
 'pacenthink' !~ 'pacenthink'   = false
