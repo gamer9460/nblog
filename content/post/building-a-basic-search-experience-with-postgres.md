@@ -51,7 +51,7 @@ WHERE my_column ILIKE '% my pattern %'
     ...
 ```
 
-On top of that, custom enum types and dates need to be typecast, because ILIKE only works on `TEXT` data type.
+On top of that, custom enum types and dates need to be typecast, because [`ILIKE`](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-LIKE) only works on TEXT data type.
 
 ```sql
 SELECT *
@@ -75,7 +75,7 @@ Not very commonly used and is generally avoided, since introducing regex pattern
 
 ## POSIX Regular Expressions
 
-POSIX regular expressions are a better way to match patterns than the [`ILIKE`](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-LIKE) and [`SIMILAR TO`](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-SIMILARTO-REGEXP) operators. The most common example of regex usage is the `grep` tool.
+POSIX regular expressions are a better way to match patterns than the [`ILIKE`](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-LIKE) and [`SIMILAR TO`](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-SIMILARTO-REGEXP) operators. The most common example of regex usage is the [`grep`](https://www.postgresql.org/docs/15/app-postgres.html) tool.
 
 The operator `~` can be used to for POSIX regex matches. Where `*` is used of case-insensitive matches & `!` represents the logical NOT operation.
 
@@ -94,7 +94,7 @@ A trigram is a group of three consecutive characters taken from a string.
 
 We can measure the similarity of two strings by counting the number of trigrams they share.
 
-> To use the `pg_trgm` extension you will have to first enable it using `CREATE EXTENSION pg_trgm;`
+> To use the [`pg_trgm`](https://www.postgresql.org/docs/current/pgtrgm.html) extension you will have to first enable it using [`CREATE EXTENSION pg_trgm;`](https://www.postgresql.org/docs/current/pgtrgm.html)
 
 Let's take a quick overview of some common trigram functions in Postgres.
 
@@ -132,7 +132,7 @@ WHERE SIMILARITY(my_column, 'word') > 0.3
 
 The Levenshtein distance is the distance between two words, i.e., the minimum number of single-character edits required for both strings to match.
 
-> To use this functionality, we need to enable another extension called `fuzzystrmatch` using `CREATE EXTENSION fuzzystrmatch;`
+> To use this functionality, we need to enable another extension called [`fuzzystrmatch`](https://www.postgresql.org/docs/15/fuzzystrmatch.html) using [`CREATE EXTENSION fuzzystrmatch;`](https://www.postgresql.org/docs/15/fuzzystrmatch.html)
 
 ```sql
 SELECT * FROM my_table WHERE levenshtein(my_column, 'MyStr') < 3
@@ -142,7 +142,7 @@ The above query will match all `my_column` values which have a Levenshtein dista
 
 ## Getting to indexes
 
-To index `LIKE` & `SIMILAR TO` the `pg_trgm` module supports two PostgreSQL index types: **GIST** and **GIN**.
+To index [`LIKE`](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-LIKE) & [`SIMILAR TO`](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-SIMILARTO-REGEXP) the [`pg_trgm`](https://www.postgresql.org/docs/current/pgtrgm.html) module supports two PostgreSQL index types: **GIST** and **GIN**.
 
 - A [`GiST`](https://www.postgresql.org/docs/15/gist.html) (Generalized Search Tree) index is lossy, meaning that the index may produce false matches, and it is necessary to check the actual table row to eliminate such false matches. (PostgreSQL does this automatically). Use GIST index when you are storing data like longitudes, latitudes, ip address etc.
 
@@ -159,7 +159,7 @@ To index `LIKE` & `SIMILAR TO` the `pg_trgm` module supports two PostgreSQL inde
   CREATE INDEX index_name ON my_table USING GIN (my_column1, my_column2 gin_trgm_ops);
   ```
 
-  When using GIN indexes with `pg_trgm`, Postgres will split the row values into trigrams.
+  When using GIN indexes with [`pg_trgm`](https://www.postgresql.org/docs/current/pgtrgm.html), Postgres will split the row values into trigrams.
 
 > As a rule of thumb, a GIN index is faster to search than a GiST index, but slower to build or update; so GIN is better suited for static data and GiST for often-updated data.
 
@@ -193,7 +193,7 @@ SELECT to_tsvector('The quick brown fox jumped over the lazy dog') @@ to_tsquery
 TRUE
 ```
 
-A `tsquery` contains search terms, which must be already-normalized lexemes, and may combine multiple terms using `AND`, `OR`, `NOT`, and `FOLLOWED BY` operators.
+A [`tsquery`](https://www.postgresql.org/docs/current/datatype-textsearch.html#DATATYPE-TSQUERY) contains search terms, which must be already-normalized lexemes, and may combine multiple terms using AND, OR, NOT, and FOLLOWED BY operators.
 
 ```sql
 SELECT to_tsquery('fat & rat');
@@ -203,7 +203,7 @@ SELECT to_tsquery('fat & rat');
 'fat' & 'rat'
 ```
 
-The following shows the difference between casting and using the function `to_tsquery()`
+The following shows the difference between casting and using the function [`to_tsquery()`](https://www.postgresql.org/docs/current/datatype-textsearch.html#DATATYPE-TSQUERY)
 
 ```sql
 SELECT 'impossible'::tsquery, to_tsquery('impossible');
@@ -216,7 +216,7 @@ SELECT 'impossible'::tsquery, to_tsquery('impossible');
 
 ## Summary
 
-The best way to implement a basic (or even full-text search) for rows in order of thousands is to have a GIN index on columns required used either via `tsvector` approach or using the `ILIKE` operator.
+The best way to implement a basic (or even full-text search) for rows in order of thousands is to have a GIN index on columns required used either via [`tsvector`](https://www.postgresql.org/docs/current/datatype-textsearch.html#DATATYPE-TSVECTOR) approach or using the [`ILIKE`](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-LIKE) operator.
 
 Note that having any kind of index will slow down INSERTS, UPDATES, and DELETEs. For tables with an extremely high volume of transactions, we have to be very careful about adding indexes. For most tables in most systems, this is not an issue. In those cases opting for a solution like elastic search is a good bet.
 
