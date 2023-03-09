@@ -7,15 +7,17 @@ tags: ["postgres", "sql"]
 categories: ["Engineering"]
 author: "Bhupesh Varshney"
 authorDes: "Software Developer at  Nurdsoft | Tech Writer |  Python & Golang"
+authorUrl: "https://www.linkedin.com/in/bhupesh-v"
 
 authorImage: "img/bhupesh-varshney.jpg"
 ---
 
-Building search functionality in products is a common task. Many solutions exist to solve this problem already. OpenSource tools like [opensearch](https://opensearch.org/) and [mellisearch](https://www.meilisearch.com/) are some examples that are very commonly used. Using a 3rd party tool to build a "full-text search" is a good bet if you have a lot of data (i.e. a lot of users).
+Building search functionality in products is a common task. Many solutions exist to solve this problem already. OpenSource tools like [`opensearch`](https://opensearch.org/) and [`mellisearch`](https://www.meilisearch.com/) are some examples that are very commonly used. Using a 3rd party tool to build a "full-text search" is a good bet if you have a lot of data (i.e. a lot of users).
 
 The goal of this post is to have a look at some in-built tools to build a minimalist search feature when your data is backed by a Postgres (or any SQL) database. Here is a rundown of what we will be covering
 
-- [`ILIKE` operator](#ILIKE-operator)
+- [`ILIKE` operator](#ilike-operator)
+
 - [`SIMILAR TO` operator](#similar-to-operator)
 - [POSIX Regular Expressions](#posix-regular-expressions)
 - [Fuzzy Searching](#fuzzy-searching)
@@ -34,7 +36,7 @@ The most basic and simplest approach to implement simple “pattern matching”.
 SELECT * FROM my_table WHERE my_column ILIKE'% my pattern %';
 ```
 
-The wildcard `%` is used to match any number of characters. Similar to ILIKE is the `LIKE` operator which returns results in case-sensitive mode.
+The wildcard `%` is used to match any number of characters. Similar to ILIKE is the [`LIKE`](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-LIKE) operator which returns results in case-sensitive mode.
 
 This is easy to implement, but queries can easily become long when multiple columns are used which can be a hassle to maintain if you have to replicate a similar approach among multiple tables.
 
@@ -61,7 +63,7 @@ WHERE
 
 ## `SIMILAR TO` operator
 
-This operator lets us use [“regular expressions”](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-SIMILARTO-REGEXP) in SQL queries and returns true/false if a match is found.
+This operator lets us use [`regular expressions`](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-SIMILARTO-REGEXP) in SQL queries and returns true/false if a match is found.
 
 ```sql
 SELECT *
@@ -73,7 +75,7 @@ Not very commonly used and is generally avoided, since introducing regex pattern
 
 ## POSIX Regular Expressions
 
-POSIX regular expressions are a better way to match patterns than the `ILIKE` and `SIMILAR TO` operators. The most common example of regex usage is the `grep` tool.
+POSIX regular expressions are a better way to match patterns than the [`ILIKE`](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-LIKE) and [`SIMILAR TO`](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-SIMILARTO-REGEXP) operators. The most common example of regex usage is the `grep` tool.
 
 The operator `~` can be used to for POSIX regex matches. Where `*` is used of case-insensitive matches & `!` represents the logical NOT operation.
 
@@ -142,13 +144,13 @@ The above query will match all `my_column` values which have a Levenshtein dista
 
 To index `LIKE` & `SIMILAR TO` the `pg_trgm` module supports two PostgreSQL index types: **GIST** and **GIN**.
 
-- A [GiST](https://www.postgresql.org/docs/15/gist.html) (Generalized Search Tree) index is lossy, meaning that the index may produce false matches, and it is necessary to check the actual table row to eliminate such false matches. (PostgreSQL does this automatically). Use GIST index when you are storing data like longitudes, latitudes, ip address etc.
+- A [`GiST`](https://www.postgresql.org/docs/15/gist.html) (Generalized Search Tree) index is lossy, meaning that the index may produce false matches, and it is necessary to check the actual table row to eliminate such false matches. (PostgreSQL does this automatically). Use GIST index when you are storing data like longitudes, latitudes, ip address etc.
 
   ```sql
   CREATE INDEX index_name ON my_table USING GIST (my_column);
   ```
 
-- [GIN](https://www.postgresql.org/docs/15/gin.html) indexes are not lossy, but their performance depends logarithmically on the number of unique words.
+- [`GIN`](https://www.postgresql.org/docs/15/gin.html) indexes are not lossy, but their performance depends logarithmically on the number of unique words.
 
   ```sql
   CREATE INDEX index_name ON my_table USING GIN (my_column gin_trgm_ops);
@@ -161,7 +163,7 @@ To index `LIKE` & `SIMILAR TO` the `pg_trgm` module supports two PostgreSQL inde
 
 > As a rule of thumb, a GIN index is faster to search than a GiST index, but slower to build or update; so GIN is better suited for static data and GiST for often-updated data.
 
-## Full-Text Search using [`tsvector` and `tsquery`](https://www.postgresql.org/docs/current/datatype-textsearch.html)
+## Full-Text Search using `tsvector` and `tsquery`
 
 First, let's look at the definition (source Wikipedia):
 
