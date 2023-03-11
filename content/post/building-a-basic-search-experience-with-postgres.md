@@ -12,7 +12,7 @@ authorUrl: "https://www.linkedin.com/in/bhupesh-v"
 authorImage: "img/bhupesh-varshney.jpg"
 ---
 
-Building search functionality in products is a common task. Many solutions exist to solve this problem already. OpenSource tools like [`opensearch`](https://opensearch.org/) and [`mellisearch`](https://www.meilisearch.com/) are some examples that are very commonly used. Using a 3rd party tool to build a "full-text search" is a good bet if you have a lot of data (i.e. a lot of users).
+Building search functionality in products is a common task. Many solutions exist to solve this problem already. OpenSource tools like [`opensearch`](https://opensearch.org/) and [`meilisearch`](https://www.meilisearch.com/) are some examples that are very commonly used. Using a 3rd party tool to build a "full-text search" is a good bet if you have a lot of data (i.e. a lot of users).
 
 The goal of this post is to have a look at some in-built tools to build a minimalist search feature when your data is backed by a Postgres (or any SQL) database. Here is a rundown of what we will be covering
 
