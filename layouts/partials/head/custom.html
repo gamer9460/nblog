@@ -1,3 +1,7 @@
+{{ with .Site.Params.favicon }}
+<link rel="icon" type="image/ico" href="{{ . }}" />
+{{ end }}
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -22,7 +26,3 @@
 
   gtag("config", "G-99C9344K6W");
 </script>
-
-{{ with .Site.Params.favicon }}
-<link rel="icon" type="image/ico" href="{{ . }}" />
-{{ end }}
