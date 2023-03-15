@@ -103,6 +103,7 @@ params:
 
   widgets:
     homepage:
+      - type: subscribe-home
       - type: search
       # - type: archives
       #   params:
