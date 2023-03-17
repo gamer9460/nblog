@@ -126,5 +126,5 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 
 # Contact Us
 
-If you have any questions about this Privacy Policy, please contact us: hello@nurdsoft.co
+If you have any questions about this Privacy Policy, please contact us: hello@pacenthink.io
 Privacy Policy of https://pacenthink.io
