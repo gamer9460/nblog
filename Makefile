@@ -10,7 +10,7 @@ help : Makefile
 .PHONY: %
 ## % 	: Generate a new blog file.
 %:
-	hugo new content/blog/$@.md
+	hugo new content/post/$@.md
 
 .PHONY: build
 ## build : build docker image for hugo application
