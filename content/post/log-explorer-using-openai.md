@@ -1,11 +1,11 @@
 ---
-title: "Log Explorer Using OpenAI"
+title: "Log Explorer Using OpenAI - Part 1"
 date: 2023-03-22T17:08:11+05:30
 draft: false
-tags: ["openai"]
+tags: ["openai","nlp", "logging"]
 categories: ["Engineering"]
-author: "Mukesh Kumar"
-authorDes: "TODO"
+author: "Bhupesh Varshney"
+authorDes: "Software Developer at  Nurdsoft | Tech Writer |  Python & Golang"
 authorUrl: "https://www.linkedin.com/in/bhupesh-v"
 authorImage: "img/bhupesh-varshney.jpg"
 ---
@@ -18,15 +18,15 @@ For example, a user could request to see the top 10 APIs that have returned 5xx 
 
 ## Background
 
-- Before going into actual implementation details, i wanted to explore more about what openAI provides currently. So i have documented few things from openAI that we will be using throughout the whole journey.
+- Before going into actual implementation details, I wanted to explore more about what OpenAI provides currently. So I have documented few things from OpenAI that we will be using throughout the whole journey.
 
 - OpenAI has a language model called GPT-3, which is being used to generate human-like text, answer questions, translate languages, write code, and more. The model is trained on massive amount of data to understand and generate human-like text.
 
 ## How GPT works?
 
-You can input any text as a prompt, and the openAI model will generate a text completion that attempts to match whatever context or pattern you gave it.
+You can input any text as a prompt, and the OpenAI model will generate a text completion that attempts to match whatever context or pattern you give it.
 
-E.g. When i asked GPT to suggest movie title on developer's life it said Debugged: A Comedic Tale of a Developer's Life  Funny, right? 😄😄
+E.g. When asked to "suggest movie title on developer's life", it said _Debugged: A Comedic Tale of a Developer's Life_  Funny, right? 😄😄
 
 Now, let's deep dive into some of the core components of GPT which we can leverage via API.
 
@@ -40,7 +40,8 @@ OpenAI supports different models and each of these models have different objecti
 
 - Content filter: A fine-tuned model that can detect whether text may be sensitive or unsafe
 
-We will be mostly interested in codex model for this problem statement. 
+We will be mostly interested in codex model for this problem statement.
+
 
 ### What is Codex Model?
 
@@ -53,10 +54,9 @@ We will be mostly interested in codex model for this problem statement.
   - Bring knowledge to you, such as finding a useful library or API call for an application.
   - Add comments to your code.
   - Rewrite code for efficiency
-- Sample example to convert prompt to sql query using completion API.
+- Here is a sample prompt to generat a SQL query using completion API.
 
-  ```bash
-  Prompt
+  ```
   ### Postgres SQL tables, with their properties:
   #
   # Employee(id, name, department_id)
@@ -65,9 +65,11 @@ We will be mostly interested in codex model for this problem statement.
   #
   ### A query to list the names of the departments which employed 
   ### more than 10 employees in the last 3 months
-  Select
+  ```
 
-  OpenAI Response
+  OpenAI's Response:
+
+  ```sql
   SELECT DISTINCT department.name
   FROM employee
   INNER JOIN department ON employee.department_id = department.id
@@ -81,7 +83,7 @@ We will be mostly interested in codex model for this problem statement.
 
 All these functionalities are available through completion API. Given a prompt, the model will return one or more predicted completions.
 
-Sample Curl
+Sample curl,
 
 ```bash
 curl https://api.openai.com/v1/completions \
@@ -95,16 +97,16 @@ curl https://api.openai.com/v1/completions \
 }'
 ```
 
-Let’s understand what these body Params means:
+Let’s understand what these each of these body params means:
 
-- `model`: code-davinci-002 or code-cushman-001 for code completion.
-- `prompt`: user prompt that user will provide.
-- `temperature`: Higher values means the model will take more risks. Try 0.9 for more creative applications, and 0 (argmax sampling) for ones with a well-defined answer.
-- `max_tokens`: The maximum number of tokens to generate in the completion.
+- [`model`](https://platform.openai.com/docs/api-reference/completions/create#completions/create-model): `code-davinci-002` or `code-cushman-001` for code completion.
+- [`prompt`](https://platform.openai.com/docs/api-reference/completions/create#completions/create-prompt): user prompt that user will provide.
+- [`temperature`](https://platform.openai.com/docs/api-reference/completions/create#completions/create-temperature): Higher values means the model will take more risks. Try `0.9` for more creative applications, and `0` (argmax sampling) for ones with a well-defined answer.
+- [`max_tokens`](https://platform.openai.com/docs/api-reference/completions/create#completions/create-max_tokens): The maximum number of tokens to generate in the completion.
 
 ### Training Model for specific use cases
 
-For any specific use case, it is also possible to train model on top of any existing base model for specific use case by providing example datasets to model.
+For any specific use case, it's also possible to train model on top of any existing base model by providing example datasets to model.
 
 Data needs to be a JSONL document, where each line is a prompt-completion pair corresponding to a training example. Once we provide these datasets with custom model name, we can use it just like any other model
 
@@ -119,35 +121,42 @@ Example dataset:
 
 ## Solution
 
-Since now we have explored different components of openAI API’s, let's talk about how can we use this for our problem statement. For developing POC, we will only be focusing on searching logs from kibana.
+Since now we have explored different components of OpenAI API’s, let's talk about how can we use this for our orignial problem statement. For developing a log explorer POC, we will only be focusing on searching logs from [Kibana](https://www.elastic.co/kibana/).
 
 ### Approach 1
 
-- We can make use of prompt to sql code completion feature from openAI.
-- Elastic search provides api to fetch all fields names with data types for all indices which are logged in given time frame.
-- We will use field names & data types from ES to define schema for openAI sql completion API.
-- Elastic search provides a SQL feature to execute SQL queries against Elasticsearch indices and return results in tabular format. We can use sql returned from openAI to execute it on ES.
+- We can make use of prompt to SQL code completion feature from OpenAI.
+- Elastic search provides APIs to fetch all fields names with data types for all indices which are logged in given time frame.
+- We will use field names & data types from ES to define schema for OpenAI SQL completion API.
+- Elastic search provides a SQL feature to execute SQL queries against Elasticsearch indices and return results in tabular format. We can use SQL returned from OpenAI to execute it on ES.
 
 ![Searching logs using Kibana and OpenAI](img/log-explorer-using-openai.png)
 
 Example:
 
-```bash
-User Prompt - 
-  A query to list logs having 5xx error
+**User Prompt**
 
-Input for openAI - 
+  ```
+  A query to list logs having 5xx error
+  ```
+
+**Input for OpenAI**
+
+  ```
   ### Postgres SQL tables, with their properties:
   # logs_table[message, msg, level, RequestHeaders.user_id, RequestHeaders.user_type, RequestMethod, RequestProxy, RequestTime, RequestURL, ResponseStatus(int), ResponseTime, time]
   ### A query to list logs having 5xx error
-  SELECT
+  ```
 
-Query Returned by openAI - 
-  SELECT * FROM logs_table WHERE ResponseStatus >= 500 AND ResponseStatus < 600
+**Query Returned by OpenAI**
+
+```sql
+SELECT * FROM logs_table WHERE ResponseStatus >= 500 AND ResponseStatus < 600
 ```
 
-So far In this blog post, we examined the overall concept of using OpenAI to search logs through natural language. Specifically, we looked at the different models and capabilities that OpenAI offers, with a focus on the Codex model and the code completion API.
+So far, we examined the overall concept of using OpenAI to search logs via natural language. Specifically, we looked at the different models and capabilities that OpenAI offers, with a focus on the Codex model and the code completion API.
 
 We also touched on the idea of fine-tuning the model for specific use cases by providing example datasets.
 
-In our next blog post, we will delve deeper into the code completion API of GPT to determine its feasibility for our specific use case. Stay tuned for more updates on this exciting project!
+In our next part for this series, we will delve deeper into the code completion API of GPT to determine its feasibility for our specific use case. Stay tuned for more updates on this exciting project!
+
