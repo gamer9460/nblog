@@ -32,15 +32,15 @@ Now, let's deep dive into some of the core components of GPT which we can levera
 
 ### Model
 
-OpenAI supports different models and each of these models have different objective & pricing. Broadly these 3 models are available -
+OpenAI supports different models and each of these models have different objective & pricing. Some of them are listed below
 
 - GPT-3: A set of models that can understand and generate natural language
 
 - Codex: A set of models that can understand and generate code, including translating natural language to code e.g prompt to sql
 
-- Content filter: A fine-tuned model that can detect whether text may be sensitive or unsafe
+- Moderation: A fine-tuned model that can detect whether text may be sensitive or unsafe and complies with [OpenAI's usage policies](https://openai.com/policies/usage-policies).
 
-We will be mostly interested in codex model for this problem statement.
+A full list can be found on [OpenAI docs](https://platform.openai.com/docs/models/overview). We will be mostly interested in codex model for this problem statement.
 
 
 ### What is Codex Model?
@@ -159,4 +159,3 @@ So far, we examined the overall concept of using OpenAI to search logs via natur
 We also touched on the idea of fine-tuning the model for specific use cases by providing example datasets.
 
 In our next part for this series, we will delve deeper into the code completion API of GPT to determine its feasibility for our specific use case. Stay tuned for more updates on this exciting project!
-
