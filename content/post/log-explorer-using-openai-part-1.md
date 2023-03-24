@@ -4,6 +4,7 @@ date: 2023-03-22T17:08:11+05:30
 draft: false
 tags: ["openai","nlp", "logging"]
 categories: ["Engineering"]
+image: "img/log-explorer-using-openai-part1.jpg"
 author: "Bhupesh Varshney"
 authorDes: "Software Developer at  Nurdsoft | Tech Writer |  Python & Golang"
 authorUrl: "https://www.linkedin.com/in/bhupesh-v"
