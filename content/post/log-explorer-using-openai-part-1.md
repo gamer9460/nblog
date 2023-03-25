@@ -3,7 +3,7 @@ title: "Log Explorer Using OpenAI - Part 1"
 date: 2023-03-22T17:08:11+05:30
 draft: false
 tags: ["openai","nlp", "logging"]
-categories: ["Engineering"]
+categories: ["AI"]
 image: "img/log-explorer-using-openai-part1.jpg"
 author: "Bhupesh Varshney"
 authorDes: "Software Developer at  Nurdsoft | Tech Writer |  Python & Golang"
