@@ -4,7 +4,7 @@ date: 2023-03-22T17:08:11+05:30
 draft: false
 tags: ["openai","nlp", "logging"]
 categories: ["AI"]
-image: "img/log-explorer-using-openai-part1.jpg"
+image: "img/logOpenAi.png"
 author: "Bhupesh Varshney"
 authorDes: "Software Developer at  Nurdsoft | Tech Writer |  Python & Golang"
 authorUrl: "https://www.linkedin.com/in/bhupesh-v"
@@ -64,7 +64,7 @@ A full list can be found on [OpenAI docs](https://platform.openai.com/docs/model
   # Department(id, name, address)
   # Salary_Payments(id, employee_id, amount, date)
   #
-  ### A query to list the names of the departments which employed 
+  ### A query to list the names of the departments which employed
   ### more than 10 employees in the last 3 months
   ```
 
