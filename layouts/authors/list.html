@@ -1,0 +1,54 @@
+{{ define "main" }}
+<div class="author-head">
+  <div>
+    <h1>{{ .Params.name }}</h1>
+    <h3>{{.Params.discription}}</h3>
+    <p style="text-align: justify;">
+
+      {{ .Content }}
+    </p>
+
+  </div>
+  {{ .Render "photo" }}
+</div>
+
+<h2>Articles by {{ .Params.name }}</h2>
+
+<aside class="related-content--wrapper">
+
+  <div class="related-content" style="width: 100%;">
+    <div  class="flex article-list--tile">
+          {{ range where .Site.RegularPages "Params.author" .Params.name }}
+
+      <article class="has-image">
+        <a href="{{ .Permalink }}">
+          <div class="article-image">
+               <img src="../../{{.Params.image}}" loading="lazy" />
+
+          </div>
+
+          <div
+            class="article-details"
+            style="
+              background: linear-gradient(
+                0deg,
+                rgba(28, 44, 52, 0.5) 0%,
+                rgba(186, 84, 75, 0.75) 100%
+              );
+            "
+          >
+            <h2 class="article-title">
+              {{ .Title }}
+
+            </h2>
+          </div>
+        </a>
+
+      </article>
+      {{ end }}
+    </div>
+  </div>
+
+</aside>
+     {{ partialCached "footer/footer" . }}
+ {{ end }}

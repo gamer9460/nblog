@@ -170,3 +170,8 @@ related:
 
     - name: categories
       weight: 200
+
+taxonomies:
+  author: authors
+  tag: tags
+  category: categories

@@ -68,4 +68,4 @@ SemVer has significantly helped our team. Here are a few ways in which we have i
 1. Automation: SemVer works best in an environment without any human intervention. i.e., the process of generating a new release number is fully automated.
 2. Strict Git commit rules: If your organization currently leverages Git as a version control system, you will notice that the tools mentioned above require good Git commit message etiquette. This means, if you are not doing so already, you will want to look into enforcing strict Git commit rules using something like pre or post commit hooks. This will ensure that the process used to generate a new version using SemVer provides a seamless experience.
 
-Stay tuned.  Next time we get into Semantic Commits.
+Stay tuned. Next time we get into Semantic Commits.
