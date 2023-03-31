@@ -5,7 +5,7 @@ draft: true
 tags: ["Blockchain"]
 author: "Darshan Ghetiya"
 authorDes: "Nurdsoft"
-authorUrl: "https://github.com/Darshan072"
+
 ---
 
 This article describes various aspects of a blockchain.

@@ -8,7 +8,7 @@ categories: ["Engineering"]
 
 author: "Tarpan Pathak"
 authorDes: "Co-Founder at Nurdsoft"
-authorUrl: "https://www.linkedin.com/in/tarpanpathak"
+
 authorImage: "img/tarpan-pathak.jpg"
 ---
 
