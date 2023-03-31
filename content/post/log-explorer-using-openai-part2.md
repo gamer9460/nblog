@@ -4,10 +4,10 @@ date: 2023-03-27T19:42:03+05:30
 draft: false
 tags: ["openai","nlp", "logging"]
 categories: ["AI"]
-image: "img/log-explorer-using-openai-part2.jpg"
+image: "img/Frame6.png"
 author: "Bhupesh Varshney"
 authorDes: "Software Developer at  Nurdsoft | Tech Writer |  Python & Golang"
-authorUrl: "https://www.linkedin.com/in/bhupesh-v"
+
 authorImage: "img/bhupesh-varshney.jpg"
 ---
 
@@ -22,7 +22,7 @@ I have created various test tables to evaluate the performance of OpenAI in conv
 - By default, OpenAI treats all fields as a string. So we need to define integer fields explicitly. In the below example, I removed data type int for `ResponseStatus`
 
   ```txt
-  Prompt - 
+  Prompt -
   ### Postgres SQL tables, with their properties:
   # logs_table[message, msg, RequestHeaders.user_id, RequestHeaders.user_type, RequestMethod, RequestProxy, RequestTime, RequestURL, ResponseStatusCode, ResponseTime, time, level]
   ### A query to list messages having 5xx error
@@ -35,7 +35,7 @@ I have created various test tables to evaluate the performance of OpenAI in conv
 - I tried to check if we can enforce a specific style inside the prompt. I noticed that we can enforce lower or uppercase but not any other casing style like camelcase etc.
 
   ```txt
-  Prompt 1 - 
+  Prompt 1 -
   ### Postgres SQL tables, with their properties:
   # logs_table[message, msg, RequestHeaders.user_id, RequestHeaders.user_type, RequestMethod, RequestProxy, RequestTime, RequestURL, ResponseStatusCode, ResponseTime, time, level]
   ### A query to list messages having errors
@@ -44,7 +44,7 @@ I have created various test tables to evaluate the performance of OpenAI in conv
   Query Returned by OpenAI -
   SELECT * FROM logs_table WHERE level = 'error'
 
-  Prompt 2 with uppercase of level field- 
+  Prompt 2 with uppercase of level field-
   ### Postgres SQL tables, with their properties:
   # logs_table[message, msg, RequestHeaders.user_id, RequestHeaders.user_type, RequestMethod, RequestProxy, RequestTime, RequestURL, ResponseStatusCode, ResponseTime, time, level]
   # level(ERROR|DEBUG)
@@ -54,7 +54,7 @@ I have created various test tables to evaluate the performance of OpenAI in conv
   Query Returned by OpenAI -
   SELECT * FROM logs_table WHERE level = 'ERROR'
 
-  Prompt 2 with Camelcase for level - 
+  Prompt 2 with Camelcase for level -
   ### Postgres SQL tables, with their properties:
   # logs_table[message, msg, RequestHeaders.user_id, RequestHeaders.user_type, RequestMethod, RequestProxy, RequestTime, RequestURL, ResponseStatusCode, ResponseTime, time, level]
   # level(Error|Debug)
@@ -144,7 +144,7 @@ I have created various test tables to evaluate the performance of OpenAI in conv
    ```txt
    ### Postgres SQL tables, with their properties:
    # logs_table[message, msg, RequestHeaders.user_id, RequestHeaders.user_type, RequestMethod, RequestProxy, RequestTime, RequestURL, ResponseStatusCode, ResponseTime, time, level]
-   
+
    ### A query to list messages having post request
    ```
 
@@ -249,7 +249,7 @@ I have created various test tables to evaluate the performance of OpenAI in conv
    ```txt
    ### Postgres SQL tables, with their properties:\n#
    # Table logs_table[RequestMethod,app_name,category,currency,customer_birth_date,customer_first_name,customer_full_name,customer_gender,customer_id,customer_last_name,customer_phone,day_of_week,day_of_week_i,email,geoip.city_name,geoip.continent_name,geoip.country_iso_code,geoip.location,geoip.region_name,level,manufacturer,order_date(datetime),order_id,products._id,products.base_price,products.base_unit_price,products.category,products.created_on,products.discount_amount,products.discount_percentage,products.manufacturer,products.min_price,products.price,products.product_id,products.product_name,products.quantity,products.sku,products.tax_amount,products.taxful_price,products.taxless_price,products.unit_discount_amount,requestUrl,responseStatusCode(int)]
-   
+
    # return top 10 products where request returned order not found error. Return all product fields only for such orders
    ```
 
@@ -266,7 +266,7 @@ I have created various test tables to evaluate the performance of OpenAI in conv
    ```txt
    ### Postgres SQL tables, with their properties:
    # logs_table[RequestMethod,app_name,category,currency,customer_birth_date,customer_first_name,customer_full_name,customer_gender,customer_id,customer_last_name,customer_phone,day_of_week,day_of_week_i,email,geoip.city_name,geoip.continent_name,geoip.country_iso_code,geoip.location,geoip.region_name,level,manufacturer,order_date(datetime),order_id,products._id,products.base_price,products.base_unit_price,products.category,products.created_on,products.discount_amount,products.discount_percentage,products.manufacturer,products.min_price,products.price,products.product_id,products.product_name,products.quantity,products.sku,products.tax_amount,products.taxful_price,products.taxless_price,products.unit_discount_amount,url,requestUrl,responseStatusCode(int), time]
-   
+
    ### write query to return service names which were throwing 5xx error in last 15 mins
    ```
 
@@ -299,7 +299,7 @@ OpenAI charges based on the number of tokens(1 token ~= 4 English char) and code
 To reduce pricing, we need to find a way to define schema once only & execute prompts without schema so that no.of tokens will go down per request. The option of Fine-tuning the model is available but it is not yet available for codex so we can try this in the future once it is available. But I tried to train it on the davinci base model but it doesn’t work. A model can be fine-tuned like this
 
 ```sh
-# submmitting data for fine-tuning 
+# submmitting data for fine-tuning
 openai api fine_tunes.create -t fine-tuned-data.jsonl -m davinci
 ```
 
