@@ -58,7 +58,35 @@
     color: var(--secondary);
   }
 }
+.author-head {
+  display: flex;
+  justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+text-align: center;
+  p{
+    text-align: justify;
+  }
+  figure{
+    order: 1;
+     @include respond(sm) {
+        order: 2;
 
+      }
+  }
+  div{
+    order: 2;
+     @include respond(sm) {
+        order: 1;
+
+      }
+  }
+  @include respond(sm) {
+        flex-direction: row;
+    align-items: flex-start;
+text-align: justify;
+      }
+}
 .article-title {
   font-weight: 600;
   margin: 0;
