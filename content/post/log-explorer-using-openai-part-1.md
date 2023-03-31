@@ -42,8 +42,6 @@ OpenAI supports different models and each of these models have different objecti
 - Moderation: A fine-tuned model that can detect whether text may be sensitive or unsafe and complies with [OpenAI's usage policies](https://openai.com/policies/usage-policies).
 
 A full list can be found on [OpenAI docs](https://platform.openai.com/docs/models/overview). We will be mostly interested in codex model for this problem statement.
-
-
 ### What is Codex Model?
 
 - The Codex models are descendants of GPT-3 models that can understand and generate code. Their training data contains both natural language and billions of lines of public code from GitHub.
