@@ -134,3 +134,4 @@ vault token create -field=token -policy gh-actions
 
 ## Summary
 Vault is a powerful tool that can help you to manage your secrets and secure your DevOps pipeline. By following the steps outlined in this guide, you can install and configure Vault, enable a secret engine, create a secret, and integrate it into a GitHub Actions workflow. By using Vault to store and manage your secrets, you can ensure that they are kept secure and only accessed by authorized users and workflows, reducing the risk of unauthorized access or data breaches. This can help you to maintain a robust and secure DevOps pipeline, while also streamlining your development and deployment processes. With Vault, you can take control of your secrets and build a more secure and efficient development workflow.
+
