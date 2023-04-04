@@ -12,6 +12,7 @@ authorImage: "img/mhathesh-tsr.jpg"
 ---
 
 ## What is HashiCorp Vault?
+
 **[`HashiCorp Vault`](https://developer.hashicorp.com/vault/docs/what-is-vault)** is a tool designed to address the challenges of managing and securing secrets in modern IT environments. Vault provides a secure, centralized system for storing and managing secrets, such as passwords, API keys, and TLS certificates. Vault supports a wide range of secret types and can be extended to support custom secrets as well.
 
 Vault is designed with security in mind and provides several layers of protection for secrets, including encryption, access controls, and auditing. Vault also provides a flexible and extensible architecture that can be integrated with other tools and services in a modern IT environment.
@@ -133,5 +134,6 @@ vault token create -field=token -policy gh-actions
 > **[`Tune`](https://developer.hashicorp.com/vault/docs/commands/secrets/tune) TTL and MAX_TTL as per your requirments**
 
 ## Summary
+
 Vault is a powerful tool that can help you to manage your secrets and secure your DevOps pipeline. By following the steps outlined in this guide, you can install and configure Vault, enable a secret engine, create a secret, and integrate it into a GitHub Actions workflow. By using Vault to store and manage your secrets, you can ensure that they are kept secure and only accessed by authorized users and workflows, reducing the risk of unauthorized access or data breaches. This can help you to maintain a robust and secure DevOps pipeline, while also streamlining your development and deployment processes. With Vault, you can take control of your secrets and build a more secure and efficient development workflow.
 
