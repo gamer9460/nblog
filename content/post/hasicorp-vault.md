@@ -8,7 +8,7 @@ image: "img/logOpenAi.png"
 author: "Mhathesh"
 authorDes: "DevOps Engineer at Nurdsoft"
 
-authorImage: "img/bhupesh-varshney.jpg"
+authorImage: "img/mhathesh-tsr.jpg"
 ---
 
 # What is HashiCorp Vault?
