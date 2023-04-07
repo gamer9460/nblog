@@ -4,11 +4,11 @@ date: 2023-04-04T17:08:11+05:30
 draft: false
 tags: ["hashicorp","vault","devops"]
 categories: ["DevOps"]
-image: "img/logOpenAi.png"
+image: "img/hashicorp-vault.jpg"
 author: "Mhathesh TSR"
 authorDes: "DevOps Engineer at Nurdsoft"
 
-authorImage: "img/mhathesh-tsr.jpg"
+authorImage: "img/mhathesh-tsr.jpeg"
 ---
 
 ## What is HashiCorp Vault?
@@ -50,7 +50,7 @@ Once installed, you can start Vault in development mode by running the following
 vault server -dev
 ```
 
-This will start Vault in development mode with a root token and a default unseal key. You can use the root token to authenticate with Vault and enable secret engines, 
+This will start Vault in development mode with a root token and a default unseal key. You can use the root token to authenticate with Vault and enable secret engines,
 > **Note:** do not use root token in production env.
 
 
@@ -130,10 +130,9 @@ vault policy write gh-actions policy.hcl
 ```sh
 vault token create -field=token -policy gh-actions
 ```
-> **Token** generated from above step should be configured in github actions secret as **VAULT_TOKEN** variable. 
+> **Token** generated from above step should be configured in github actions secret as **VAULT_TOKEN** variable.
 > **[`Tune`](https://developer.hashicorp.com/vault/docs/commands/secrets/tune) TTL and MAX_TTL as per your requirments**
 
 ## Summary
 
 Vault is a powerful tool that can help you to manage your secrets and secure your DevOps pipeline. By following the steps outlined in this guide, you can install and configure Vault, enable a secret engine, create a secret, and integrate it into a GitHub Actions workflow. By using Vault to store and manage your secrets, you can ensure that they are kept secure and only accessed by authorized users and workflows, reducing the risk of unauthorized access or data breaches. This can help you to maintain a robust and secure DevOps pipeline, while also streamlining your development and deployment processes. With Vault, you can take control of your secrets and build a more secure and efficient development workflow.
-
