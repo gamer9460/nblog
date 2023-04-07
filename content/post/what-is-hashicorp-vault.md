@@ -1,9 +1,9 @@
 ---
-title: "HashiCorp Vault"
+title: "What is HashiCorp Vault"
 date: 2023-04-04T17:08:11+05:30
 draft: false
 tags: ["hashicorp","vault","devops"]
-categories: ["Engineering"]
+categories: ["Security"]
 image: "img/hashicorp-vault.jpg"
 author: "Mhathesh TSR"
 authorDes: "DevOps Engineer at Nurdsoft"
