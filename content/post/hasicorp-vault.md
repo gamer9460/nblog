@@ -3,7 +3,7 @@ title: "HashiCorp Vault"
 date: 2023-04-04T17:08:11+05:30
 draft: false
 tags: ["hashicorp","vault","devops"]
-categories: ["DevOps"]
+categories: ["Engineering"]
 image: "img/hashicorp-vault.jpg"
 author: "Mhathesh TSR"
 authorDes: "DevOps Engineer at Nurdsoft"
