@@ -1,0 +1,177 @@
+baseURL: "https://www.pacenthink.io/"
+languageCode: "en-us"
+title: "Pace 'n Think"
+theme: "hugo-theme-stack"
+module:
+  imports:
+    - path: github.com/CaiJimmy/hugo-theme-stack/v3
+
+params:
+  mainSections:
+    - post
+  featuredImageField: image
+  rssFullContent: true
+  favicon: "/img/favicon.ico"
+
+  footer:
+    since: 2023
+    # customText: Built to make things easy
+
+  dateFormat:
+    published: Jan 02, 2006
+    lastUpdated: Jan 02, 2006 15:04 MST
+
+  sidebar:
+    compact: false
+    # emoji: 🗞️
+    # subtitle: "Welcome to Pace 'n Think"
+    avatar:
+      enabled: false
+      local: true
+      src: img/art.png
+
+  article:
+    math: false
+    toc: true
+    readingTime: true
+    license:
+      enabled: true
+      default: Licensed under CC Pace 'n Think
+
+  comments:
+    enabled: false
+    provider: disqus
+
+    disqusjs:
+      shortname:
+      apiUrl:
+      apiKey:
+      admin:
+      adminLabel:
+
+    remark42:
+      host:
+      site:
+      locale:
+
+    # Waline client configuration see: https://waline.js.org/en/reference/client.html
+    waline:
+      serverURL:
+      lang:
+      visitor:
+      avatar:
+      emoji:
+        - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
+      requiredMeta:
+        - name
+        - email
+        - url
+      locale:
+        admin: Admin
+        placeholder:
+
+    twikoo:
+      envId:
+      region:
+      path:
+      lang:
+
+    giscus:
+      repo:
+      repoID:
+      category:
+      categoryID:
+      mapping:
+      strict:
+      lightTheme:
+      darkTheme:
+      reactionsEnabled: 1
+      emitMetadata: 0
+      inputPosition:
+      lang:
+
+    gitalk:
+      owner:
+      admin:
+      repo:
+      clientID:
+      clientSecret:
+
+    cusdis:
+      host:
+      id:
+
+  widgets:
+    homepage:
+      - type: subscribe-home
+      - type: search
+      # - type: archives
+      #   params:
+      #     limit: 5
+      - type: categories
+        params:
+          limit: 10
+      - type: tag-cloud
+        params:
+          limit: 10
+    page:
+      - type: toc
+
+  opengraph:
+    twitter:
+      # Your Twitter username
+      site:
+
+      # Available values: summary, summary_large_image
+      card: summary_large_image
+
+  defaultImage:
+    opengraph:
+      enabled: false
+      local: false
+      src: img/art.png
+
+  colorScheme:
+    # Display toggle
+    toggle: true
+
+    # Available values: auto, light, dark
+    default: light
+
+  imageProcessing:
+    cover:
+      enabled: true
+    content:
+      enabled: true
+
+menu:
+  main: []
+
+  # social:
+  #   - identifier: github
+  #     name: GitHub
+  #     url: https://github.com/pacenthink
+  #     params:
+  #       icon: brand-github
+
+  #   - identifier: twitter
+  #     name: Twitter
+  #     url: https://twitter.com/nurdsoft
+  #     params:
+  #       icon: brand-twitter
+
+related:
+  includeNewer: true
+  threshold: 60
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
+
+    - name: categories
+      weight: 200
+
+taxonomies:
+  author: authors
+  tag: tags
+  category: categories

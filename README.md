@@ -1,8 +1,8 @@
 # pacenthink.io
 
-A repository to house the code for https://www.pacenthink.io/
+A repository to house the code for https://pacenthinkio-maddy023-main.pacenthink.co/
 
-## Initial Setup 
+## Initial Setup
 
 This repository was bootstrapped using the [Hugo QuickStart Guide](https://gohugo.io/getting-started/quick-start/).
 
@@ -10,13 +10,13 @@ This repository was bootstrapped using the [Hugo QuickStart Guide](https://gohug
 
 Use the steps below to test your changes:
 
-**Step 1**. Add a new blog file: `hugo new content/blog/<topic>.md` 
+**Step 1**. Add a new blog file: `hugo new content/blog/<topic>.md`
 
 **Step 2**. Edit the newly created file with the desired change/s.
 
-**Step 3**. Run Hugo locally to validate your change/s: `hugo server -D`. 
+**Step 3**. Run Hugo locally to validate your change/s: `hugo server -D`.
 
-**Step 4**. [Publish your changes](#contributions). 
+**Step 4**. [Publish your changes](#contributions).
 
 **Helpful hint**: The project includes a [Makefile](https://github.com/pacenthink/pacenthink.io/Makefile) to help you speed up testing. Run `make help` from the root of the project or see the makefile for details.
 
@@ -24,13 +24,12 @@ Use the steps below to test your changes:
 
 The repository assumes the following:
 
+- A basic understanding of [Docker](https://docs.docker.com/engine/) with Docker installed locally.
 - A basic understanding of [Git](https://git-scm.com/).
 - A basic understanding of [Hugo](https://gohugo.io). 
     - **Important Notes**: 
         - This repository uses the following Hugo Theme: https://github.com/adityatelange/hugo-PaperMod.git
         - Hugo version `>= v0.100.2`. 
-- (Optional) A basic understanding of [Netlify](https://www.netlify.com). 
-    - **Important Note**: Netlify holds all the configurations to automatically publish changes via a CI/CD pipeline and the `main` branch. If CI/CD changes are needed, please reach out to a team member with the specifics. 
 
 ## Contributions
 
@@ -40,7 +39,9 @@ To publish a change, create a [PR](https://docs.github.com/en/pull-requests/coll
 
 **Step 1**. Clone this project: `git@github.com:pacenthink/pacenthink.io.git`.
 
-**Step 2**. Checkout a branch:
+**Step 2**. Pull hugo theme from submodule if missing `git submodule update --init --recursive`
+
+**Step 3**. Checkout a branch:
 ```sh 
 # Feature branch
 $ git checkout -b feature/abc
@@ -49,9 +50,9 @@ $ git checkout -b feature/abc
 $ git checkout -b fix/abc
 ```
 
-**Step 3**. Validate the changes locally by executing the steps defined under [Test](#test).
+**Step 4**. Validate the changes locally by executing the steps defined under [Test](#test).
 
-**Step 4**. Commit and push the new changes to the remote:
+**Step 5**. Commit and push the new changes to the remote:
 ```
 $ git add file1 file2 ...
 
@@ -60,10 +61,8 @@ $ git commit -m "Adding some change"
 $ git push --set-upstream origin <branch>
 ```
 
-**Step 5**. Create a PR against the `main` branch and assign it to a team member for review.
+**Step 6**. Create a PR against the `main` branch and assign it to a team member for review.
 
-**Step 6**. Once merged, a CI/CD pipeline will run on the `main` branch to publish the change/s via Netlify. This normally only take a couple of minutes.
+**Step 7**. Once merged, a CI/CD pipeline will run on the `main` branch to publish the change/s via the [BND Platform](https://bnd.pacenthink.co/login).
 
-**Step 7**. Verify that your change has been propagated correctly by visiting https://wwww.pacenthink.io/
-
-    
+**Step 8**. Verify that your change has been propagated correctly by visiting https://pacenthinkio-maddy023-main.pacenthink.co/
