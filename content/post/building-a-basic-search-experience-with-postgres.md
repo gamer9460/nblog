@@ -7,8 +7,6 @@ tags: ["postgres", "sql"]
 categories: ["Engineering"]
 author: "Bhupesh Varshney"
 authorDes: "Software Developer at  Nurdsoft | Tech Writer |  Python & Golang"
-
-
 authorImage: "img/bhupesh-varshney.jpg"
 ---
 
@@ -17,7 +15,6 @@ Building search functionality in products is a common task. Many solutions exist
 The goal of this post is to have a look at some in-built tools to build a minimalist search feature when your data is backed by a Postgres (or any SQL) database. Here is a rundown of what we will be covering
 
 - [`ILIKE` operator](#ilike-operator)
-
 - [`SIMILAR TO` operator](#similar-to-operator)
 - [POSIX Regular Expressions](#posix-regular-expressions)
 - [Fuzzy Searching](#fuzzy-searching)

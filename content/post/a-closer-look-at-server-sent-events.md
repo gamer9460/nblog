@@ -1,8 +1,15 @@
 ---
-title: "A Closer Look at Server-Sent Events"
-date: 2023-02-01T13:59:11+05:30
+title: "A Closer Look at Server Sent Events"
+date: 2023-04-12T13:03:44+05:30
 draft: false
+image: "img/postgres-search-experience-cover.png"
+tags: ["go", "http"]
+categories: ["Engineering"]
+author: "Bhupesh Varshney"
+authorDes: "Software Developer at  Nurdsoft | Tech Writer |  Python & Golang"
+authorImage: "img/bhupesh-varshney.jpg"
 ---
+
 
 Server-Sent Events (SSE) which first appeared in the HTML5 specification in late 2009 is a simple and efficient way for a server to PUSH data to a client in real-time over HTTP.
 The goal of this article is to give you an overview of where the technology currently sits and what are some possible use cases to introduce it.
