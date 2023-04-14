@@ -2,7 +2,7 @@
 title: "A Closer Look at Server Sent Events"
 date: 2023-04-12T13:03:44+05:30
 draft: false
-image: "img/postgres-search-experience-cover.png"
+image: "img/closer-look-at-sse.png"
 tags: ["go", "http"]
 categories: ["Engineering"]
 author: "Bhupesh Varshney"
