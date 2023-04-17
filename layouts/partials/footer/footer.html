@@ -1,5 +1,6 @@
 {{- $ThemeVersion := "3.16.0" -}}
 <footer class="site-footer">
+  {{partial "subscribe/subscribe.html" . }}
   <div style="display: flex;flex-direction: column;align-items: center;gap: 6px;">
     <a class="privacy" href="/page/privacy/">Privacy Policy</a></section>
     <section class="copyright">
@@ -38,3 +39,10 @@
   </section>
   */}}
 </footer>
+<script>
+   window.addEventListener("DOMContentLoaded", function () {
+    if (window.location.pathname == "/") {
+      document.getElementById("mc_embed_signup_page").style.display = "none";
+    }
+  });
+</script>

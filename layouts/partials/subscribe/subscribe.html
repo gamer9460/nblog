@@ -87,84 +87,94 @@
   /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
-<div id="mc_embed_signup">
-  <h1>Subscribe for Free</h1>
-  <p class="subscribe-subtitle">
-    Get the earliest access to hand-picked content weekly for free.
-  </p>
-  <form
-    action="https://nurdsoft.us21.list-manage.com/subscribe/post?u=32bd586ed246bab936c97928e&amp;id=49df8ffb0c&amp;f_id=00bcaee1f0"
-    method="post"
-    id="mc-embedded-subscribe-form"
-    name="mc-embedded-subscribe-form"
-    class="validate form-style"
-    target="_blank"
-    novalidate
-  >
-    <div id="mc_embed_signup_scroll" style="width: 80%">
-      <div class="mc-field-group">
-        <input
-          type="email"
-          class="input-box"
-          placeholder="Enter your email"
-          value=""
-          name="EMAIL"
-          id="mce-EMAIL"
-        />
-      </div>
-      <div id="mce-responses" class="clear foot">
-        <div
-          class="response"
-          id="mce-error-response"
-          style="display: none"
-        ></div>
-        <div
-          class="response"
-          id="mce-success-response"
-          style="display: none"
-        ></div>
-      </div>
-       <div hidden="true">
-        <input type="hidden" name="tags"value="346732"/>
-      </div>
-      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-      <div style="position: absolute; left: -5000px" aria-hidden="true">
-        <input
-          type="text"
-         name="b_32bd586ed246bab936c97928e_49df8ffb0c"
-          tabindex="-1"
-          value=""
-        />
-      </div>
-    </div>
-    <div class="optionalParent">
-      <div class="clear foot">
-        <input
-          style="padding: 4.5px 10px"
-          type="submit"
-          value="Subscribe"
-          name="subscribe"
-          id="mc-embedded-subscribe"
-          class="button"
-        />
-      </div>
-    </div>
-  </form>
-  <p style="font-size: 14px; margin: 4px">
-    We care about your data in our
-    <a
-      style="font-weight: 500; text-decoration: underline"
-      href="/page/privacy/"
+<div id="subscribe_div">
+  <div id="mc_embed_signup">
+    <h1>Subscribe for Free</h1>
+    <p class="subscribe-subtitle">
+      Get the earliest access to hand-picked content weekly for free.
+    </p>
+    <form
+      action="https://nurdsoft.us21.list-manage.com/subscribe/post?u=32bd586ed246bab936c97928e&amp;id=49df8ffb0c&amp;f_id=00bcaee1f0"
+      method="post"
+      id="mc-embedded-subscribe-form"
+      name="mc-embedded-subscribe-form"
+      class="validate form-style"
+      target="_blank"
+      novalidate
     >
-      privacy policy</a
-    >
-  </p>
+      <div id="mc_embed_signup_scroll" style="width: 80%">
+        <div class="mc-field-group">
+          <input
+            type="email"
+            class="input-box"
+            placeholder="Enter your email"
+            value=""
+            name="EMAIL"
+            id="mce-EMAIL"
+          />
+        </div>
+        <div id="mce-responses" class="clear foot">
+          <div
+            class="response"
+            id="mce-error-response"
+            style="display: none"
+          ></div>
+          <div
+            class="response"
+            id="mce-success-response"
+            style="display: none"
+          ></div>
+        </div>
+        <div hidden="true">
+          <input type="hidden" name="tags" value="346732" />
+        </div>
+        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px" aria-hidden="true">
+          <input
+            type="text"
+            name="b_32bd586ed246bab936c97928e_49df8ffb0c"
+            tabindex="-1"
+            value=""
+          />
+        </div>
+      </div>
+      <div class="optionalParent">
+        <div class="clear foot">
+          <input
+            style="padding: 4.5px 10px"
+            type="submit"
+            value="Subscribe"
+            name="subscribe"
+            id="mc-embedded-subscribe"
+            class="button"
+          />
+        </div>
+      </div>
+    </form>
+    <p style="font-size: 14px; margin: 4px">
+      We care about your data in our
+      <a
+        style="font-weight: 500; text-decoration: underline"
+        href="/page/privacy/"
+      >
+        privacy policy</a
+      >
+    </p>
+  </div>
 </div>
 <script
   type="text/javascript"
   src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
 ></script>
 <script type="text/javascript">
+  window.addEventListener("DOMContentLoaded", function () {
+    if (
+      window.location.pathname == "/" ||
+      window.location.pathname == "/page/search/"
+    ) {
+      document.getElementById("subscribe_div").style.display = "none";
+    }
+  });
   (function ($) {
     window.fnames = new Array();
     window.ftypes = new Array();
