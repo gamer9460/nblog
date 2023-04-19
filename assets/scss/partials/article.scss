@@ -23,7 +23,7 @@
     .article-image {
       img {
         width: 100%;
-        height: 150px;
+
         object-fit: cover;
 
         @include respond(md) {
@@ -61,31 +61,29 @@
 .author-head {
   display: flex;
   justify-content: space-between;
-      flex-direction: column;
-      align-items: center;
-text-align: center;
-  p{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  p {
     text-align: justify;
   }
-  figure{
+  figure {
     order: 1;
-     @include respond(sm) {
-        order: 2;
-
-      }
+    @include respond(sm) {
+      order: 2;
+    }
   }
-  div{
+  div {
     order: 2;
-     @include respond(sm) {
-        order: 1;
-
-      }
+    @include respond(sm) {
+      order: 1;
+    }
   }
   @include respond(sm) {
-        flex-direction: row;
+    flex-direction: row;
     align-items: flex-start;
-text-align: justify;
-      }
+    text-align: justify;
+  }
 }
 .article-title {
   font-weight: 600;
@@ -213,7 +211,6 @@ text-align: justify;
 
     .article-image {
       img {
-        width: var(--image-size);
         height: var(--image-size);
         object-fit: cover;
       }
