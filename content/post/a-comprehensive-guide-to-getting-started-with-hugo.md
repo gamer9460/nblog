@@ -55,7 +55,7 @@ To create a new article, use the following command:
 $ hugo new about.md  # It will create a new about file in the content folder
 ```
 
-To start the Hugo server locally for live code preview, use the following command:
+To start the Hugo server locally for live code preview, use the following commands:
 
 ```shell
 $ hugo server  # Start the dev server
@@ -182,6 +182,11 @@ Markdown is a lightweight markup language used for formatting text.
 The Markdown Guide is a free and open-source reference guide that explains how to use Markdown, the simple and easy-to-use markup language you can use to format virtually any document. Please refer to the [`Markdown Guide`](https://www.markdownguide.org/)
 
 Now you're ready to create engaging content in Hugo using Markdown!
+
+
+## Stay Tuned
+
+In the upcoming article, we will explore the process of publishing our website to a live server, ensuring that our content is accessible to a wider audience. Stay tuned.
 
 ## Resources
 
