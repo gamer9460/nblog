@@ -42,7 +42,11 @@
 <script>
    window.addEventListener("DOMContentLoaded", function () {
     if (window.location.pathname == "/") {
-      document.getElementById("mc_embed_signup_page").style.display = "none";
+      const el=document.getElementById("mc_embed_signup_page")
+      if(el){
+el.style.display = "none";
+      }
+      
     }
   });
 </script>
