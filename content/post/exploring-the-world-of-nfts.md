@@ -3,7 +3,7 @@ title: "Exploring the World of NFTs"
 date: 2023-05-15T20:15:52+05:30
 draft: false
 image: "img/exploring-the-world-of-nfts.png"
-tags: ["nft"]
+tags: ["NFT"]
 categories: ["Engineering"]
 author: "Sreeni KS"
 authorDes: "UI/UX Designer at  Nurdsoft | Artist"
