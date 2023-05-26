@@ -1,9 +1,9 @@
 ---
-title: "Setting up K8S cluster and Rancher for managing the cluster"
+title: "Supercharge your cluster management: K8S and Rancher combo! - Part 1"
 date: 2023-05-26T17:08:11+05:30
 draft: false
 tags: ["devops"]
-categories: ["Security"]
+categories: ["Engineering"]
 image: "img/k8s-cluster-and-rancher.png"
 author: "Mhathesh TSR"
 authorDes: "DevOps Engineer at Nurdsoft"
