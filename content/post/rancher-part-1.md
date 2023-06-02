@@ -13,13 +13,13 @@ authorImage: "img/mhathesh-tsr.jpeg"
 
 ## What is rancher?
 
-    Rancher is a Kubernetes management tool to deploy and run clusters anywhere and on any provider. Rancher can provision Kubernetes from a hosted provider, provision compute nodes and then install Kubernetes onto them, or import existing Kubernetes clusters running anywhere.
+Rancher is a Kubernetes management tool to deploy and run clusters anywhere and on any provider. Rancher can provision Kubernetes from a hosted provider, provision compute nodes and then install Kubernetes onto them, or import existing Kubernetes clusters running anywhere.
 
 ## Installing Rancher server:
 
-    The Rancher server manages and provisions Kubernetes clusters. You can interact with downstream Kubernetes clusters through the Rancher server's user interface. The Rancher management server can be installed on any Kubernetes cluster, including hosted clusters, such as Amazon EKS clusters.
+The Rancher server manages and provisions Kubernetes clusters. You can interact with downstream Kubernetes clusters through the Rancher server's user interface. The Rancher management server can be installed on any Kubernetes cluster, including hosted clusters, such as Amazon EKS clusters.
 
-    To install Rancher using Docker, you can follow these general steps:
+To install Rancher using Docker, you can follow these general steps:
 
 1. Install Docker: Ensure that Docker is installed on your server. You can refer to the official Docker documentation for instructions specific to your operating system.
 
