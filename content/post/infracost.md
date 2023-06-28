@@ -6,12 +6,30 @@ tags: ["devops"]
 categories: ["Engineering"]
 author: "Chinmay Jain"
 ---
-Preamble
+## Preamble
 The use of public cloud resources has increased drastically in the last decade with the growth in cloud-native development and ease of developing/delivering applications and many more are pros of using public cloud services/resources. But, there are many challenges that so come while using services from the various providers (AWS/Azure/GCP…) the cloud service provider has full ownership of the public cloud with its own policy, value, and profit, costing, and charging model. Every company's success/growth gets affected by each resource provisioned and sometimes we ignore this cost in case of rapid development by using some automation(IaC) tools like terraform, ansible, ARM template where we just go on provisioning and during the billing cycle we need to brace yourself.
 
-But now we can estimate the cost before provisioning the resource and many other features to understand the cloud cost using an opensource solution (INFRACOST)
+But now we can estimate the cost before provisioning the resource and many other features to understand the cloud cost using an opensource solution (INFRACOST).Certainly! Here are some links that can support the content regarding cloud cost estimation using the open-source solution, Infracost, for AWS, Azure,and GCP:
 
-Automating Cloud Cost Management -
+## AWS:
+Infracost GitHub Repository: https://github.com/infracost/infracost
+Infracost AWS Provider Documentation: https://www.infracost.io/docs/providers/aws
+AWS Pricing Calculator: https://calculator.aws
+AWS Simple Monthly Calculator: https://calculator.s3.amazonaws.com/index.html
+
+## Azure:
+Infracost Azure Provider Documentation: https://www.infracost.io/docs/providers/azure
+Azure Pricing Calculator: https://azure.microsoft.com/pricing/calculator
+Azure Pricing Documentation: https://azure.microsoft.com/pricing
+
+## Google Cloud Platform (GCP):
+Infracost GCP Provider Documentation: https://www.infracost.io/docs/providers/gcp
+GCP Pricing Calculator: https://cloud.google.com/products/calculator
+GCP Pricing Documentation: https://cloud.google.com/pricing
+
+These links will provide you with additional information and resources related to cloud cost estimation and pricing for each respective cloud provider (AWS, Azure, GCP). You can refer to the Infracost documentation for more details on how to use the tool effectively to estimate costs before provisioning resources. Additionally, the cloud provider pricing calculators will help you explore pricing details and estimate costs for various services provided by each cloud platform.
+
+## Automating Cloud Cost Management -
 1. A Devops/Developer makes changes to their Terraform configuration, and they submit a pull request.
 
 2. This pull request auto triggers a CI workflow, which calculates the cloud cost difference before and after their changes. It nicely displays the cost difference in a table format as a pull request comment, with a detailed drill-down on where the cost change occurs.
@@ -31,7 +49,7 @@ Solution: Real-time Cost Estimation with Infracost Infracost revolutionized our 
 
 Solution: Centralized Cost Tracking with Infracost Infracost served as a centralized platform for tracking costs across multiple cloud providers. It supported popular cloud platforms like AWS, Azure, Google Cloud, and more, enabling us to analyze and compare costs across different providers in a unified manner. With Infracost's detailed cost breakdowns and support for multiple currencies, we gained granular insights into our infrastructure spending, identified cost-saving opportunities, and optimized our cloud deployments accordingly.
 
-Quick start
+## Quick start
 The following steps assume a simple Terraform directory is being used, we recommend you use a more relevant example if required.
 
 1. If you haven't done so already, download Infracost and run infracost auth login to get a free API key.
@@ -43,7 +61,7 @@ The following steps assume a simple Terraform directory is being used, we recomm
 4. Create a new file in .github/workflows/infracost.yml in your repo with the following content.
 
 ```bash
-name: "Infracost Analysis for PRs"
+name: "Infracost Analysis"
 
 on:
   workflow_call:
@@ -70,9 +88,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    env:
-      TF_ROOT: ${{ inputs.working-directory }}
-
     steps:
       # Harden Runner is a security action to protect our workflow from supply chain attacks
       - name: Harden Runner
@@ -87,12 +102,6 @@ jobs:
         # See https://github.com/infracost/actions/tree/master/setup for other inputs
         with:
           api-key: ${{ secrets.INFRACOST_API_KEY }}
-
-      # Checkout the base branch of the pull request (e.g. main).
-      - name: Checkout base branch
-        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
-        with:
-          ref: '${{ github.event.pull_request.base.ref }}'
 
       - name: Print debug info
         run: |
@@ -154,5 +163,4 @@ jobs:
                                    --behavior=update \
                                    --policy-path=${TF_ROOT}/infracost-policy.rego
 ```
-
-- Conclusion: Implementing the Infracost Terraform tool has been a game-changer for our organization in optimizing cloud infrastructure costs. By providing real-time cost estimation, centralized cost tracking across multiple cloud providers, and enabling cost allocation and forecasting, Infracost has empowered us to make data-driven decisions, optimize spending, and align our infrastructure changes with our budgetary constraints. 
+## Conclusion: Implementing the Infracost Terraform tool has been a game-changer for our organization in optimizing cloud infrastructure costs. By providing real-time cost estimation, centralized cost tracking across multiple cloud providers, and enabling cost allocation and forecasting, Infracost has empowered us to make data-driven decisions, optimize spending, and align our infrastructure changes with our budgetary constraints. 
