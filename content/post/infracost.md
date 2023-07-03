@@ -6,10 +6,17 @@ tags: ["devops"]
 categories: ["Engineering"]
 author: "Chinmay Jain"
 ---
-## Preamble
-The use of public cloud resources has increased drastically in the last decade with the growth in cloud-native development and ease of developing/delivering applications and many more are pros of using public cloud services/resources. But, there are many challenges that so come while using services from the various providers (AWS/Azure/GCP…) the cloud service provider has full ownership of the public cloud with its own policy, value, and profit, costing, and charging model. Every company's success/growth gets affected by each resource provisioned and sometimes we ignore this cost in case of rapid development by using some automation(IaC) tools like terraform, ansible, ARM template where we just go on provisioning and during the billing cycle we need to brace yourself.
 
-But now we can estimate the cost before provisioning the resource and many other features to understand the cloud cost using an opensource solution (INFRACOST).Certainly! Here are some links that can support the content regarding cloud cost estimation using the open-source solution, Infracost, for AWS, Azure,and GCP:
+photo_url: '../../../img/infracost1.png'
+
+## Preamble
+The use of public cloud resources has drastically increased in the last decade due to the growth in cloud-native development and the ease ofdeveloping and delivering applications. There are numerous advantages of using public cloud services/resources. However, there are also challenges associated with using services from various cloud service providers such as AWS, Azure, and GCP.
+
+Each cloud service provider has full ownership of the public cloud, with its own policies, values, profit models, and cost structures. Everycompany's success and growth are affected by the resources provisioned, and sometimes we overlook the costs during rapid development when using automation tools like Terraform, Ansible, and ARM templates. We may end up provisioning resources without considering the financial implications, only to realize the impact during the billing cycle.
+
+Fortunately, now we have the ability to estimate costs before provisioning resources and gain a better understanding of cloud costs using anopen-source solution called Infracost. You can find additional information and resources related to cloud cost estimation and pricing on Infracost for AWS, Azure, and GCP. 
+
+These links will provide you with detailed information on how to effectively use Infracost to estimate costs before provisioning resources. Additionally, the cloud provider pricing calculators will assist you in exploring pricing details and estimating costs for various services offered by each cloud platform.
 
 ## AWS:
 Infracost GitHub Repository: https://github.com/infracost/infracost
@@ -27,19 +34,18 @@ Infracost GCP Provider Documentation: https://www.infracost.io/docs/providers/gc
 GCP Pricing Calculator: https://cloud.google.com/products/calculator
 GCP Pricing Documentation: https://cloud.google.com/pricing
 
-These links will provide you with additional information and resources related to cloud cost estimation and pricing for each respective cloud provider (AWS, Azure, GCP). You can refer to the Infracost documentation for more details on how to use the tool effectively to estimate costs before provisioning resources. Additionally, the cloud provider pricing calculators will help you explore pricing details and estimate costs for various services provided by each cloud platform.
-
 ## Automating Cloud Cost Management -
-1. A Devops/Developer makes changes to their Terraform configuration, and they submit a pull request.
+1. A DevOps/Developer makes changes to their Terraform configuration, and they submit a pull request.
 
 2. This pull request auto triggers a CI workflow, which calculates the cloud cost difference before and after their changes. It nicely displays the cost difference in a table format as a pull request comment, with a detailed drill-down on where the cost change occurs.
+
+photo_url: '../../../img/infracost.png' 
 
 3. If the monthly cloud cost change exceeds your predefined policy threshold, your workflow fails for further examination to ensure there is no human error in your Terraform configuration.
 
 4. The workflow can also generate an HTML/Json report on the cloud cost for the infrastructure with the latest changes.
 
 5. You and/or the developer get an email/slack notification with this report attached. See a sample report below:
-
 
 - Problem 1: Lack of Cost Visibility during Infrastructure Planning Before adopting Infracost, estimating the financial impact of infrastructure changes was a time-consuming and error-prone process. It was challenging to get an accurate picture of the costs associated with deploying new resources or modifying existing infrastructure. As a result, we often faced unexpected cost overruns, impacting our budget and hindering our ability to plan effectively.
 
@@ -163,4 +169,4 @@ jobs:
                                    --behavior=update \
                                    --policy-path=${TF_ROOT}/infracost-policy.rego
 ```
-## Conclusion: Implementing the Infracost Terraform tool has been a game-changer for our organization in optimizing cloud infrastructure costs. By providing real-time cost estimation, centralized cost tracking across multiple cloud providers, and enabling cost allocation and forecasting, Infracost has empowered us to make data-driven decisions, optimize spending, and align our infrastructure changes with our budgetary constraints. 
+## Conclusion: Implementing the Infracost Terraform tool has been a game-changer for your organization in optimizing cloud infrastructure costs. By providing real-time cost estimation, centralized cost tracking across multiple cloud providers, and enabling cost allocation and forecasting, Infracost has empowered us to make data-driven decisions, optimize spending, and align our infrastructure changes with our budgetary constraints. 
