@@ -7,10 +7,8 @@ categories: ["Engineering"]
 author: "Chinmay Jain"
 ---
 
-photo_url: '../../../img/infracost1.png'
-
 ## Preamble
-The use of public cloud resources has drastically increased in the last decade due to the growth in cloud-native development and the ease ofdeveloping and delivering applications. There are numerous advantages of using public cloud services/resources. However, there are also challenges associated with using services from various cloud service providers such as AWS, Azure, and GCP.
+The use of public cloud resources has drastically increased in the last decade due to the growth in cloud-native development and the ease of developing and delivering applications. There are numerous advantages of using public cloud services/resources. However, there are also challenges associated with using services from various cloud service providers such as AWS, Azure, and GCP.
 
 Each cloud service provider has full ownership of the public cloud, with its own policies, values, profit models, and cost structures. Everycompany's success and growth are affected by the resources provisioned, and sometimes we overlook the costs during rapid development when using automation tools like Terraform, Ansible, and ARM templates. We may end up provisioning resources without considering the financial implications, only to realize the impact during the billing cycle.
 
@@ -39,13 +37,13 @@ GCP Pricing Documentation: https://cloud.google.com/pricing
 
 2. This pull request auto triggers a CI workflow, which calculates the cloud cost difference before and after their changes. It nicely displays the cost difference in a table format as a pull request comment, with a detailed drill-down on where the cost change occurs.
 
-photo_url: '../../../img/infracost.png' 
+![](../../../img/infracost.png)
 
 3. If the monthly cloud cost change exceeds your predefined policy threshold, your workflow fails for further examination to ensure there is no human error in your Terraform configuration.
 
 4. The workflow can also generate an HTML/Json report on the cloud cost for the infrastructure with the latest changes.
 
-5. You and/or the developer get an email/slack notification with this report attached. See a sample report below:
+5. You and/or the developer get an email/slack notification with this report attached.
 
 - Problem 1: Lack of Cost Visibility during Infrastructure Planning Before adopting Infracost, estimating the financial impact of infrastructure changes was a time-consuming and error-prone process. It was challenging to get an accurate picture of the costs associated with deploying new resources or modifying existing infrastructure. As a result, we often faced unexpected cost overruns, impacting our budget and hindering our ability to plan effectively.
 
@@ -66,6 +64,8 @@ The following steps assume a simple Terraform directory is being used, we recomm
 
 4. Create a new file in .github/workflows/infracost.yml in your repo with the following content.
 
+# Check out more about the plugin : https://github.com/infracost/actions
+
 ```bash
 name: "Infracost Analysis"
 
@@ -77,16 +77,6 @@ on:
         required: false
         type: string
         default: 'terraform'
-      # tfvars file path
-      terraform-var-file:
-        required: false
-        type: string
-        default: ''
-      # infracost usage file path
-      usage-file:
-        required: false
-        type: string
-        default: './.env/dev/infracost-usage.yml'
 
 jobs:
   infracost:
@@ -94,15 +84,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:
-      # Harden Runner is a security action to protect our workflow from supply chain attacks
-      - name: Harden Runner
-        uses: step-security/harden-runner@2e205a28d0e1da00c5f53b161f4067b052c61f34
-        with:
-          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+    env:
+      TF_ROOT: ${{ inputs.working-directory }}
 
-      # this step calls infracost/actions/setup@v2, which installs the latest patch version of the Infracost CLI v0.10.x and
-      # gets the backward-compatible bug fixes and new resources. Replacing the version number with git SHA is a security hardening measure.
       - name: Setup Infracost
         uses: infracost/actions/setup@6bdd3cb01a306596e8a614e62af7a9c0a133bc5c
         # See https://github.com/infracost/actions/tree/master/setup for other inputs
@@ -113,6 +97,7 @@ jobs:
         run: |
           echo github base branch is ${{github.event.pull_request.base.ref}}
           echo github.event.pull_request.number is ${{github.event.pull_request.number}}
+
       # Generate Infracost JSON file as the baseline.
       - name: Generate Infracost cost estimate baseline
         run: |
@@ -123,6 +108,7 @@ jobs:
                               --usage-file ${{ inputs.usage-file }} \
                               --format=json \
                               --out-file=/tmp/infracost-base.json
+
       # Checkout the current PR branch so we can create a diff.
       - name: Checkout PR branch
         uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
@@ -139,17 +125,13 @@ jobs:
                           --usage-file ${{ inputs.usage-file }} \
                           --compare-to=/tmp/infracost-base.json \
                           --out-file=/tmp/infracost.json
+
       # generate the html report based on the JSON output from last step
       - name: Generate Infracost Report
         run: |
           export INFRACOST_API_KEY=${{ secrets.INFRACOST_API_KEY }}
           cd ${TF_ROOT}
           infracost output --path /tmp/infracost.json --show-skipped --format html --out-file report.html
-      # upload the report to artifact so subsequent workflow can download the report and email it as attachment
-      - uses: actions/upload-artifact@83fd05a356d7e2593de66fc9913b3002723633cb
-        with:
-          name: report.html
-          path: ${{ inputs.working-directory }}/report.html
 
       # Posts a comment to the PR using the 'update' behavior.
       # This creates a single comment and updates it. The "quietest" option.
@@ -167,6 +149,5 @@ jobs:
                                    --github-token=${{github.token}} \
                                    --pull-request=${{github.event.pull_request.number}} \
                                    --behavior=update \
-                                   --policy-path=${TF_ROOT}/infracost-policy.rego
 ```
 ## Conclusion: Implementing the Infracost Terraform tool has been a game-changer for your organization in optimizing cloud infrastructure costs. By providing real-time cost estimation, centralized cost tracking across multiple cloud providers, and enabling cost allocation and forecasting, Infracost has empowered us to make data-driven decisions, optimize spending, and align our infrastructure changes with our budgetary constraints. 
