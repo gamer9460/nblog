@@ -1,10 +1,15 @@
 ---
 title: "Infracost + Terraform + GitHub Actions = Automate Cloud Cost Management"
-date: 2023-06-28
+date: 2023-07-7
 draft: false
 tags: ["devops"]
 categories: ["Engineering"]
+image: "img/infracost-cover.png"
 author: "Chinmay Jain"
+authorDes: "DevOps Engineer at Nurdsoft"
+
+authorImage: "img/chinmay_jain.jpg"
+
 ---
 
 ## Preamble
