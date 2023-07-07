@@ -78,8 +78,6 @@ The following steps assume a simple Terraform directory is being used, we recomm
 
 4. Create a new file in .github/workflows/infracost.yml in your repo with the following content.
 
-### Check out more about the plugin : https://github.com/infracost/actions
-
 ## Sample GitHub Action
 
 See a sample Infrascost Analysis template below:
