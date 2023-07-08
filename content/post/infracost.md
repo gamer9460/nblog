@@ -1,6 +1,6 @@
 ---
 title: "Infracost + Terraform + GitHub Actions = Automate Cloud Cost Management"
-date: 2023-07-07T17:010:11+05:30
+date: 2023-07-07T20:32:20+05:30
 draft: false
 tags: ["devops"]
 categories: ["Engineering"]
