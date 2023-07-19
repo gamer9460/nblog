@@ -2,7 +2,7 @@
 title: "How to deploy your next idea on Buildndeploy"
 date: 2023-07-11T13:03:44+05:30
 draft: false
-image: "img/buildndeployHome.png"
+image: "img/buildndeployBanner.png"
 tags: ["Deployment"]
 categories: ["Devops"]
 author: "Aryan Choudhary"
