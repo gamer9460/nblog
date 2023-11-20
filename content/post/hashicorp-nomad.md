@@ -19,7 +19,7 @@ It can be daunting when first looking at a new piece of software. There’s a ba
 This guide will walk you through all the steps to getting Nomad running, explaining along the way what it is you are doing, and where to go for more information.
 
 ## What Is Nomad?
- According to its [website](https://www.nomadproject.io/)Nomad is:
+ According to its [website](https://www.nomadproject.io/) Nomad is:
  A simple and flexible workload orchestrator to deploy and manage containers and non-containerized applications across on-prem and clouds at scale.
 
  Nomad is a scheduler similar to something like ECS, Kubernetes, Swarm, etc. Your scheduler is going to take information like “I want N copies of image X running” and take care of running and maintaining the availability of these containers on a cluster of different hosts.
@@ -31,7 +31,7 @@ Say you have version A of your app running and you want to deploy version B. If 
 Think of it as a lightweight version of Kubernetes and also much easier to learn.
 
 ## Nomad architecture:
-I will try to simplify as much as I can but I strongly advise you to still read this nonetheless[website](https://developer.hashicorp.com/nomad/docs/concepts/architecture/)
+I will try to simplify as much as I can but I strongly advise you to still read this nonetheless [website](https://developer.hashicorp.com/nomad/docs/concepts/architecture/)
 
 Nomad is composed of two agents: Server and Client.
 
