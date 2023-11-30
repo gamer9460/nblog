@@ -136,4 +136,4 @@ job "docs" {
   }
 }
 ```
-Hopefully you found this useful and are enjoying using Nomad.
+Stay tuned for Part II of our Nomad Odyssey - where theory meets practice in the HashiCorp Universe!
