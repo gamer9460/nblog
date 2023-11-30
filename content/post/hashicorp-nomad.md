@@ -2,8 +2,8 @@
 title: "Nomad Odyssey: Navigating the HashiCorp Universe with Confidence"
 date: 2023-11-17T11:54:00+05:30
 draft: false
-tags: ["devops"]
-categories: ["Engineering"]
+tags: ["Devops"]
+categories: ["Devops"]
 image: "img/"
 author: "Chinmay Jain"
 authorDes: "DevOps Engineer at Nurdsoft"
